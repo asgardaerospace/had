@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import Slider from 'react-slick';
 import { Link } from "react-router-dom";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { SITE } from "../../config/site";
-import SensingMotif from "../visual/SensingMotif";
 
 /**
  * Hemisphere Defense hero.
@@ -13,6 +13,11 @@ import SensingMotif from "../visual/SensingMotif";
  */
 const SliderV1 = () => {
     const sliderRef = useRef<Slider | null>(null);
+
+    // Parallax: the hero photo drifts slower than the page as you scroll,
+    // giving the flat backdrop real depth.
+    const { scrollY } = useScroll();
+    const heroPhotoY = useTransform(scrollY, [0, 700], [0, 90]);
 
     const settings = {
         infinite: true,
@@ -33,10 +38,13 @@ const SliderV1 = () => {
         <>
             {/* Hero Section Start */}
             <section className="slider-area style-1 had-hero">
-                {/* environment layers (behind content) */}
+                {/* environment layers (behind content); navy gradient is the
+                    load fallback beneath the cinematic hero photo, which drifts
+                    in a parallax wrapper and slow-zooms for depth. */}
                 <div className="had-hero-bg" style={heroBg} />
-                <div className="had-hero-map" />
-                <div className="had-hero-motif-wrap"><SensingMotif /></div>
+                <motion.div className="had-hero-photo-wrap" style={{ y: heroPhotoY }}>
+                    <div className="had-hero-photo" />
+                </motion.div>
                 <div className="had-hero-overlay" />
 
                 <h2 className="te-slider-label">HAD</h2>

@@ -6,6 +6,7 @@ type CapabilityItem = {
     icon: string;
     title: string;
     text: string;
+    image: string;
 };
 
 interface CapabilityAreasProps {
@@ -56,11 +57,20 @@ const CapabilityAreas = ({ style = '' }: CapabilityAreasProps) => {
                                     transition={{ delay, duration: 0.6, ease: "easeOut" }}
                                 >
                                     <div className="had-capability-card">
-                                        <div className="had-capability-icon">
-                                            <i className={item.icon} />
+                                        <div className="had-capability-media">
+                                            <img
+                                                src={`/images/had/${item.image}`}
+                                                alt=""
+                                                loading="lazy"
+                                            />
+                                            <div className="had-capability-icon">
+                                                <i className={item.icon} />
+                                            </div>
                                         </div>
-                                        <h3 className="had-capability-title">{item.title}</h3>
-                                        <p className="had-capability-text">{item.text}</p>
+                                        <div className="had-capability-body">
+                                            <h3 className="had-capability-title">{item.title}</h3>
+                                            <p className="had-capability-text">{item.text}</p>
+                                        </div>
                                     </div>
                                 </motion.div>
                             );

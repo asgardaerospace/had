@@ -4,6 +4,7 @@ import CapabilityAreas from '../../components/capability/CapabilityAreas';
 import AboutV1 from '../../components/about/AboutV1';
 import FeaturedProgram from '../../components/program/FeaturedProgram';
 import PhilosophyPrinciples from '../../components/philosophy/PhilosophyPrinciples';
+import StatementBand from '../../components/visual/StatementBand';
 import LeadershipTeaser from '../../components/leadership/LeadershipTeaser';
 import HaiBand from '../../components/hai/HaiBand';
 import ContactCta from '../../components/cta/ContactCta';
@@ -24,6 +25,7 @@ const Home = () => {
             <AboutV1 style="background-gray-700 te-pt-120 te-pb-120" />
             <FeaturedProgram />
             <PhilosophyPrinciples />
+            <StatementBand />
             <LeadershipTeaser />
             <HaiBand />
             <ContactCta />

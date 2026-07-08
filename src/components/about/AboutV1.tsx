@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import SensingMotif from "../visual/SensingMotif";
 
 type AboutV1Props = {
     style?: string;
@@ -18,15 +17,11 @@ const AboutV1 = ({ style = "", full = false }: AboutV1Props) => {
                 <div className="container">
                     <div className="row gy-4">
                         <div className="col-lg-6 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <div className="had-mission-visual had-visual-mapped">
-                                <SensingMotif className="had-motif-panel" />
+                            <div className="had-mission-visual had-mv-photo had-mv-mission">
                                 <span className="had-mission-visual-eyebrow">Hemisphere Defense</span>
                                 <p className="had-mission-visual-line">
                                     Persistent awareness. Distributed infrastructure. Clear authority.
                                 </p>
-                                <span className="had-placeholder had-mission-visual-note">
-                                    [ MARITIME / DISTRIBUTED-INFRASTRUCTURE IMAGERY — TO BE PROVIDED ]
-                                </span>
                             </div>
                         </div>
                         <div

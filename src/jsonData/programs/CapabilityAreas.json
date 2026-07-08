@@ -3,36 +3,42 @@
         "id": 1,
         "icon": "fa-solid fa-tower-broadcast",
         "title": "Persistent Awareness",
-        "text": "Programs built around sustained sensing and monitoring, so awareness is maintained over time rather than demonstrated once."
+        "text": "Programs built around sustained sensing and monitoring, so awareness is maintained over time rather than demonstrated once.",
+        "image": "cap-awareness.jpg"
     },
     {
         "id": 2,
         "icon": "fa-solid fa-diagram-project",
         "title": "Distributed Infrastructure",
-        "text": "Capabilities designed to operate across dispersed locations and environments rather than depending on a single fixed point."
+        "text": "Capabilities designed to operate across dispersed locations and environments rather than depending on a single fixed point.",
+        "image": "cap-distributed.jpg"
     },
     {
         "id": 3,
         "icon": "fa-solid fa-robot",
         "title": "Autonomous Systems Support",
-        "text": "Infrastructure that launches, recovers, hosts, and sustains autonomous and uncrewed systems in support of the mission."
+        "text": "Infrastructure that launches, recovers, hosts, and sustains autonomous and uncrewed systems in support of the mission.",
+        "image": "cap-autonomy.jpg"
     },
     {
         "id": 4,
         "icon": "fa-solid fa-cubes",
         "title": "Modular Mission Capability",
-        "text": "Programs that adapt as sensors, payloads, and mission requirements change, without redesigning the underlying system."
+        "text": "Programs that adapt as sensors, payloads, and mission requirements change, without redesigning the underlying system.",
+        "image": "cap-modular.jpg"
     },
     {
         "id": 5,
         "icon": "fa-solid fa-gears",
         "title": "Operational Sustainment",
-        "text": "Maintenance, logistics, readiness, and lifecycle support treated as part of the program from the outset."
+        "text": "Maintenance, logistics, readiness, and lifecycle support treated as part of the program from the outset.",
+        "image": "cap-sustainment.jpg"
     },
     {
         "id": 6,
         "icon": "fa-solid fa-gauge-high",
         "title": "Rapid Program Development",
-        "text": "Structured development against measurable criteria and decision gates, so capability advances on evidence."
+        "text": "Structured development against measurable criteria and decision gates, so capability advances on evidence.",
+        "image": "cap-development.jpg"
     }
 ]

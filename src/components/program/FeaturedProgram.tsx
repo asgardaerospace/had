@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { SITE, EXTERNAL_LINK_PROPS, isPlaceholder } from "../../config/site";
-import SensingMotif from "../visual/SensingMotif";
 
 /**
  * Featured Program band — AYDLL / IDL.
@@ -24,13 +23,9 @@ const FeaturedProgram = () => {
                 <div className="container">
                     <div className="row gy-5 align-items-center">
                         <div className="col-lg-5 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <div className="had-mission-visual had-visual-mapped" style={{ minHeight: 380 }}>
-                                <SensingMotif className="had-motif-panel had-motif-panel-lg" />
+                            <div className="had-mission-visual had-mv-photo had-mv-aydll" style={{ minHeight: 380 }}>
                                 <span className="had-mission-visual-eyebrow">Featured Program</span>
                                 <p className="had-mission-visual-line">AYDLL / IDL</p>
-                                <span className="had-placeholder had-mission-visual-note">
-                                    [ MARITIME INFRASTRUCTURE IMAGERY — TO BE PROVIDED ]
-                                </span>
                             </div>
                         </div>
                         <div className="col-lg-7 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">

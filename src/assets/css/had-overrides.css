@@ -589,3 +589,268 @@ body {
   content: ""; position: absolute; top: 0; left: 0;
   width: 48px; height: 2px; background: var(--had-accent);
 }
+
+/* =====================================================================
+   Generated imagery pass (nano-banana) — cinematic autonomous-defense
+   photography, brand-tinted navy + steel-azure. No personnel or weapons.
+   Appended last so these win over earlier equal-specificity base rules.
+   ===================================================================== */
+
+/* --- Hero: photographic backdrop replaces the map + SVG motif layers.
+   The navy gradient (.had-hero-bg) remains beneath as a load fallback. --- */
+.had-hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: url("/images/had/hero-home.jpg") center right / cover no-repeat;
+}
+/* Stronger left-weighted scrim keeps the headline legible over the photo. */
+.had-hero-overlay {
+  background: linear-gradient(90deg,
+    rgba(14, 28, 51, 0.95) 0%, rgba(14, 28, 51, 0.85) 34%,
+    rgba(14, 28, 51, 0.55) 64%, rgba(14, 28, 51, 0.22) 100%);
+}
+/* Soft bottom vignette seats the hero into the page body. */
+.had-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(11, 21, 34, 0.92) 0%, rgba(11, 21, 34, 0) 24%);
+}
+@media (max-width: 991px) {
+  .had-hero-photo { background-position: center; }
+  .had-hero-overlay {
+    background: linear-gradient(180deg, rgba(14, 28, 51, 0.72) 0%, rgba(14, 28, 51, 0.93) 100%);
+  }
+}
+
+/* --- Mission / featured-program panels: photo fills the former placeholder.
+   The caption (eyebrow + line) sits over a dark bottom scrim. --- */
+.had-mission-visual.had-mv-photo::before { display: none; } /* drop grid over photo */
+.had-mission-visual.had-mv-mission {
+  background:
+    linear-gradient(180deg, rgba(14, 28, 51, 0.15) 0%, rgba(14, 28, 51, 0.32) 45%, rgba(11, 21, 34, 0.88) 100%),
+    url("/images/had/mission-panel.jpg") center / cover no-repeat;
+}
+.had-mission-visual.had-mv-aydll {
+  background:
+    linear-gradient(180deg, rgba(14, 28, 51, 0.15) 0%, rgba(14, 28, 51, 0.32) 45%, rgba(11, 21, 34, 0.88) 100%),
+    url("/images/had/aydll-infrastructure.jpg") center / cover no-repeat;
+}
+
+/* --- Capability cards: full-bleed image band + overlaid icon badge. --- */
+.had-capability-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.had-capability-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.had-capability-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.had-capability-card:hover .had-capability-media img { transform: scale(1.06); }
+.had-capability-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 21, 34, 0) 42%, rgba(11, 21, 34, 0.92) 100%);
+}
+.had-capability-card .had-capability-icon {
+  position: absolute;
+  left: 22px;
+  bottom: 16px;
+  z-index: 2;
+  margin: 0;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  background: rgba(14, 28, 51, 0.62);
+  backdrop-filter: blur(3px);
+}
+.had-capability-body { padding: 22px 28px 30px; }
+
+/* --- Inner-page header: quiet photo beneath the navy scrim. --- */
+.had-breadcrumb {
+  background:
+    linear-gradient(120deg, rgba(14, 28, 51, 0.88) 0%, rgba(20, 32, 58, 0.82) 55%, rgba(11, 21, 34, 0.92) 100%),
+    url("/images/had/breadcrumb-bg.jpg") center / cover no-repeat;
+}
+
+/* --- Closing contact band: faint hero backdrop bookends the home page. --- */
+.had-contact-cta {
+  background:
+    linear-gradient(120deg, rgba(14, 28, 51, 0.90) 0%, rgba(11, 21, 34, 0.95) 100%),
+    url("/images/had/hero-home.jpg") center / cover no-repeat;
+}
+
+/* =====================================================================
+   Depth & motion pass — elevation, contrast, and one cinematic statement
+   moment. Removes the "flat / subdued" read while keeping the institutional
+   restraint. All motion respects prefers-reduced-motion (opt-out at end).
+   ===================================================================== */
+
+:root {
+  --had-black: #0A121E;
+  --had-glow: rgba(90, 151, 206, 0.35);
+  --had-elev: 0 22px 48px -16px rgba(0, 0, 0, 0.72), 0 6px 16px -6px rgba(0, 0, 0, 0.5);
+  --had-rim: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+/* --- Elevation: lift every card/panel off the flat background. --- */
+.had-capability-card,
+.had-principle-card,
+.had-leader-card,
+.had-inquiry-card,
+.had-program-row,
+.had-program-aside {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.012));
+  box-shadow: var(--had-elev), var(--had-rim);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+}
+.had-capability-card:hover,
+.had-principle-card:hover,
+.had-leader-card:hover,
+.had-inquiry-card:hover,
+.had-program-row:hover {
+  transform: translateY(-6px);
+  border-color: rgba(90, 151, 206, 0.6);
+  box-shadow: var(--had-elev), 0 0 42px -10px var(--had-glow), 0 0 0 1px rgba(90, 151, 206, 0.22), var(--had-rim);
+}
+
+/* --- Contrast: punch the imagery so it stops reading muddy. --- */
+.had-capability-media img { filter: contrast(1.09) saturate(1.14) brightness(1.02); }
+.had-capability-card:hover .had-capability-media img { filter: contrast(1.12) saturate(1.2) brightness(1.05); }
+.had-hero-photo { filter: contrast(1.06) saturate(1.12) brightness(1.03); }
+
+/* Mission / program panels: frame, lift, steel-azure accent edge. */
+.had-mission-visual.had-mv-photo {
+  box-shadow: var(--had-elev);
+  border-color: rgba(90, 151, 206, 0.28);
+}
+
+/* --- Hero motion: parallax wrapper + slow Ken Burns drift. --- */
+.had-hero-photo-wrap {
+  position: absolute;
+  inset: -120px 0;
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+}
+.had-hero-photo {
+  position: absolute;
+  inset: 0;
+  animation: hadKenBurns 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes hadKenBurns {
+  from { transform: scale(1.05); }
+  to   { transform: scale(1.14) translate3d(-1.5%, -1%, 0); }
+}
+/* Orchestrated hero entrance — content rises in on load. */
+.had-hero-content > * { animation: hadRise 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.had-hero-content > *:nth-child(1) { animation-delay: 0.10s; }
+.had-hero-content > *:nth-child(2) { animation-delay: 0.20s; }
+.had-hero-content > *:nth-child(3) { animation-delay: 0.32s; }
+.had-hero-content > *:nth-child(4) { animation-delay: 0.46s; }
+@keyframes hadRise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* --- Signature: full-bleed cinematic statement band. --- */
+.had-statement {
+  position: relative;
+  overflow: hidden;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--had-line);
+  border-bottom: 1px solid var(--had-line);
+  background: var(--had-black);
+}
+.had-statement-photo {
+  position: absolute;
+  inset: -12% 0;
+  z-index: 0;
+  background: url("/images/had/statement-band.jpg") center 40% / cover no-repeat;
+  filter: contrast(1.08) saturate(1.12);
+  will-change: transform;
+}
+.had-statement-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(10, 18, 30, 0.94) 0%, rgba(10, 18, 30, 0.6) 42%, rgba(10, 18, 30, 0.15) 100%),
+    linear-gradient(0deg, rgba(10, 18, 30, 0.9) 0%, rgba(10, 18, 30, 0) 42%);
+}
+.had-statement .container { position: relative; z-index: 2; }
+.had-statement-inner { max-width: 760px; padding: 60px 0; }
+.had-statement-eyebrow {
+  display: inline-block;
+  position: relative;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--had-accent-strong);
+  margin-bottom: 18px;
+  padding-left: 40px;
+}
+.had-statement-eyebrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 28px;
+  height: 1px;
+  background: var(--had-accent);
+}
+.had-statement-title {
+  color: #fff;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.14;
+  margin: 0;
+  font-weight: 700;
+}
+.had-statement-title span { color: var(--had-accent-strong); }
+
+/* --- Button depth. --- */
+.te-theme-btn { box-shadow: 0 10px 24px -10px rgba(62, 124, 177, 0.65); }
+.te-theme-btn:hover { box-shadow: 0 14px 30px -10px rgba(90, 151, 206, 0.8); transform: translateY(-1px); }
+
+/* --- Glowing hairline dividers mark the major section seams. --- */
+.had-featured-program,
+.had-contact-cta { position: relative; }
+.had-featured-program::before,
+.had-contact-cta::before,
+.had-statement::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1140px, 88%);
+  height: 1px;
+  z-index: 3;
+  background: linear-gradient(90deg, transparent, rgba(90, 151, 206, 0.55), transparent);
+}
+
+/* --- Motion opt-out. --- */
+@media (prefers-reduced-motion: reduce) {
+  .had-hero-photo { animation: none; }
+  .had-hero-content > * { animation: none; }
+  .had-hero-photo-wrap,
+  .had-statement-photo { transform: none !important; }
+}
