@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "icon": "fa-solid fa-shield-halved",
+        "title": "Defense Program Inquiries",
+        "desc": "Questions about HAD programs, capability areas, or program development.",
+        "email": "[PROGRAMS-EMAIL]"
+    },
+    {
+        "id": 2,
+        "icon": "fa-solid fa-landmark",
+        "title": "Government & Mission Partnerships",
+        "desc": "Government mission owners and organizations exploring operational collaboration.",
+        "email": "[GOVERNMENT-EMAIL]"
+    },
+    {
+        "id": 3,
+        "icon": "fa-solid fa-handshake-angle",
+        "title": "Strategic Partnerships",
+        "desc": "Industry, research, and technology partners aligned to HAD program needs.",
+        "email": "[PARTNERSHIPS-EMAIL]"
+    },
+    {
+        "id": 4,
+        "icon": "fa-solid fa-building-columns",
+        "title": "Investment / Corporate Inquiries",
+        "desc": "Corporate and investment matters relating to Hemisphere Defense and HAI.",
+        "email": "[CORPORATE-EMAIL]"
+    },
+    {
+        "id": 5,
+        "icon": "fa-solid fa-newspaper",
+        "title": "Media Inquiries",
+        "desc": "Press, media, and public affairs.",
+        "email": "[MEDIA-EMAIL]"
+    }
+]

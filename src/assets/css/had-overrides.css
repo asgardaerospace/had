@@ -1,0 +1,591 @@
+/* =====================================================================
+   Hemisphere Defense (HAD) — structural + tone overrides.
+   Loaded AFTER style.css so these rules win. Keep this file focused on
+   HAD-specific adjustments; the base design system stays in style.css.
+   ===================================================================== */
+
+:root {
+  --had-navy: #0E1C33;
+  --had-navy-2: #14203A;
+  --had-slate: #1E3355;
+  --had-charcoal: #111418;
+  --had-accent: #3E7CB1;
+  --had-accent-strong: #5A97CE;
+  --had-line: rgba(255, 255, 255, 0.10);
+}
+
+/* Ensure primary buttons keep legible white text on the steel-azure accent. */
+.te-theme-btn {
+  color: #ffffff !important;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Keep hero CTAs in DOM order (primary first) when they wrap on small screens. */
+.te-slider-btn-wrapper { flex-wrap: wrap !important; }
+
+/* Secondary / outline button for restrained dual-CTA hero. */
+.te-theme-btn.te-theme-btn-outline {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  margin-left: 14px;
+}
+.te-theme-btn.te-theme-btn-outline:hover {
+  border-color: var(--had-accent);
+  background: rgba(62, 124, 177, 0.12) !important;
+}
+@media (max-width: 575px) {
+  .te-theme-btn.te-theme-btn-outline { margin-left: 0; margin-top: 12px; }
+}
+
+/* Restrained accent labels (the small "short-title" eyebrow) read clearly
+   on dark panels without shouting. */
+.short-title {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* --- HAI relationship band: kept visually secondary to the HAD identity. --- */
+.had-hai-band {
+  background-color: var(--had-charcoal);
+  border-top: 1px solid var(--had-line);
+  border-bottom: 1px solid var(--had-line);
+  padding: 28px 0;
+}
+.had-hai-band .had-hai-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.had-hai-band p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+.had-hai-band .had-hai-link {
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--had-line);
+  padding: 10px 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.had-hai-band .had-hai-link:hover {
+  color: #fff;
+  border-color: var(--had-accent);
+  background-color: rgba(62, 124, 177, 0.12);
+}
+
+/* --- Featured-program callout (AYDLL / IDL) external route note. --- */
+.had-program-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--had-accent-strong);
+  margin-bottom: 12px;
+}
+.had-external-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 14px;
+  letter-spacing: 0.03em;
+}
+
+/* --- Placeholder styling: makes unfilled [BRACKETED] content obvious in-page. --- */
+.had-placeholder {
+  color: rgba(255, 255, 255, 0.45);
+  font-style: italic;
+}
+.had-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(160deg, var(--had-slate), var(--had-navy));
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 34px;
+  border: 1px solid var(--had-line);
+}
+
+/* Authority statement / mission clause emphasis block. */
+.had-authority-note {
+  border-left: 3px solid var(--had-accent);
+  padding: 10px 0 10px 18px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* --- Mission visual placeholder panel (stands in for approved imagery). --- */
+.had-mission-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 420px;
+  padding: 36px;
+  background:
+    radial-gradient(700px 360px at 80% 10%, rgba(62, 124, 177, 0.18), transparent 60%),
+    linear-gradient(150deg, var(--had-slate) 0%, var(--had-navy) 60%, var(--had-charcoal) 100%);
+  border: 1px solid var(--had-line);
+  overflow: hidden;
+}
+.had-mission-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+}
+.had-mission-visual-eyebrow {
+  position: relative;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--had-accent-strong);
+}
+.had-mission-visual-line {
+  position: relative;
+  margin: 12px 0 0;
+  font-size: 24px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+.had-mission-visual-note {
+  position: relative;
+  margin-top: 18px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+/* --- Featured program band (AYDLL / IDL). --- */
+.had-featured-program {
+  background:
+    radial-gradient(900px 460px at 15% 20%, rgba(62, 124, 177, 0.14), transparent 60%),
+    linear-gradient(120deg, var(--had-charcoal) 0%, var(--had-navy-2) 100%);
+  border-top: 1px solid var(--had-line);
+  border-bottom: 1px solid var(--had-line);
+}
+.had-featured-canonical {
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86);
+  border-left: 3px solid var(--had-accent);
+  padding-left: 20px;
+  margin: 8px 0 22px;
+}
+
+/* --- Operating philosophy principle cards. --- */
+.had-principle-card {
+  position: relative;
+  height: 100%;
+  padding: 32px 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--had-line);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.had-principle-card:hover {
+  border-color: rgba(62, 124, 177, 0.6);
+  transform: translateY(-4px);
+}
+.had-principle-index {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  color: var(--had-accent-strong);
+  margin-bottom: 14px;
+}
+.had-principle-title {
+  color: #fff;
+  font-size: 23px;
+  margin: 0 0 10px;
+}
+.had-principle-text {
+  color: rgba(255, 255, 255, 0.68);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- Leadership placeholder cards. --- */
+.had-leader-card {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--had-line);
+  transition: border-color 0.25s ease;
+}
+.had-leader-card:hover { border-color: rgba(62, 124, 177, 0.55); }
+.had-leader-photo {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--had-slate), var(--had-navy));
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 40px;
+  border-bottom: 1px solid var(--had-line);
+}
+.had-leader-body { padding: 24px 26px; }
+.had-leader-name { color: #fff; font-size: 22px; margin: 0 0 4px; }
+.had-leader-title { color: var(--had-accent-strong); font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 12px; }
+.had-leader-bio { color: rgba(255, 255, 255, 0.6); margin: 0; line-height: 1.6; font-size: 15px; }
+.had-leader-group-title {
+  color: #fff;
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  padding-bottom: 14px;
+  margin-bottom: 34px;
+  border-bottom: 1px solid var(--had-line);
+}
+
+/* --- Program portfolio list rows. --- */
+.had-program-row {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--had-line);
+  padding: 34px 34px;
+  margin-bottom: 26px;
+  transition: border-color 0.25s ease;
+}
+.had-program-row:hover { border-color: rgba(62, 124, 177, 0.5); }
+.had-program-name { color: #fff; font-size: 27px; margin: 0; }
+.had-program-cat { color: var(--had-accent-strong); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; }
+.had-program-stage {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--had-line);
+  padding: 5px 14px;
+  border-radius: 2px;
+}
+.had-program-field-label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 4px;
+}
+.had-program-field-value { color: rgba(255, 255, 255, 0.78); line-height: 1.6; }
+
+/* Contact inquiry pathway cards. */
+.had-inquiry-card {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--had-line);
+  padding: 30px 28px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.had-inquiry-card:hover { border-color: rgba(62, 124, 177, 0.55); transform: translateY(-4px); }
+.had-inquiry-icon { color: var(--had-accent-strong); font-size: 26px; margin-bottom: 16px; }
+.had-inquiry-title { color: #fff; font-size: 20px; margin: 0 0 8px; }
+.had-inquiry-desc { color: rgba(255, 255, 255, 0.62); font-size: 15px; line-height: 1.55; margin: 0 0 14px; }
+.had-inquiry-email { color: var(--had-accent-strong); font-weight: 600; letter-spacing: 0.02em; word-break: break-word; }
+
+/* Closing contact CTA band. */
+.had-contact-cta {
+  background:
+    radial-gradient(800px 400px at 85% 0%, rgba(62, 124, 177, 0.16), transparent 60%),
+    linear-gradient(120deg, var(--had-navy) 0%, var(--had-charcoal) 100%);
+  border-top: 1px solid var(--had-line);
+}
+.had-contact-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.had-contact-cta-title {
+  color: #fff;
+  font-size: 40px;
+  margin: 10px 0 0;
+  max-width: 640px;
+  line-height: 1.2;
+}
+@media (max-width: 767px) {
+  .had-contact-cta-title { font-size: 30px; }
+}
+
+/* Program detail: canonical description callout. */
+.had-canonical-callout {
+  background: rgba(62, 124, 177, 0.08);
+  border: 1px solid rgba(62, 124, 177, 0.35);
+  border-left: 3px solid var(--had-accent);
+  padding: 24px 26px;
+  margin: 26px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+
+
+
+/* =====================================================================
+   Global dark theme base + remaining HAD component styles.
+   ===================================================================== */
+
+body {
+  background-color: var(--had-navy);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* The whole HAD site is dark; make reused section titles read light. */
+.te-section-title .title,
+.te-about-info-card .title { color: #ffffff; }
+.te-section-desc,
+.te-section-desc p { color: rgba(255, 255, 255, 0.68); }
+
+/* Neutralize any template light/image backgrounds on sections we reuse so
+   they inherit the navy body unless we set an explicit dark class. */
+.feature-area.style-1,
+.about-us-area.style-1 { background: transparent; }
+
+/* Shared section intro block. */
+.had-context-section {
+  background:
+    radial-gradient(900px 500px at 82% 0%, rgba(62, 124, 177, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--had-navy) 0%, var(--had-navy-2) 100%);
+}
+.had-section-heading {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.18;
+  margin: 6px 0 20px;
+  max-width: 820px;
+}
+@media (max-width: 767px) { .had-section-heading { font-size: 29px; } }
+.had-context-lead {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 820px;
+}
+.had-inline-link { color: var(--had-accent-strong); }
+.had-inline-link:hover { text-decoration: underline; }
+
+/* --- Header top (HAI linkage), kept quiet. --- */
+.had-header-top {
+  background: var(--had-charcoal);
+  border-bottom: 1px solid var(--had-line);
+  padding: 9px 0;
+}
+.had-header-top .te-header-top-wrapper {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.had-header-top-note {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.had-header-top-link {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600;
+}
+.had-header-top-link:hover { color: var(--had-accent-strong); }
+@media (max-width: 575px) { .had-header-top-note { display: none; } }
+
+/* --- Wordmark logo. --- */
+.had-wordmark { display: inline-flex; align-items: center; gap: 12px; }
+.had-wordmark-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px;
+  border: 1.5px solid var(--had-accent);
+  color: #fff; font-weight: 700; font-size: 16px; letter-spacing: 0.04em;
+  background: rgba(62, 124, 177, 0.14);
+}
+.had-wordmark-text {
+  display: flex; flex-direction: column; line-height: 1.02;
+  color: #fff; font-weight: 700; font-size: 19px; letter-spacing: 0.14em;
+}
+.had-wordmark-text-2 { color: var(--had-accent-strong); font-weight: 600; }
+.te-menu-sidebar-logo .had-wordmark-text { color: #fff; }
+
+/* Header CTA sizing. */
+.had-header-cta { padding: 12px 22px; }
+
+/* --- Breadcrumb: navy gradient instead of military imagery. --- */
+.had-breadcrumb {
+  background:
+    radial-gradient(1000px 500px at 80% 10%, rgba(62, 124, 177, 0.20), transparent 60%),
+    linear-gradient(120deg, var(--had-navy) 0%, var(--had-navy-2) 55%, var(--had-charcoal) 100%);
+  border-bottom: 1px solid var(--had-line);
+}
+.had-breadcrumb .te-page-title { color: #fff; }
+.had-breadcrumb .breadcrumb-list a { color: rgba(255,255,255,0.6); }
+.had-breadcrumb .breadcrumb-list .active { color: var(--had-accent-strong); }
+
+/* --- Capability cards (custom, dark, FA icons). --- */
+.had-capability-card {
+  height: 100%;
+  padding: 34px 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--had-line);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.had-capability-card:hover { border-color: rgba(62,124,177,0.6); transform: translateY(-4px); }
+.had-capability-icon {
+  width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--had-line); color: var(--had-accent-strong); font-size: 24px;
+  margin-bottom: 20px; background: rgba(62,124,177,0.10);
+}
+.had-capability-title { color: #fff; font-size: 22px; margin: 0 0 10px; }
+.had-capability-text { color: rgba(255,255,255,0.66); margin: 0; line-height: 1.6; }
+
+/* Featured tag on program rows. */
+.had-featured-tag {
+  display: inline-block; margin-left: 12px; vertical-align: middle;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;
+  color: var(--had-accent-strong); border: 1px solid rgba(62,124,177,0.5);
+  padding: 3px 10px; border-radius: 2px;
+}
+
+/* Program detail aside. */
+.had-program-aside {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--had-line); padding: 28px 26px;
+}
+
+/* Contact general list. */
+.had-contact-list { list-style: none; margin: 0; padding: 0; }
+.had-contact-list li { padding: 14px 0; border-bottom: 1px solid var(--had-line); }
+.had-contact-list li a { color: rgba(255,255,255,0.82); }
+.had-contact-list li a:hover { color: var(--had-accent-strong); }
+.had-contact-list-label {
+  display: block; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.42); margin-bottom: 4px;
+}
+
+/* Inquiry-type select styled to match the template's dark inputs. */
+.had-select {
+  width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.04);
+  border: 1px solid var(--had-line); color: rgba(255,255,255,0.8); appearance: none;
+}
+.had-select:focus { outline: none; border-color: var(--had-accent); }
+.had-select option { background: var(--had-navy-2); color: #fff; }
+
+/* Preloader background to navy so first paint isn't a bright flash. */
+.preeloader, .preloader { background-color: var(--had-navy) !important; }
+
+/* =====================================================================
+   Depth pass — sensing motif, world-map layers, technical detailing.
+   On-theme (sensing / awareness / maritime). No personnel or weapons.
+   ===================================================================== */
+
+/* Sensing motif base — color + fade set here; placement by parent. */
+.had-motif { color: var(--had-accent); display: block; }
+.had-motif-ring {
+  transform-origin: 300px 300px;
+  animation: hadRingPulse 6s ease-in-out infinite;
+}
+@keyframes hadRingPulse {
+  0%, 100% { opacity: 0.16; }
+  50%      { opacity: 0.5; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .had-motif-ring { animation: none; }
+}
+
+/* --- Hero (custom structure; layers live on the container, not the slides) --- */
+.had-hero { position: relative; overflow: hidden; background: var(--had-navy); }
+.had-hero-bg,
+.had-hero-map,
+.had-hero-overlay { position: absolute; inset: 0; pointer-events: none; }
+.had-hero-bg { z-index: 0; }
+.had-hero-map {
+  z-index: 1;
+  background: url("/images/section-bg/world-map.png") center right / cover no-repeat;
+  opacity: 0.16;
+  mix-blend-mode: screen;
+}
+.had-hero-motif-wrap {
+  position: absolute; z-index: 1;
+  right: -140px; top: 50%; transform: translateY(-50%);
+  width: 780px; max-width: 92%; height: 780px;
+  opacity: 0.55; pointer-events: none;
+}
+.had-hero-motif-wrap .had-motif { width: 100%; height: 100%; }
+/* Left-dark overlay keeps the headline legible while motif/map show at right. */
+.had-hero-overlay {
+  z-index: 2;
+  background: linear-gradient(90deg,
+    rgba(14,28,51,0.92) 0%, rgba(14,28,51,0.74) 44%,
+    rgba(14,28,51,0.30) 74%, rgba(14,28,51,0.10) 100%);
+}
+.had-hero .te-slider-wrapper,
+.had-hero .te-slider-label { position: relative; z-index: 3; }
+/* Restore brand accent on the highlighted headline words. */
+.had-hero .te-slider-title span { color: var(--had-accent-strong); }
+.had-hero .te-slider-title { color: #fff; }
+.had-hero-slide { min-height: 600px; display: flex !important; align-items: center; padding: 60px 0; }
+.had-hero-content { max-width: 760px; }
+@media (max-width: 991px) {
+  .had-hero-slide { min-height: 460px; padding-top: 40px; }
+  .had-hero-motif-wrap { opacity: 0.30; right: -240px; }
+  .had-hero-overlay {
+    background: linear-gradient(180deg, rgba(14,28,51,0.80) 0%, rgba(14,28,51,0.92) 100%);
+  }
+}
+
+/* --- Motif inside placeholder panels --- */
+.had-visual-mapped { position: relative; }
+.had-visual-mapped::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 0;
+  background: url("/images/section-bg/world-map.png") center / cover no-repeat;
+  opacity: 0.10;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.had-motif-panel {
+  position: absolute; z-index: 1;
+  right: -90px; bottom: -90px;
+  width: 380px; height: 380px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.had-motif-panel-lg { width: 460px; height: 460px; right: -110px; bottom: -110px; }
+.had-mission-visual > *:not(.had-motif-panel):not(.had-visual-mapped) { position: relative; z-index: 2; }
+.had-mission-visual .had-mission-visual-eyebrow,
+.had-mission-visual .had-mission-visual-line,
+.had-mission-visual .had-mission-visual-note { z-index: 2; }
+
+/* Corner ticks — small technical framing on key panels. */
+.had-mission-visual {
+  box-shadow:
+    inset 2px 2px 0 -1px rgba(90,151,206,0.5),
+    inset -2px -2px 0 -1px rgba(90,151,206,0.5);
+}
+
+/* --- Section-level world-map watermark for depth --- */
+.had-featured-program, .had-context-section, .portfolio-slider-area-page { position: relative; }
+.had-featured-program::after,
+.had-context-section.had-mapped::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 0;
+  background: url("/images/section-bg/world-map.png") center / cover no-repeat;
+  opacity: 0.06;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.had-featured-program .container, .had-context-section .container { position: relative; z-index: 1; }
+
+/* Hairline accent above dark section intros for a technical, framed feel. */
+.had-context-section .short-title-wrapper { position: relative; padding-top: 18px; }
+.had-context-section .short-title-wrapper::before {
+  content: ""; position: absolute; top: 0; left: 0;
+  width: 48px; height: 2px; background: var(--had-accent);
+}

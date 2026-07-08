@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "icon": "icon-1.png",
+        "title": "Mission Before Technology",
+        "text": "Start with the operational problem. Technology exists to support the mission, not the other way around."
+    },
+    {
+        "id": 2,
+        "icon": "icon-2.png",
+        "title": "Persistent Capability",
+        "text": "Design programs around sustained operational value rather than episodic demonstrations."
+    },
+    {
+        "id": 3,
+        "icon": "icon-3.png",
+        "title": "Clear Authority",
+        "text": "Preserve government mission authority and clearly define contractor operational responsibilities."
+    },
+    {
+        "id": 4,
+        "icon": "icon-1.png",
+        "title": "Modular Development",
+        "text": "Build programs that can evolve as mission requirements, sensors, autonomous systems, and operating environments change."
+    },
+    {
+        "id": 5,
+        "icon": "icon-2.png",
+        "title": "Operational Sustainment",
+        "text": "Treat maintenance, logistics, readiness, and lifecycle support as part of the program from the beginning."
+    },
+    {
+        "id": 6,
+        "icon": "icon-3.png",
+        "title": "Evidence Before Scale",
+        "text": "Use bounded pilots, measurable validation criteria, and decision gates before expanding programs."
+    }
+]

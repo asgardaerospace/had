@@ -1,0 +1,41 @@
+[
+    {
+        "id": "aydll-idl",
+        "name": "AYDLL / IDL",
+        "category": "Persistent Maritime Awareness Infrastructure",
+        "mission": "Persistent maritime awareness infrastructure designed to support maritime domain awareness, autonomous systems operations, modular mission capabilities, and government reach-back command.",
+        "problem": "Continuous, low-intensity sensing and monitoring places a sustained burden on high-value manned assets that are needed for higher-priority tasking.",
+        "approach": "Provide persistent infrastructure that hosts sensing, autonomous systems support, and modular mission capability, reducing the routine monitoring burden on manned platforms while government personnel retain command, mission, and authority.",
+        "stage": "Program development",
+        "featured": true,
+        "hasDedicatedSite": true,
+        "externalKey": "aydllIdl",
+        "thumb": "program-aydll-idl.jpg"
+    },
+    {
+        "id": "program-placeholder-2",
+        "name": "[ADDITIONAL PROGRAM — NAME PENDING]",
+        "category": "[CAPABILITY AREA]",
+        "mission": "[Short mission statement to be provided once this program is approved for public presentation.]",
+        "problem": "[Operational problem the program is built to address.]",
+        "approach": "[Program approach — to be provided.]",
+        "stage": "[STAGE]",
+        "featured": false,
+        "hasDedicatedSite": false,
+        "externalKey": null,
+        "thumb": "program-placeholder.jpg"
+    },
+    {
+        "id": "program-placeholder-3",
+        "name": "[ADDITIONAL PROGRAM — NAME PENDING]",
+        "category": "[CAPABILITY AREA]",
+        "mission": "[Short mission statement to be provided once this program is approved for public presentation.]",
+        "problem": "[Operational problem the program is built to address.]",
+        "approach": "[Program approach — to be provided.]",
+        "stage": "[STAGE]",
+        "featured": false,
+        "hasDedicatedSite": false,
+        "externalKey": null,
+        "thumb": "program-placeholder.jpg"
+    }
+]

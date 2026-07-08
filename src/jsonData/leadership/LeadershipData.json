@@ -1,0 +1,30 @@
+[
+    {
+        "group": "Executive Leadership",
+        "members": [
+            { "id": "exec-1", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO — to be provided]", "photo": null },
+            { "id": "exec-2", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO — to be provided]", "photo": null }
+        ]
+    },
+    {
+        "group": "Program Leadership",
+        "members": [
+            { "id": "prog-1", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO — to be provided]", "photo": null },
+            { "id": "prog-2", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO — to be provided]", "photo": null }
+        ]
+    },
+    {
+        "group": "Technical Leadership",
+        "members": [
+            { "id": "tech-1", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO — to be provided]", "photo": null },
+            { "id": "tech-2", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO — to be provided]", "photo": null }
+        ]
+    },
+    {
+        "group": "Strategic Advisors",
+        "members": [
+            { "id": "adv-1", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO — to be provided]", "photo": null },
+            { "id": "adv-2", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO — to be provided]", "photo": null }
+        ]
+    }
+]
