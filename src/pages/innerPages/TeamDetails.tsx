@@ -8,8 +8,8 @@ type Member = { id: string; name: string; title: string; bio: string; photo: str
 type Group = { group: string; members: Member[] };
 
 /**
- * Leadership detail placeholder. Renders only approved (currently placeholder)
- * fields: no invented biography, service history, clearances, or affiliations.
+ * Leadership detail page. Renders approved fields for the selected leader; no
+ * biography, service history, clearances, or affiliations are invented here.
  */
 const LeadershipDetails = () => {
     const { id } = useParams();
@@ -32,16 +32,19 @@ const LeadershipDetails = () => {
                 <div className="container">
                     <div className="row gy-4">
                         <div className="col-lg-4">
-                            <div className="had-leader-photo" style={{ aspectRatio: "1 / 1" }}>
-                                <i className="fa-solid fa-user" />
-                            </div>
+                            <div
+                                className="had-leader-photo"
+                                role="img"
+                                aria-label={member ? member.name : "Portrait placeholder"}
+                                style={{ backgroundImage: `url(${member?.photo || "/images/had/leader-placeholder.jpg"})` }}
+                            />
                         </div>
                         <div className="col-lg-8">
-                            <h2 className="had-section-heading had-placeholder">
+                            <h2 className={`had-section-heading ${member ? "" : "had-placeholder"}`}>
                                 {member ? member.name : "[NAME]"}
                             </h2>
                             <p className="had-leader-title">{member ? member.title : "[TITLE]"}</p>
-                            <p className="had-context-lead had-placeholder">
+                            <p className={`had-context-lead ${member ? "" : "had-placeholder"}`}>
                                 {member ? member.bio : "[SHORT BIO: to be provided]"}
                             </p>
                             <div className="btn-wrapper mt-4">

@@ -229,11 +229,14 @@
 }
 .had-leader-card:hover { border-color: rgba(62, 124, 177, 0.55); }
 .had-leader-photo {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, var(--had-slate), var(--had-navy));
+  background-color: var(--had-slate);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: rgba(255, 255, 255, 0.32);
   font-size: 40px;
   border-bottom: 1px solid var(--had-line);
@@ -1345,4 +1348,20 @@ body {
 }
 @media (prefers-reduced-motion: reduce) {
   .had-page-hero-media img { animation: none; }
+}
+
+/* =====================================================================
+   Leadership cards on desktop: two wide cards per row (photo left / bio
+   right) so bios read wider instead of taller and each section stays even.
+   Below lg the card keeps its stacked (photo on top) layout.
+   ===================================================================== */
+@media (min-width: 992px) {
+  .had-leader-card { display: flex; }
+  .had-leader-card .had-leader-photo {
+    flex: 0 0 40%;
+    max-width: 250px;
+    align-self: flex-start;
+    border-bottom: none;
+  }
+  .had-leader-card .had-leader-body { flex: 1 1 auto; padding: 28px 30px; }
 }

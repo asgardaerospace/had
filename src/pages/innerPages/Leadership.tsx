@@ -13,7 +13,7 @@ const Leadership = () => {
                 objectPosition="center 40%"
                 eyebrow="Our People"
                 pageTitle="Leadership & Team"
-                subtitle="Executive, program, and technical leadership, supported by strategic advisors."
+                subtitle="Executive, program, technical, and strategic & corporate leadership."
                 breadcrumb="Leadership"
             />
             <section className="had-context-section te-pt-120 te-pb-60">
@@ -27,9 +27,8 @@ const Leadership = () => {
                                 The people responsible for Hemisphere Defense
                             </h2>
                             <p className="had-context-lead">
-                                Hemisphere Defense is led across executive, program, and technical leadership, supported
-                                by strategic advisors. Individual profiles are published as approved information is
-                                provided.
+                                Hemisphere Defense is led across four areas: executive, program, technical, and
+                                strategic &amp; corporate leadership.
                             </p>
                         </div>
                     </div>

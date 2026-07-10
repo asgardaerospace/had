@@ -1,4 +1,5 @@
 import LeadershipData from '../../jsonData/leadership/LeadershipData.json';
+import { isPlaceholder } from '../../config/site';
 
 type Member = {
     id: string;
@@ -14,9 +15,9 @@ type Group = {
 };
 
 /**
- * Leadership & Team grid, organized by group. All member content is a
- * clearly-marked placeholder: no invented names, titles, biographies,
- * prior service, clearances, awards, or affiliations.
+ * Leadership & Team grid, organized by category. Names, titles, and bios are
+ * approved content; a headshot is shown when one is provided, otherwise a
+ * neutral placeholder icon. No content is invented here.
  */
 const LeadershipGrid = () => {
     return (
@@ -27,22 +28,18 @@ const LeadershipGrid = () => {
                         <h2 className="had-leader-group-title">{group.group}</h2>
                         <div className="row gy-4 mb-5">
                             {group.members.map((m) => (
-                                <div className="col-lg-3 col-md-6" key={m.id}>
+                                <div className="col-lg-6 col-md-6" key={m.id}>
                                     <div className="had-leader-card">
-                                        {m.photo ? (
-                                            <div
-                                                className="had-leader-photo"
-                                                style={{ backgroundImage: `url(${m.photo})`, backgroundSize: "cover" }}
-                                            />
-                                        ) : (
-                                            <div className="had-leader-photo" aria-label="Photo to be provided">
-                                                <i className="fa-solid fa-user" />
-                                            </div>
-                                        )}
+                                        <div
+                                            className="had-leader-photo"
+                                            role="img"
+                                            aria-label={m.photo ? m.name : "Portrait placeholder"}
+                                            style={{ backgroundImage: `url(${m.photo || "/images/had/leader-placeholder.jpg"})` }}
+                                        />
                                         <div className="had-leader-body">
-                                            <h3 className="had-leader-name had-placeholder">{m.name}</h3>
+                                            <h3 className={`had-leader-name ${isPlaceholder(m.name) ? "had-placeholder" : ""}`}>{m.name}</h3>
                                             <p className="had-leader-title">{m.title}</p>
-                                            <p className="had-leader-bio had-placeholder">{m.bio}</p>
+                                            <p className={`had-leader-bio ${isPlaceholder(m.bio) ? "had-placeholder" : ""}`}>{m.bio}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -50,10 +47,6 @@ const LeadershipGrid = () => {
                         </div>
                     </div>
                 ))}
-
-                <p className="had-placeholder" style={{ marginTop: 8 }}>
-                    Leadership profiles will be published as approved information is provided.
-                </p>
             </div>
         </div>
     );

@@ -42,11 +42,11 @@ const HeroV1 = () => {
             <motion.div className="had-hero-media" style={{ y: mediaY }}>
                 <VideoBackdrop
                     eager
-                    src="/video/hero-revere.mp4"
-                    poster="/images/had/hero-poster.jpg"
+                    src="/video/hero-vigilance.mp4"
+                    poster="/images/had/hero-vigilance-poster.jpg"
                     objectPosition="center"
                     className="had-hero-video"
-                    playbackRate={0.5}
+                    playbackRate={0.4}
                     crossfadeLoop
                     crossfadeDuration={1}
                 />

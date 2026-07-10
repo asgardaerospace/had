@@ -9,7 +9,7 @@ const Programs = () => {
         <>
             <HeaderV1 />
             <BreadCrumb
-                image="program-network.jpg"
+                image="colonial-boston.jpg"
                 eyebrow="What We Build"
                 pageTitle="Programs"
                 subtitle="Mission-oriented programs, each scoped to a specific operational problem."

@@ -2,29 +2,29 @@
     {
         "group": "Executive Leadership",
         "members": [
-            { "id": "exec-1", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO: to be provided]", "photo": null },
-            { "id": "exec-2", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO: to be provided]", "photo": null }
+            { "id": "exec-1", "name": "John B. Sawyer", "title": "Founder, Principal & Chief Executive Officer", "bio": "John B. Sawyer is the Founder, Principal, and Chief Executive Officer of Hemisphere Aerospace Investments and provides executive leadership across HAI and Hemisphere Defense. With nearly four decades of commercial aviation trading experience, he leads the company's strategic direction, capital allocation, client relationships, and major business initiatives across aerospace and defense programs.", "photo": "/images/had/john-sawyer.jpg" },
+            { "id": "exec-2", "name": "Craig McPike", "title": "Chair, Board of Strategy & Oversight", "bio": "Craig McPike, Brigadier General, U.S. Air Force Retired, chairs the Board of Strategy and Oversight for Hemisphere Defense. He provides senior defense and national-security leadership, guides defense strategy and program oversight, and supports senior engagement with government, allied, and industry stakeholders.", "photo": "/images/had/craig-mcpike.jpg" }
         ]
     },
     {
         "group": "Program Leadership",
         "members": [
-            { "id": "prog-1", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO: to be provided]", "photo": null },
-            { "id": "prog-2", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO: to be provided]", "photo": null }
+            { "id": "prog-1", "name": "Kenneth Stetham", "title": "Strategy & Innovation", "bio": "Kenneth supports strategy and innovation for Hemisphere Defense, helping define priorities for the defense line of business and evaluate emerging capabilities, technologies, and program opportunities. He contributes to strategic planning, positioning, and long-term growth initiatives.", "photo": null },
+            { "id": "prog-2", "name": "Rob Riedell", "title": "Programs & Procurement", "bio": "Rob leads program execution and procurement across HAI and Hemisphere Defense. His work includes contracting, purchasing, supplier coordination, material and service sourcing, and tracking cost, schedule, and supplier performance to keep programs organized, supplied, and moving forward.", "photo": null }
         ]
     },
     {
         "group": "Technical Leadership",
         "members": [
-            { "id": "tech-1", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO: to be provided]", "photo": null },
-            { "id": "tech-2", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO: to be provided]", "photo": null }
+            { "id": "tech-1", "name": "Chip Fichtner", "title": "Head of Engineering", "bio": "Chip serves as Head of Engineering for Hemisphere Defense programs. He leads system and platform engineering, technical design, engineering standards, and technical execution across program development efforts, working with leadership to move concepts from design toward execution.", "photo": "/images/had/chip-fichtner.jpg" },
+            { "id": "tech-2", "name": "Dalton Sawyer", "title": "Technical Direction", "bio": "Dalton supports technical direction across HAI and Hemisphere Defense programs, helping align engineering interfaces, technical standards, and program requirements. His role focuses on ensuring technical work remains coordinated with program objectives and leadership priorities.", "photo": null }
         ]
     },
     {
-        "group": "Strategic Advisors",
+        "group": "Strategic & Corporate Leadership",
         "members": [
-            { "id": "adv-1", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO: to be provided]", "photo": null },
-            { "id": "adv-2", "name": "[NAME]", "title": "[TITLE]", "bio": "[SHORT BIO: to be provided]", "photo": null }
+            { "id": "strat-1", "name": "Thomas Leath", "title": "Partner & Chief Business Development Officer", "bio": "Thomas Leath serves as Partner and Chief Business Development Officer of Hemisphere Aerospace Investments. He leads business development, investor relationships, strategic partnerships, and growth initiatives, bringing a broad cross-industry network to support the company's long-term expansion and capitalization.", "photo": null },
+            { "id": "strat-2", "name": "Cody Blossman", "title": "Chief Operating Officer & Chief of Staff", "bio": "Cody serves as Chief Operating Officer and Chief of Staff, overseeing day-to-day operations and internal coordination across the organization. His role focuses on aligning teams, processes, staffing, and execution with leadership priorities across HAI and affiliated defense initiatives.", "photo": null }
         ]
     }
 ]

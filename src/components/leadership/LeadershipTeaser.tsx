@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import LeadershipData from '../../jsonData/leadership/LeadershipData.json';
 
-type Group = { group: string; members: unknown[] };
+type Group = { group: string; members: { name: string }[] };
 
 /**
- * Team preview for the home page. Shows the organizing structure of the team
- * over a mission-operations image and routes to the full Team page. Names and
- * bios remain placeholders on the Team page. None are invented here.
+ * Team preview for the home page. Shows the four leadership categories and their
+ * members over a mission-operations image and routes to the full Team page. No
+ * content is invented here.
  */
 const LeadershipTeaser = () => {
     const groups = LeadershipData as Group[];
@@ -50,8 +50,8 @@ const LeadershipTeaser = () => {
                                 <h2 className="title">The people who keep the watch</h2>
                                 <div className="te-section-desc">
                                     <p>
-                                        HAD is led across executive, program, and technical leadership, supported by
-                                        strategic advisors. Profiles are published as approved information is provided.
+                                        HAD is led across executive, program, technical, and strategic &amp; corporate
+                                        leadership.
                                     </p>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@ const LeadershipTeaser = () => {
                                     <div className="had-team-chip">
                                         <h3 className="had-team-chip-title">{g.group}</h3>
                                         <p className="had-team-chip-note">
-                                            {g.members.length} {g.members.length === 1 ? "role" : "roles"} (profiles pending)
+                                            {g.members.map((m) => m.name).join(" · ")}
                                         </p>
                                     </div>
                                 </div>
