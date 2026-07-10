@@ -10,10 +10,14 @@ const ContactCta = () => {
             <div className="container">
                 <div className="had-contact-cta-inner">
                     <div>
-                        <span className="short-title text-white">Contact</span>
+                        <span className="short-title text-white">Contact &amp; Partnership</span>
                         <h2 className="had-contact-cta-title">
-                            Direct your inquiry to the appropriate channel
+                            Early warning is still a national advantage. Build it with us.
                         </h2>
+                        <p className="had-contact-cta-sub">
+                            For program, partnership, and government-engagement inquiries, reach the appropriate
+                            Hemisphere Defense channel.
+                        </p>
                     </div>
                     <Link to="/contact" className="te-theme-btn">
                         Contact Hemisphere Defense

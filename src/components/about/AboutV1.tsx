@@ -20,7 +20,7 @@ const AboutV1 = ({ style = "", full = false }: AboutV1Props) => {
                             <div className="had-mission-visual had-mv-photo had-mv-mission">
                                 <span className="had-mission-visual-eyebrow">Hemisphere Defense</span>
                                 <p className="had-mission-visual-line">
-                                    Persistent awareness. Distributed infrastructure. Clear authority.
+                                    From the first watchmen to the modern warfighter — the mission endures.
                                 </p>
                             </div>
                         </div>

@@ -14,6 +14,7 @@ type Program = {
     hasDedicatedSite: boolean;
     externalKey: string | null;
     thumb: string;
+    platform?: string;
 };
 
 const externalUrlFor = (key: string | null): string | null => {

@@ -73,10 +73,12 @@ const FooterV1 = () => {
                                 <div className="te-footer-widget te_widget_nav_menu">
                                     <h3 className="te-footer-widget-title">Explore</h3>
                                     <ul className="no-icon">
-                                        <li><Link to="/about">About</Link></li>
+                                        <li><Link to="/about">Mission</Link></li>
+                                        <li><Link to="/#domains">Domains</Link></li>
                                         <li><Link to="/programs">Programs</Link></li>
+                                        <li><Link to="/program-details/aydll-idl">Paul Revere Program</Link></li>
                                         <li><Link to="/approach">Approach</Link></li>
-                                        <li><Link to="/leadership">Leadership</Link></li>
+                                        <li><Link to="/leadership">Team</Link></li>
                                         <li><Link to="/contact">Contact</Link></li>
                                     </ul>
                                 </div>
@@ -100,11 +102,11 @@ const FooterV1 = () => {
                                         <li>
                                             {aydllReady ? (
                                                 <a href={SITE.external.aydllIdl} {...EXTERNAL_LINK_PROPS}>
-                                                    AYDLL / IDL Program Site
+                                                    Paul Revere Program Site
                                                     <i className="fa fa-solid fa-arrow-up-right-from-square ms-2" />
                                                 </a>
                                             ) : (
-                                                <Link to="/program-details/aydll-idl">AYDLL / IDL Program</Link>
+                                                <Link to="/program-details/aydll-idl">Paul Revere Program</Link>
                                             )}
                                         </li>
                                     </ul>

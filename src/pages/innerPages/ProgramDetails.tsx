@@ -10,6 +10,7 @@ type Program = {
     id: string; name: string; category: string; mission: string;
     problem: string; approach: string; stage: string; featured: boolean;
     hasDedicatedSite: boolean; externalKey: string | null; thumb: string;
+    platform?: string;
 };
 
 const ProgramDetails = () => {
@@ -49,13 +50,18 @@ const ProgramDetails = () => {
 
                                 {isAydll ? (
                                     <>
+                                        <p className="had-context-lead" style={{ marginBottom: 16 }}>
+                                            The public-facing <strong>Paul Revere Program</strong> is built around the{" "}
+                                            <strong>AYDLL</strong> platform. It carries forward a simple American idea:
+                                            warning before arrival.
+                                        </p>
                                         <div className="had-canonical-callout">
                                             Persistent maritime awareness infrastructure designed to support maritime
                                             domain awareness, autonomous systems operations, modular mission
                                             capabilities, and government reach-back command.
                                         </div>
                                         <p className="had-context-lead">
-                                            AYDLL / IDL exists to reduce the burden of continuous, low-intensity sensing
+                                            The program exists to reduce the burden of continuous, low-intensity sensing
                                             and monitoring on high-value crewed assets. It is persistent infrastructure —
                                             not a ship, a weapons platform, or a replacement for crewed cutters,
                                             destroyers, or aircraft.
@@ -69,7 +75,7 @@ const ProgramDetails = () => {
                                         </div>
                                         <p className="had-context-lead" style={{ marginTop: 24 }}>
                                             This is a concise corporate-level introduction. Full program detail is
-                                            maintained on the dedicated AYDLL / IDL program website.
+                                            maintained on the dedicated Paul Revere Program website.
                                         </p>
                                     </>
                                 ) : (

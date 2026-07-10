@@ -1,11 +1,12 @@
 [
     {
         "id": "aydll-idl",
-        "name": "AYDLL / IDL",
+        "name": "Paul Revere Program",
+        "platform": "AYDLL",
         "category": "Persistent Maritime Awareness Infrastructure",
         "mission": "Persistent maritime awareness infrastructure designed to support maritime domain awareness, autonomous systems operations, modular mission capabilities, and government reach-back command.",
-        "problem": "Continuous, low-intensity sensing and monitoring places a sustained burden on high-value manned assets that are needed for higher-priority tasking.",
-        "approach": "Provide persistent infrastructure that hosts sensing, autonomous systems support, and modular mission capability, reducing the routine monitoring burden on manned platforms while government personnel retain command, mission, and authority.",
+        "problem": "Continuous, low-intensity sensing and monitoring places a sustained burden on high-value crewed assets that are needed for higher-priority tasking.",
+        "approach": "Provide persistent infrastructure that hosts sensing, autonomous systems support, and modular mission capability, reducing the routine monitoring burden on crewed platforms while government personnel retain command, mission, and authority.",
         "stage": "Program development",
         "featured": true,
         "hasDedicatedSite": true,

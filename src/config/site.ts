@@ -14,9 +14,11 @@ export const SITE = {
   name: "Hemisphere Defense",
   shortName: "HAD",
   // Restrained hero positioning statement (see alternates in project notes).
-  positioning: "Developing defense programs for persistent, distributed operations.",
+  positioning: "American vigilance, modernized.",
+  // Primary hero line — the site's operating thesis (Paul Revere metaphor).
+  headline: "The warfighter has changed. The mission remains.",
   description:
-    "Hemisphere Defense (HAD) is the defense-programs company within Hemisphere Aerospace Investments. HAD identifies operational gaps in national-security missions and develops structured, sustainable defense programs around them.",
+    "Hemisphere Defense builds mission-oriented programs for the next era of American vigilance — persistent awareness, distributed infrastructure, and operational readiness across land, air, and sea.",
 
   parent: {
     name: "Hemisphere Aerospace Investments",
@@ -25,12 +27,26 @@ export const SITE = {
     relationship: "Hemisphere Defense operates within the Hemisphere Aerospace Investments (HAI) structure.",
   },
 
+  /**
+   * Flagship program. "Paul Revere Program" is the public-facing program name;
+   * it is built around the AYDLL platform. CANONICAL description (verbatim) is
+   * reused wherever the program is summarized. Never describe the platform as a
+   * ship, warship, drone mothership, weapons platform, or combatant.
+   */
+  flagship: {
+    program: "Paul Revere Program",
+    platform: "AYDLL",
+    subtitle: "Persistent maritime awareness infrastructure for the modern watch.",
+    canonical:
+      "Persistent maritime awareness infrastructure designed to support maritime domain awareness, autonomous systems operations, modular mission capabilities, and government reach-back command.",
+  },
+
   /** External destinations. Program websites live off the HAD corporate site. */
   external: {
-    // Dedicated AYDLL / IDL program website — replace with the approved URL.
-    aydllIdl: "https://[AYDLL-IDL-PROGRAM-SITE]",
-    // HAI corporate website — replace with the approved URL.
-    hai: "https://[HAI-CORPORATE-SITE]",
+    // Dedicated AYDLL platform / Paul Revere Program website.
+    aydllIdl: "https://aydll.com",
+    // Hemisphere Aerospace Investments (HAI) corporate website.
+    hai: "https://hai-aero.com/",
   },
 
   /** Contact placeholders — replace with approved information before launch. */

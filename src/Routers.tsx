@@ -10,8 +10,9 @@ import Contact from './pages/innerPages/Contact';
 
 /**
  * Hemisphere Defense (HAD) corporate + program-portfolio routes.
- * Individual programs (e.g. AYDLL / IDL) have dedicated external websites;
- * this site introduces them and routes visitors outward.
+ * Individual programs (e.g. the Paul Revere Program, built around the AYDLL
+ * platform) have dedicated external websites; this site introduces them and
+ * routes visitors outward.
  */
 const Routers = () => {
     return (

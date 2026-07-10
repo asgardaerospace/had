@@ -1,27 +1,53 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import LeadershipData from '../../jsonData/leadership/LeadershipData.json';
 
 type Group = { group: string; members: unknown[] };
 
 /**
- * Compact leadership teaser for the home page. Shows the organizing structure
- * of the team and routes to the full Leadership page. Names/bios stay on the
- * Leadership page as placeholders — none are invented here.
+ * Team preview for the home page. Shows the organizing structure of the team
+ * over a mission-operations image and routes to the full Team page. Names and
+ * bios remain placeholders on the Team page — none are invented here.
  */
 const LeadershipTeaser = () => {
     const groups = LeadershipData as Group[];
 
     return (
-        <div className="about-us-area style-1 te-py-120">
+        <section className="about-us-area style-1 te-py-120 had-team" id="team">
             <div className="container">
-                <div className="row gy-4 align-items-center">
-                    <div className="col-lg-5">
+                <div className="row gy-5 align-items-center">
+                    <motion.div
+                        className="col-lg-6"
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <div className="had-team-media">
+                            <img
+                                src="/images/had/team-ops.jpg"
+                                alt="A small mission-operations team at consoles before a wall display tracking the maritime approaches."
+                                loading="lazy"
+                            />
+                            <span className="had-team-media-caption">
+                                Disciplined operations in support of government reach-back
+                            </span>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        className="col-lg-6"
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
                         <div className="te-section-title">
                             <div className="te-section-content">
                                 <div className="short-title-wrapper">
-                                    <span className="short-title">Leadership</span>
+                                    <span className="short-title">Team</span>
                                 </div>
-                                <h2 className="title">The team responsible for Hemisphere Defense</h2>
+                                <h2 className="title">The people who keep the watch</h2>
                                 <div className="te-section-desc">
                                     <p>
                                         HAD is led across executive, program, and technical leadership, supported by
@@ -30,30 +56,28 @@ const LeadershipTeaser = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="btn-wrapper">
-                            <Link to="/leadership" className="te-theme-btn">
-                                Meet the Leadership
-                                <i className="fa fa-solid fa-arrow-right" />
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 offset-lg-1">
                         <div className="row gy-3">
                             {groups.map((g) => (
                                 <div className="col-sm-6" key={g.group}>
-                                    <div className="had-principle-card" style={{ padding: "24px 24px" }}>
-                                        <h3 className="had-principle-title" style={{ fontSize: 20 }}>{g.group}</h3>
-                                        <p className="had-principle-text" style={{ fontSize: 14 }}>
+                                    <div className="had-team-chip">
+                                        <h3 className="had-team-chip-title">{g.group}</h3>
+                                        <p className="had-team-chip-note">
                                             {g.members.length} {g.members.length === 1 ? "role" : "roles"} — profiles pending
                                         </p>
                                     </div>
                                 </div>
                             ))}
                         </div>
-                    </div>
+                        <div className="btn-wrapper mt-4">
+                            <Link to="/leadership" className="te-theme-btn">
+                                Meet the Team
+                                <i className="fa fa-solid fa-arrow-right" />
+                            </Link>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

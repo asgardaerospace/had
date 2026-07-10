@@ -399,8 +399,13 @@ body {
 .had-header-top-link:hover { color: var(--had-accent-strong); }
 @media (max-width: 575px) { .had-header-top-note { display: none; } }
 
-/* --- Wordmark logo. --- */
-.had-wordmark { display: inline-flex; align-items: center; gap: 12px; }
+/* --- Wordmark logo (shield emblem + name lockup). --- */
+.had-wordmark { display: inline-flex; align-items: center; gap: 13px; }
+.had-wordmark-emblem {
+  height: 50px; width: auto; display: block; flex: 0 0 auto;
+  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.5));
+}
+@media (max-width: 575px) { .had-wordmark-emblem { height: 42px; } }
 .had-wordmark-mark {
   display: inline-flex; align-items: center; justify-content: center;
   width: 44px; height: 44px;
@@ -853,4 +858,337 @@ body {
   .had-hero-content > * { animation: none; }
   .had-hero-photo-wrap,
   .had-statement-photo { transform: none !important; }
+}
+
+/* =====================================================================
+   PAUL REVERE NARRATIVE PASS
+   Cinematic video hero, mission thesis, Land/Air/Sea domains, the flagship
+   Paul Revere Program, and the amber "lantern light" accent layered onto the
+   existing navy + steel-azure system. Appended last so these win.
+   Palette: midnight navy / charcoal / deep black + warm amber lantern light,
+   with restrained red-white-blue accents. No sci-fi HUD clutter.
+   ===================================================================== */
+
+:root {
+  --had-amber: #E9A23B;          /* lantern flame */
+  --had-amber-strong: #F4B860;   /* highlit amber for text/eyebrows */
+  --had-amber-soft: rgba(233, 162, 59, 0.14);
+  --had-amber-glow: rgba(233, 162, 59, 0.38);
+}
+
+/* Restrained red/white/blue tick — the only overt patriotic mark, kept tiny. */
+.had-tricolor {
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #B22234 0 33.3%, #F4F6FA 33.3% 66.6%, #3C5A99 66.6% 100%);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.12);
+  flex: 0 0 auto;
+}
+
+/* --- Reusable video backdrop (hero, statement, program tagline). --- */
+.had-video-backdrop { position: absolute; inset: 0; overflow: hidden; }
+.had-video-poster,
+.had-video-el {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.had-video-poster { z-index: 0; }
+.had-video-el { z-index: 1; }
+
+/* =====================================================================
+   Cinematic hero (.had-hero-cinematic) — replaces the slider hero.
+   ===================================================================== */
+.had-hero-cinematic { min-height: min(100vh, 920px); display: flex; align-items: center; }
+/* framer-motion drives the line-by-line reveal; kill the old CSS rise. */
+.had-hero-cinematic .had-hero-content > * { animation: none; }
+
+.had-hero-media { position: absolute; inset: -120px 0; z-index: 1; pointer-events: none; will-change: transform; }
+.had-hero-video .had-video-el,
+.had-hero-video .had-video-poster { filter: contrast(1.06) saturate(1.12) brightness(1.02); }
+/* Very slow, subtle scale drift for depth — complements the 0.5x playback so
+   the overall hero motion stays calm and cinematic. */
+.had-hero-video .had-video-el { animation: hadHeroDrift 72s ease-in-out infinite alternate; }
+@keyframes hadHeroDrift {
+  from { transform: scale(1.04); }
+  to   { transform: scale(1.08) translate3d(-0.8%, -0.5%, 0); }
+}
+
+.had-hero-scrim {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(11, 21, 34, 0.95) 0%, rgba(11, 21, 34, 0.82) 34%, rgba(11, 21, 34, 0.5) 63%, rgba(11, 21, 34, 0.26) 100%),
+    linear-gradient(0deg, rgba(11, 21, 34, 0.92) 0%, rgba(11, 21, 34, 0) 36%);
+}
+.had-hero-cinematic .container { position: relative; z-index: 3; }
+.had-hero-content { max-width: 840px; padding: 104px 0; }
+.had-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 13px;
+  font-size: 14px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88); font-weight: 600;
+}
+.had-hero-title { margin: 24px 0 26px; font-weight: 700; line-height: 1.04; }
+.had-hero-line {
+  display: block; color: #fff;
+  font-size: clamp(34px, 5.6vw, 74px); letter-spacing: -0.015em;
+}
+.had-hero-line-accent { color: var(--had-amber-strong); text-shadow: 0 0 44px rgba(233, 162, 59, 0.28); }
+.had-hero-desc {
+  max-width: 640px; margin: 0;
+  font-size: clamp(16px, 1.5vw, 20px); line-height: 1.72; color: rgba(255, 255, 255, 0.84);
+}
+.had-hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; }
+.had-hero-actions .te-theme-btn.te-theme-btn-outline { margin-left: 0; }
+.had-hero-scrollcue {
+  position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 3;
+  display: inline-flex; flex-direction: column; align-items: center; gap: 10px;
+  font-size: 10.5px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+.had-hero-scrollcue-dot {
+  width: 1px; height: 44px;
+  background: linear-gradient(var(--had-amber-strong), transparent);
+  animation: hadCue 2.4s ease-in-out infinite;
+}
+@keyframes hadCue { 0%, 100% { opacity: 0.35; transform: scaleY(0.7); transform-origin: top; } 50% { opacity: 1; transform: scaleY(1); } }
+@media (max-width: 991px) { .had-hero-scrollcue { display: none; } }
+
+/* =====================================================================
+   Mission band — "The warning came before the fight." (Old North lanterns)
+   ===================================================================== */
+.had-mission-band {
+  position: relative; overflow: hidden; min-height: 640px;
+  display: flex; align-items: center;
+  border-top: 1px solid var(--had-line); border-bottom: 1px solid var(--had-line);
+  background: var(--had-black);
+}
+.had-mission-band-photo {
+  position: absolute; inset: -10% 0; z-index: 0;
+  background: url("/images/had/mission-lanterns.jpg") center 32% / cover no-repeat;
+  filter: contrast(1.08) saturate(1.06); will-change: transform;
+}
+.had-mission-band-scrim {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(9, 15, 24, 0.95) 0%, rgba(9, 15, 24, 0.74) 46%, rgba(9, 15, 24, 0.32) 100%),
+    linear-gradient(0deg, rgba(9, 15, 24, 0.86) 0%, rgba(9, 15, 24, 0) 56%);
+}
+.had-mission-band .container { position: relative; z-index: 2; }
+.had-mission-band-inner { max-width: 770px; padding: 96px 0; }
+.had-mission-band-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--had-amber-strong); margin-bottom: 22px;
+}
+.had-mission-band-title {
+  color: #fff; font-weight: 700; margin: 0 0 26px;
+  font-size: clamp(32px, 4.8vw, 62px); line-height: 1.08;
+}
+.had-mission-band-title span { color: var(--had-amber-strong); font-style: italic; }
+.had-mission-band-lead {
+  color: rgba(255, 255, 255, 0.82); max-width: 680px; margin: 0;
+  font-size: clamp(16px, 1.4vw, 19px); line-height: 1.78;
+}
+.had-mission-band-coda {
+  margin: 24px 0 0; color: #fff; font-weight: 600;
+  font-size: clamp(17px, 1.6vw, 22px); letter-spacing: 0.01em;
+  border-left: 3px solid var(--had-amber); padding-left: 18px;
+}
+
+/* =====================================================================
+   Domains — Land / Air / Sea
+   ===================================================================== */
+.had-domains {
+  position: relative;
+  background: linear-gradient(180deg, var(--had-navy) 0%, var(--had-navy-2) 100%);
+}
+.had-domains-lead {
+  color: rgba(255, 255, 255, 0.7); max-width: 700px; margin: 8px auto 0;
+  font-size: 17px; line-height: 1.7;
+}
+.had-domain-card {
+  position: relative; height: 100%; overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.012));
+  border: 1px solid var(--had-line);
+  box-shadow: var(--had-elev), var(--had-rim);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+}
+.had-domain-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(233, 162, 59, 0.5);
+  box-shadow: var(--had-elev), 0 0 46px -12px var(--had-amber-glow), 0 0 0 1px rgba(233, 162, 59, 0.2), var(--had-rim);
+}
+.had-domain-media { position: relative; aspect-ratio: 3 / 2; overflow: hidden; }
+.had-domain-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: contrast(1.08) saturate(1.12);
+  transition: transform 0.7s ease, filter 0.4s ease;
+}
+.had-domain-card:hover .had-domain-media img { transform: scale(1.06); filter: contrast(1.12) saturate(1.2); }
+.had-domain-media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(11, 21, 34, 0) 40%, rgba(11, 21, 34, 0.92) 100%);
+}
+.had-domain-index {
+  position: absolute; top: 14px; right: 16px; z-index: 2;
+  font-size: 13px; letter-spacing: 0.18em; color: rgba(255, 255, 255, 0.62);
+}
+.had-domain-label { position: absolute; left: 20px; bottom: 15px; z-index: 2; display: flex; align-items: center; gap: 13px; color: #fff; }
+.had-domain-label i {
+  width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--had-amber-strong);
+  border: 1px solid rgba(233, 162, 59, 0.42); background: rgba(14, 28, 51, 0.6); backdrop-filter: blur(3px);
+}
+.had-domain-label span { font-size: 26px; font-weight: 700; letter-spacing: 0.02em; }
+.had-domain-body { padding: 22px 26px 28px; }
+.had-domain-theme {
+  display: block; font-size: 12px; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--had-amber-strong); margin-bottom: 12px;
+}
+.had-domain-text { color: rgba(255, 255, 255, 0.72); line-height: 1.6; margin: 0; }
+
+/* =====================================================================
+   Flagship — Paul Revere Program (.had-prp)
+   ===================================================================== */
+.had-prp {
+  position: relative; padding-top: 120px;
+  background:
+    radial-gradient(900px 500px at 12% 16%, rgba(233, 162, 59, 0.1), transparent 60%),
+    linear-gradient(120deg, var(--had-charcoal) 0%, var(--had-navy-2) 100%);
+  border-top: 1px solid var(--had-line);
+}
+.had-prp::before {
+  content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: min(1140px, 88%); height: 1px; z-index: 3;
+  background: linear-gradient(90deg, transparent, rgba(233, 162, 59, 0.6), rgba(90, 151, 206, 0.4), transparent);
+}
+.had-prp-media { position: relative; }
+.had-prp-media-main { width: 100%; display: block; border: 1px solid var(--had-line); box-shadow: var(--had-elev); }
+.had-prp-media-inset {
+  position: absolute; right: -18px; bottom: -30px; width: 46%;
+  border: 1px solid rgba(233, 162, 59, 0.4); box-shadow: var(--had-elev);
+}
+.had-prp-platform-badge {
+  position: absolute; left: 18px; top: 18px; z-index: 2;
+  background: rgba(10, 16, 26, 0.74); backdrop-filter: blur(4px);
+  border: 1px solid var(--had-line); color: rgba(255, 255, 255, 0.85);
+  font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; padding: 8px 14px;
+}
+.had-prp-platform-badge strong { color: var(--had-amber-strong); font-weight: 700; }
+.had-prp-eyebrow {
+  display: inline-block; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--had-amber-strong); margin-bottom: 14px;
+}
+.had-prp-title { color: #fff; font-weight: 700; margin: 0 0 12px; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; }
+.had-prp-subtitle { color: rgba(255, 255, 255, 0.92); font-weight: 600; margin: 0 0 18px; font-size: clamp(18px, 1.7vw, 22px); }
+.had-prp-body { color: rgba(255, 255, 255, 0.75); line-height: 1.72; font-size: 17px; margin: 0; }
+.had-prp-caps {
+  list-style: none; margin: 24px 0 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 11px 24px;
+}
+.had-prp-caps li { display: flex; align-items: flex-start; gap: 10px; color: rgba(255, 255, 255, 0.84); font-size: 15px; line-height: 1.45; }
+.had-prp-caps li i { color: var(--had-amber-strong); margin-top: 4px; font-size: 12px; flex: 0 0 auto; }
+.had-prp .had-authority-note { margin-top: 26px; }
+.had-prp .te-theme-btn.te-theme-btn-outline { margin-left: 0; }
+
+/* Lantern → network tagline band */
+.had-prp-tagline {
+  position: relative; overflow: hidden; margin-top: 120px; min-height: 440px;
+  display: flex; align-items: center;
+  border-top: 1px solid var(--had-line); border-bottom: 1px solid var(--had-line);
+  background: var(--had-black);
+}
+.had-prp-tagline-media .had-video-poster,
+.had-prp-tagline-media .had-video-el { filter: contrast(1.05) saturate(1.12); }
+.had-prp-tagline-scrim {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(8, 12, 20, 0.95) 0%, rgba(8, 12, 20, 0.8) 42%, rgba(8, 12, 20, 0.45) 72%, rgba(8, 12, 20, 0.2) 100%),
+    linear-gradient(0deg, rgba(8, 12, 20, 0.88) 0%, rgba(8, 12, 20, 0) 62%);
+}
+.had-prp-tagline .container { position: relative; z-index: 2; }
+.had-prp-tagline-inner { max-width: 780px; padding: 74px 0; }
+.had-prp-tagline-title { color: #fff; font-weight: 700; margin: 0; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.16; }
+.had-prp-tagline-title span { color: var(--had-amber-strong); }
+.had-prp-tagline-sub { margin: 16px 0 0; color: rgba(255, 255, 255, 0.78); font-size: clamp(15px, 1.4vw, 18px); }
+
+/* =====================================================================
+   Statement band — now video-backed (dawn Atlantic). Reuses existing
+   .had-statement / -scrim / -inner / -eyebrow / -title; add media + sub.
+   ===================================================================== */
+.had-statement-media { position: absolute; inset: -8% 0; z-index: 0; will-change: transform; }
+.had-statement-media .had-video-poster,
+.had-statement-media .had-video-el { filter: contrast(1.08) saturate(1.12); }
+.had-statement-sub { margin: 18px 0 0; color: rgba(255, 255, 255, 0.8); font-size: clamp(15px, 1.4vw, 18px); max-width: 580px; }
+
+/* =====================================================================
+   Team preview
+   ===================================================================== */
+.had-team-media { position: relative; overflow: hidden; border: 1px solid var(--had-line); box-shadow: var(--had-elev); }
+.had-team-media img { width: 100%; display: block; aspect-ratio: 16 / 10; object-fit: cover; filter: contrast(1.06) saturate(1.1); }
+.had-team-media-caption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 24px 16px;
+  color: rgba(255, 255, 255, 0.9); font-size: 14px; letter-spacing: 0.03em;
+  background: linear-gradient(0deg, rgba(9, 15, 24, 0.92), transparent);
+}
+.had-team-chip {
+  height: 100%; padding: 22px 22px;
+  background: rgba(255, 255, 255, 0.03); border: 1px solid var(--had-line); box-shadow: var(--had-rim);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.had-team-chip:hover { border-color: rgba(233, 162, 59, 0.45); transform: translateY(-3px); }
+.had-team-chip-title { color: #fff; font-size: 19px; margin: 0 0 6px; }
+.had-team-chip-note { color: rgba(255, 255, 255, 0.6); font-size: 14px; margin: 0; }
+
+/* =====================================================================
+   Operating philosophy — icon row + centered 5-card grid
+   ===================================================================== */
+.had-principle-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.had-principle-icon {
+  width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+  font-size: 20px; color: var(--had-amber-strong);
+  border: 1px solid rgba(233, 162, 59, 0.35); background: var(--had-amber-soft);
+}
+.had-philosophy .had-principle-index { margin-bottom: 0; font-size: 22px; font-weight: 700; color: rgba(255, 255, 255, 0.16); letter-spacing: 0.1em; }
+.had-philosophy .row.gy-4 { justify-content: center; }
+.had-philosophy .had-principle-card:hover { border-color: rgba(233, 162, 59, 0.5); }
+
+/* Closing contact/partnership CTA */
+.had-contact-cta-sub { color: rgba(255, 255, 255, 0.72); font-size: 17px; line-height: 1.6; margin: 14px 0 0; max-width: 620px; }
+
+/* =====================================================================
+   Responsive
+   ===================================================================== */
+@media (max-width: 991px) {
+  .had-hero-cinematic { min-height: auto; }
+  .had-hero-content { padding: 120px 0 88px; }
+  .had-hero-scrim {
+    background: linear-gradient(180deg, rgba(11, 21, 34, 0.5) 0%, rgba(11, 21, 34, 0.86) 58%, rgba(11, 21, 34, 0.96) 100%);
+  }
+  .had-mission-band { min-height: 520px; }
+  .had-mission-band-scrim { background: linear-gradient(0deg, rgba(9, 15, 24, 0.95) 0%, rgba(9, 15, 24, 0.55) 100%); }
+  .had-mission-band-inner { padding: 76px 0; }
+  .had-prp { padding-top: 90px; }
+  .had-prp-media { margin-bottom: 34px; }
+  .had-prp-media-inset { position: static; width: 100%; right: auto; bottom: auto; margin-top: 14px; }
+  .had-prp-tagline { margin-top: 80px; min-height: 360px; }
+}
+@media (max-width: 575px) {
+  .had-hero-actions .te-theme-btn { width: 100%; justify-content: center; }
+  .had-prp-caps { grid-template-columns: 1fr; }
+  .had-domain-label span { font-size: 22px; }
+}
+
+/* =====================================================================
+   Motion opt-out (narrative pass) — kill parallax/Ken-Burns for
+   reduced-motion. CSS !important beats framer-motion's inline transform.
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .had-hero-video .had-video-el { animation: none; }
+  .had-hero-media,
+  .had-mission-band-photo,
+  .had-statement-media { transform: none !important; }
+  .had-hero-scrollcue-dot { animation: none; }
 }

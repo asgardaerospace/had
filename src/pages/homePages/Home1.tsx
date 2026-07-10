@@ -1,7 +1,8 @@
 import HeaderV1 from '../../components/header/HeaderV1';
-import SliderV1 from '../../components/slider/SliderV1';
-import CapabilityAreas from '../../components/capability/CapabilityAreas';
+import HeroV1 from '../../components/hero/HeroV1';
+import MissionBand from '../../components/mission/MissionBand';
 import AboutV1 from '../../components/about/AboutV1';
+import DomainSectors from '../../components/domains/DomainSectors';
 import FeaturedProgram from '../../components/program/FeaturedProgram';
 import PhilosophyPrinciples from '../../components/philosophy/PhilosophyPrinciples';
 import StatementBand from '../../components/visual/StatementBand';
@@ -12,19 +13,25 @@ import FooterV1 from '../../components/footer/FooterV1';
 
 /**
  * Hemisphere Defense — corporate home.
+ *
+ * Scroll sequence follows the Paul Revere narrative: cinematic hero →
+ * mission thesis → who we are → Land/Air/Sea domains → flagship Paul Revere
+ * Program → operating philosophy → dual-era statement → team → HAI → contact.
+ *
  * Removed from the template default: testimonials, client-logo "brands",
- * blog/news, appointment/quote forms, and fabricated stat counters
- * (see contradiction audit).
+ * blog/news, appointment/quote forms, and fabricated stat counters. The
+ * generic capability grid now lives on the About page.
  */
 const Home = () => {
     return (
         <>
             <HeaderV1 />
-            <SliderV1 />
-            <CapabilityAreas style="te-pt-120 te-pb-120" />
+            <HeroV1 />
+            <MissionBand />
             <AboutV1 style="background-gray-700 te-pt-120 te-pb-120" />
+            <DomainSectors />
             <FeaturedProgram />
-            <PhilosophyPrinciples />
+            <PhilosophyPrinciples id="philosophy" />
             <StatementBand />
             <LeadershipTeaser />
             <HaiBand />

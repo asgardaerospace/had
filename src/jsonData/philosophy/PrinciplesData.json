@@ -1,38 +1,32 @@
 [
     {
         "id": 1,
-        "icon": "icon-1.png",
-        "title": "Mission Before Technology",
-        "text": "Start with the operational problem. Technology exists to support the mission, not the other way around."
+        "icon": "fa-solid fa-eye",
+        "title": "See First",
+        "text": "Awareness is the first layer of defense."
     },
     {
         "id": 2,
-        "icon": "icon-2.png",
-        "title": "Persistent Capability",
-        "text": "Design programs around sustained operational value rather than episodic demonstrations."
+        "icon": "fa-solid fa-bolt",
+        "title": "Signal Fast",
+        "text": "The value of detection is measured by how quickly it reaches decision-makers."
     },
     {
         "id": 3,
-        "icon": "icon-3.png",
-        "title": "Clear Authority",
-        "text": "Preserve government mission authority and clearly define contractor operational responsibilities."
+        "icon": "fa-solid fa-tower-observation",
+        "title": "Sustain the Watch",
+        "text": "Persistent missions require infrastructure, readiness, maintenance, and endurance."
     },
     {
         "id": 4,
-        "icon": "icon-1.png",
-        "title": "Modular Development",
-        "text": "Build programs that can evolve as mission requirements, sensors, autonomous systems, and operating environments change."
+        "icon": "fa-solid fa-shield-halved",
+        "title": "Preserve Authority",
+        "text": "Hemisphere Defense programs are built around clear authority boundaries. Government mission owners retain command and response authority."
     },
     {
         "id": 5,
-        "icon": "icon-2.png",
-        "title": "Operational Sustainment",
-        "text": "Treat maintenance, logistics, readiness, and lifecycle support as part of the program from the beginning."
-    },
-    {
-        "id": 6,
-        "icon": "icon-3.png",
-        "title": "Evidence Before Scale",
-        "text": "Use bounded pilots, measurable validation criteria, and decision gates before expanding programs."
+        "icon": "fa-solid fa-chart-line",
+        "title": "Scale Through Evidence",
+        "text": "Programs should grow through pilots, validation, measurable performance, and disciplined decision gates."
     }
 ]
