@@ -7,6 +7,8 @@ import Approach from './pages/innerPages/Approach';
 import Leadership from './pages/innerPages/Leadership';
 import LeadershipDetails from './pages/innerPages/TeamDetails';
 import Contact from './pages/innerPages/Contact';
+import Privacy from './pages/innerPages/Privacy';
+import Terms from './pages/innerPages/Terms';
 
 /**
  * Hemisphere Defense (HAD) corporate + program-portfolio routes.
@@ -26,6 +28,8 @@ const Routers = () => {
                 <Route path='/leadership' element={<Leadership />}></Route>
                 <Route path='/leadership/:id' element={<LeadershipDetails />}></Route>
                 <Route path='/contact' element={<Contact />}></Route>
+                <Route path='/privacy' element={<Privacy />}></Route>
+                <Route path='/terms' element={<Terms />}></Route>
             </Routes>
         </>
     );

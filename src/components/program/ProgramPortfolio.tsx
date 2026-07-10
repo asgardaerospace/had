@@ -32,7 +32,7 @@ const externalUrlFor = (key: string | null): string | null => {
  */
 const ProgramPortfolio = () => {
     return (
-        <div className="portfolio-slider-area-page background-gray-700 te-pt-120 te-pb-120">
+        <div className="portfolio-slider-area-page background-gray-700 te-pt-60 te-pb-120">
             <div className="container">
                 {(ProgramsData as Program[]).map((p) => {
                     const externalUrl = externalUrlFor(p.externalKey);

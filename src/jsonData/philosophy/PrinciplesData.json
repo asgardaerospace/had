@@ -3,30 +3,40 @@
         "id": 1,
         "icon": "fa-solid fa-eye",
         "title": "See First",
-        "text": "Awareness is the first layer of defense."
+        "text": "Awareness is the first layer of defense.",
+        "image": "principle-see-first.jpg",
+        "alt": "Uncrewed sensing installation on a coastal ridge at first light"
     },
     {
         "id": 2,
         "icon": "fa-solid fa-bolt",
         "title": "Signal Fast",
-        "text": "The value of detection is measured by how quickly it reaches decision-makers."
+        "text": "The value of detection is measured by how quickly it reaches decision-makers.",
+        "image": "principle-signal-fast.jpg",
+        "alt": "Sensor and communications mast lit against a night sky"
     },
     {
         "id": 3,
         "icon": "fa-solid fa-tower-observation",
         "title": "Sustain the Watch",
-        "text": "Persistent missions require infrastructure, readiness, maintenance, and endurance."
+        "text": "Persistent missions require infrastructure, readiness, maintenance, and endurance.",
+        "image": "principle-sustain-watch.jpg",
+        "alt": "Long-endurance uncrewed aircraft holding station above distant terrain"
     },
     {
         "id": 4,
         "icon": "fa-solid fa-shield-halved",
         "title": "Preserve Authority",
-        "text": "Hemisphere Defense programs are built around clear authority boundaries. Government mission owners retain command and response authority."
+        "text": "Hemisphere Defense programs are built around clear authority boundaries. Government mission owners retain command and response authority.",
+        "image": "principle-authority.jpg",
+        "alt": "Government mission operators directing a shared awareness picture from a command center"
     },
     {
         "id": 5,
         "icon": "fa-solid fa-chart-line",
         "title": "Scale Through Evidence",
-        "text": "Programs should grow through pilots, validation, measurable performance, and disciplined decision gates."
+        "text": "Programs should grow through pilots, validation, measurable performance, and disciplined decision gates.",
+        "image": "principle-evidence.jpg",
+        "alt": "Close engineering detail of modular defense hardware undergoing inspection and test"
     }
 ]

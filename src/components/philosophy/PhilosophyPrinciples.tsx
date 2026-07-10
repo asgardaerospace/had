@@ -6,6 +6,8 @@ type Principle = {
     icon: string;
     title: string;
     text: string;
+    image?: string;
+    alt?: string;
 };
 
 interface PhilosophyPrinciplesProps {
@@ -54,17 +56,30 @@ const PhilosophyPrinciples = ({ style = "", showHeader = true, id }: PhilosophyP
                                     viewport={{ once: true, amount: 0.2 }}
                                     transition={{ delay, duration: 0.55, ease: "easeOut" }}
                                 >
-                                    <div className="had-principle-card">
-                                        <div className="had-principle-top">
-                                            <span className="had-principle-icon">
-                                                <i className={item.icon} aria-hidden="true" />
-                                            </span>
-                                            <span className="had-principle-index">
-                                                {String(item.id).padStart(2, "0")}
-                                            </span>
+                                    <div className={`had-principle-card${item.image ? " has-media" : ""}`}>
+                                        {item.image && (
+                                            <>
+                                                <span
+                                                    className="had-principle-bg"
+                                                    role="img"
+                                                    aria-label={item.alt || ""}
+                                                    style={{ backgroundImage: `url(/images/had/${item.image})` }}
+                                                />
+                                                <span className="had-principle-scrim" aria-hidden="true" />
+                                            </>
+                                        )}
+                                        <div className="had-principle-content">
+                                            <div className="had-principle-top">
+                                                <span className="had-principle-icon">
+                                                    <i className={item.icon} aria-hidden="true" />
+                                                </span>
+                                                <span className="had-principle-index">
+                                                    {String(item.id).padStart(2, "0")}
+                                                </span>
+                                            </div>
+                                            <h3 className="had-principle-title">{item.title}</h3>
+                                            <p className="had-principle-text">{item.text}</p>
                                         </div>
-                                        <h3 className="had-principle-title">{item.title}</h3>
-                                        <p className="had-principle-text">{item.text}</p>
                                     </div>
                                 </motion.div>
                             );

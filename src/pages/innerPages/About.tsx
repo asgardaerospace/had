@@ -44,7 +44,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <CapabilityAreas style="te-pb-120" />
+            <CapabilityAreas style="te-pt-60 te-pb-120" />
             <HaiBand />
             <FooterV1 />
         </>

@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 type AboutV1Props = {
     style?: string;
     full?: boolean;
@@ -57,20 +55,8 @@ const AboutV1 = ({ style = "", full = false }: AboutV1Props) => {
                                                     </p>
                                                 )}
                                             </div>
-                                            <div className="had-authority-note">
-                                                Hemisphere Defense does not replace military services, government mission
-                                                owners, or prime contractors, and does not hold government authority.
-                                            </div>
                                         </div>
                                     </div>
-                                    {!full && (
-                                        <div className="btn-wrapper">
-                                            <Link to="/about" className="te-theme-btn">
-                                                Read the Mission
-                                                <i className="fa fa-solid fa-arrow-right" />
-                                            </Link>
-                                        </div>
-                                    )}
                                 </div>
                             </div>
                         </div>

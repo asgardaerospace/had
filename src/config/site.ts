@@ -49,11 +49,11 @@ export const SITE = {
     hai: "https://hai-aero.com/",
   },
 
-  /** Contact placeholders: replace with approved information before launch. */
+  /** Contact information. Phone is still an unfilled placeholder (pending). */
   contact: {
-    generalEmail: "[GENERAL-INQUIRY-EMAIL]",
+    generalEmail: "info@hai-aero.com",
     phone: "[PHONE]",
-    address: "[MAILING-ADDRESS]",
+    address: "522 Austin Ave, Waco, TX 76701, USA",
   },
 } as const;
 

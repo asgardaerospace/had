@@ -1,6 +1,6 @@
 import HeaderV1 from "../../components/header/HeaderV1";
 import BreadCrumb from '../../components/breadcrumb/BreadCrumb';
-import PhilosophyPrinciples from "../../components/philosophy/PhilosophyPrinciples";
+import ApproachWalkthrough from "../../components/philosophy/ApproachWalkthrough";
 import HaiBand from "../../components/hai/HaiBand";
 import FooterV1 from "../../components/footer/FooterV1";
 
@@ -34,7 +34,7 @@ const Approach = () => {
                     </div>
                 </div>
             </section>
-            <PhilosophyPrinciples showHeader={false} style="te-pt-60" />
+            <ApproachWalkthrough />
             <HaiBand />
             <FooterV1 />
         </>

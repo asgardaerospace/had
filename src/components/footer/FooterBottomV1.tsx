@@ -9,11 +9,14 @@ const FooterBottomV1 = () => {
                     <p>
                         &copy; {new Date().getFullYear()} {SITE.name} ({SITE.shortName}). All rights reserved.
                     </p>
+                    <p className="had-copyright-hai">
+                        A {SITE.parent.name} ({SITE.parent.shortName}) company.
+                    </p>
                 </div>
                 <div className="te-footer-bottom-menu">
                     <ul>
-                        <li><Link to="#" className="had-placeholder">Privacy Policy</Link></li>
-                        <li><Link to="#" className="had-placeholder">Terms of Use</Link></li>
+                        <li><Link to="/privacy">Privacy Policy</Link></li>
+                        <li><Link to="/terms">Terms of Use</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>

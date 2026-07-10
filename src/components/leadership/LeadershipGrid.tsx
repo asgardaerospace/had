@@ -21,7 +21,7 @@ type Group = {
  */
 const LeadershipGrid = () => {
     return (
-        <div className="team-area style-2 background-gray-700 te-pt-120 te-pb-120">
+        <div className="team-area style-2 background-gray-700 te-pt-60 te-pb-120">
             <div className="container">
                 {(LeadershipData as Group[]).map((group) => (
                     <div className="had-leader-group" key={group.group}>

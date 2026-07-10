@@ -7,7 +7,7 @@ import { SITE, EXTERNAL_LINK_PROPS, isPlaceholder } from "../../config/site";
 const FooterV1 = () => {
     const haiReady = !isPlaceholder(SITE.external.hai);
     const aydllReady = !isPlaceholder(SITE.external.aydllIdl);
-    const { generalEmail, phone } = SITE.contact;
+    const { generalEmail, phone, address } = SITE.contact;
 
     return (
         <>
@@ -57,6 +57,14 @@ const FooterV1 = () => {
                                                     </div>
                                                 </li>
                                                 <li>
+                                                    <div className="contact-icon"><i className="fa-solid fa-location-dot" /></div>
+                                                    <div className="contact-text">
+                                                        {isPlaceholder(address)
+                                                            ? <span className="had-placeholder">{address}</span>
+                                                            : <span>{address}</span>}
+                                                    </div>
+                                                </li>
+                                                <li>
                                                     <div className="contact-icon"><i className="fa-solid fa-shield-halved" /></div>
                                                     <div className="contact-text">
                                                         <Link to="/contact">All inquiry channels</Link>
@@ -73,7 +81,6 @@ const FooterV1 = () => {
                                 <div className="te-footer-widget te_widget_nav_menu">
                                     <h3 className="te-footer-widget-title">Explore</h3>
                                     <ul className="no-icon">
-                                        <li><Link to="/about">Mission</Link></li>
                                         <li><Link to="/#domains">Domains</Link></li>
                                         <li><Link to="/programs">Programs</Link></li>
                                         <li><Link to="/program-details/aydll-idl">Paul Revere Program</Link></li>

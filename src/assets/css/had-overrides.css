@@ -253,6 +253,11 @@
   margin-bottom: 34px;
   border-bottom: 1px solid var(--had-line);
 }
+/* Separate stacked leadership categories so they read as distinct groups
+   rather than blurring into the cards above them. Padding (not margin) so
+   it can't collapse against the card row above. */
+.had-leader-group + .had-leader-group { padding-top: 52px; }
+@media (max-width: 767px) { .had-leader-group + .had-leader-group { padding-top: 40px; } }
 
 /* --- Program portfolio list rows. --- */
 .had-program-row {
@@ -1364,4 +1369,224 @@ body {
     border-bottom: none;
   }
   .had-leader-card .had-leader-body { flex: 1 1 auto; padding: 28px 30px; }
+}
+
+/* =====================================================================
+   Operating philosophy: image-backed principle cards
+   Each callout card carries a cinematic background photo behind a dark
+   scrim so the amber icon, title, and body copy stay fully legible.
+   The icon row sits at the top; title and text drop to the bottom over
+   the image for an editorial "capability plate" feel.
+   ===================================================================== */
+.had-principle-card.has-media {
+  overflow: hidden;
+  isolation: isolate;
+  background-image: none;
+  background-color: var(--had-navy);
+}
+.had-principle-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.01);
+  filter: saturate(1.04) contrast(1.03);
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+.had-principle-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(10, 17, 30, 0.52) 0%, rgba(10, 16, 28, 0.72) 46%, rgba(8, 13, 23, 0.95) 100%);
+}
+.had-principle-card.has-media .had-principle-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  min-height: 288px;
+}
+.had-principle-card.has-media .had-principle-top { margin-bottom: auto; }
+.had-principle-card.has-media .had-principle-title {
+  margin-top: 20px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.55);
+}
+.had-principle-card.has-media .had-principle-text { color: rgba(255, 255, 255, 0.82); }
+.had-principle-card.has-media .had-principle-icon {
+  background: rgba(9, 14, 24, 0.55);
+  border-color: rgba(233, 162, 59, 0.5);
+}
+.had-philosophy .had-principle-card.has-media .had-principle-index { color: rgba(255, 255, 255, 0.4); }
+.had-principle-card.has-media:hover .had-principle-bg {
+  transform: scale(1.07);
+  filter: saturate(1.16) contrast(1.08);
+}
+
+/* =====================================================================
+   Approach page: operating-principle walkthrough
+   Alternating large-image / text rows that carry the five principles as
+   a numbered narrative, reusing the same photos as the home callouts.
+   ===================================================================== */
+.had-approach-walk {
+  position: relative;
+  background: linear-gradient(180deg, var(--had-navy) 0%, var(--had-navy-2) 100%);
+}
+.had-approach-walk-steps {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(44px, 6vw, 92px);
+}
+.had-approach-step {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(28px, 4vw, 66px);
+  align-items: center;
+}
+.had-approach-step-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--had-line);
+  box-shadow: var(--had-elev), var(--had-rim);
+}
+.had-approach-step.is-reversed .had-approach-step-media { order: 2; }
+.had-approach-step-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.07) saturate(1.12);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.6s ease;
+}
+.had-approach-step:hover .had-approach-step-media img {
+  transform: scale(1.045);
+  filter: contrast(1.1) saturate(1.2);
+}
+.had-approach-step-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(9, 14, 24, 0) 55%, rgba(9, 14, 24, 0.4) 100%);
+  pointer-events: none;
+}
+.had-approach-step-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--had-amber-strong);
+  margin-bottom: 16px;
+}
+.had-approach-step-eyebrow i { font-size: 15px; }
+.had-approach-step-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 35px);
+  line-height: 1.14;
+  margin: 0 0 16px;
+}
+.had-approach-step-title::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin-top: 16px;
+  background: linear-gradient(90deg, var(--had-amber), transparent);
+}
+.had-approach-step-text {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 17px;
+  line-height: 1.78;
+  margin: 0;
+  max-width: 48ch;
+}
+@media (max-width: 767px) {
+  .had-approach-step { grid-template-columns: 1fr; gap: 22px; }
+  .had-approach-step.is-reversed .had-approach-step-media { order: 0; }
+  .had-approach-step-text { max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .had-principle-bg,
+  .had-approach-step-media img { transition: none; }
+}
+
+/* =====================================================================
+   Spacing: the 60px step utilities the template markup references but
+   never defined (te-pt-60 / te-pb-60 / te-py-60). Without these the
+   "context intro" sections lost their intended bottom breathing room and
+   read bottom-heavy, with the following content crowding the boundary.
+   Mirrors the 120 step's responsive scaling (120/100/80 -> 60/50/40).
+   ===================================================================== */
+.te-pt-60 { padding-top: 60px; }
+.te-pb-60 { padding-bottom: 60px; }
+.te-py-60 { padding: 60px 0; }
+@media (max-width: 991px) {
+  .te-pt-60 { padding-top: 50px; }
+  .te-pb-60 { padding-bottom: 50px; }
+  .te-py-60 { padding: 50px 0; }
+}
+@media (max-width: 767px) {
+  .te-pt-60 { padding-top: 40px; }
+  .te-pb-60 { padding-bottom: 40px; }
+  .te-py-60 { padding: 40px 0; }
+}
+
+/* =====================================================================
+   Legal pages (Privacy Policy, Terms of Use): readable long-form copy on
+   the dark theme, plus the quiet HAI attribution line in the footer bar.
+   ===================================================================== */
+.had-legal {
+  background: linear-gradient(180deg, var(--had-navy) 0%, var(--had-navy-2) 100%);
+}
+.had-legal-updated {
+  color: var(--had-amber-strong);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 28px;
+}
+.had-legal-lead {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 18px;
+  line-height: 1.75;
+  margin: 0 0 16px;
+  max-width: 760px;
+}
+.had-legal-section { margin-top: 46px; }
+.had-legal-heading {
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+.had-legal-num { color: var(--had-amber-strong); margin-right: 4px; }
+.had-legal-section p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0 0 14px;
+  max-width: 760px;
+}
+.had-legal-list {
+  margin: 0 0 14px;
+  padding-left: 22px;
+  list-style: disc outside;
+  max-width: 760px;
+}
+.had-legal-list li {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+.had-copyright-hai {
+  margin: 4px 0 0;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.5);
 }
