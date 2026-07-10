@@ -101,6 +101,19 @@
   letter-spacing: 0.03em;
 }
 
+/* --- Contact form submission status messages (success / error / notice). --- */
+.had-form-status {
+  display: block;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.had-form-status.is-success { color: #6FCF97; }
+.had-form-status.is-error { color: #EB6A6A; }
+.had-form-status.is-notice { color: var(--had-accent-strong); }
+.had-form-status a { color: inherit; text-decoration: underline; }
+
 /* --- Placeholder styling: makes unfilled [BRACKETED] content obvious in-page. --- */
 .had-placeholder {
   color: rgba(255, 255, 255, 0.45);

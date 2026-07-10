@@ -49,11 +49,24 @@ export const SITE = {
     hai: "https://hai-aero.com/",
   },
 
-  /** Contact information. Phone is still an unfilled placeholder (pending). */
+  /** Contact information. */
   contact: {
     generalEmail: "info@hai-aero.com",
-    phone: "[PHONE]",
+    // phone is raw E.164 for the tel: click-to-call href; phoneDisplay is the readable label shown to visitors.
+    phone: "+12544772281",
+    phoneDisplay: "+1 (254) 477-2281",
     address: "522 Austin Ave, Waco, TX 76701, USA",
+  },
+
+  /**
+   * Contact form delivery via Web3Forms (https://web3forms.com). Create a free
+   * access key for the inbox that should receive submissions (info@hai-aero.com)
+   * and paste it below. While this stays a [PLACEHOLDER], the form stays inert
+   * and asks visitors to email that inbox directly instead of failing silently.
+   */
+  contactForm: {
+    web3formsAccessKey: "c6dff364-33a3-45e9-8c42-4de36b3b25a8",
+    subject: "New inquiry from the Hemisphere Defense website",
   },
 } as const;
 

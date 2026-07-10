@@ -7,7 +7,7 @@ import { SITE, EXTERNAL_LINK_PROPS, isPlaceholder } from "../../config/site";
 const FooterV1 = () => {
     const haiReady = !isPlaceholder(SITE.external.hai);
     const aydllReady = !isPlaceholder(SITE.external.aydllIdl);
-    const { generalEmail, phone, address } = SITE.contact;
+    const { generalEmail, phone, phoneDisplay, address } = SITE.contact;
 
     return (
         <>
@@ -53,7 +53,7 @@ const FooterV1 = () => {
                                                     <div className="contact-text">
                                                         {isPlaceholder(phone)
                                                             ? <span className="had-placeholder">{phone}</span>
-                                                            : <Link to={`tel:${phone}`}>{phone}</Link>}
+                                                            : <Link to={`tel:${phone}`}>{phoneDisplay}</Link>}
                                                     </div>
                                                 </li>
                                                 <li>

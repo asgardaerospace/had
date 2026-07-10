@@ -3,7 +3,13 @@ import InquiryPathwaysGrid from './InquiryPathwaysGrid';
 import { SITE, isPlaceholder } from "../../config/site";
 
 const ContactContent = () => {
-    const { generalEmail, phone, address } = SITE.contact;
+    const { generalEmail, phone, phoneDisplay, address } = SITE.contact;
+
+    // Inquiry channel grid is turned off for now: every inquiry goes to the general
+    // inbox (info@hai-aero.com). The InquiryPathwaysGrid layout and its data
+    // (jsonData/contact/InquiryPathways.json) stay intact so this can be switched back
+    // on once dedicated per-channel emails exist. To restore, flip this to true.
+    const SHOW_INQUIRY_CHANNELS: boolean = false;
 
     return (
         <>
@@ -14,16 +20,18 @@ const ContactContent = () => {
                             <div className="short-title-wrapper">
                                 <span className="short-title">Contact</span>
                             </div>
-                            <h2 className="had-section-heading">Direct your inquiry to the appropriate channel</h2>
+                            <h2 className="had-section-heading">Reach our team</h2>
                             <p className="had-context-lead">
-                                Hemisphere Defense routes inquiries by type. Select the channel that best matches your
-                                inquiry, or use the general form below.
+                                Send us a message using the form below, or reach us directly with the contact
+                                details listed. We review every inquiry and make sure it reaches the right people.
                             </p>
                         </div>
                     </div>
-                    <div className="mt-5">
-                        <InquiryPathwaysGrid />
-                    </div>
+                    {SHOW_INQUIRY_CHANNELS && (
+                        <div className="mt-5">
+                            <InquiryPathwaysGrid />
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -43,7 +51,7 @@ const ContactContent = () => {
                                     <span className="had-contact-list-label">Phone</span>
                                     {isPlaceholder(phone)
                                         ? <span className="had-placeholder">{phone}</span>
-                                        : <a href={`tel:${phone}`}>{phone}</a>}
+                                        : <a href={`tel:${phone}`}>{phoneDisplay}</a>}
                                 </li>
                                 <li>
                                     <span className="had-contact-list-label">Address</span>
