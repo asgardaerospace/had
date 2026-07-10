@@ -25,7 +25,6 @@ const MainMenu = ({ toggleSubMenu }: MainMenuProps) => {
                             <li className='te-list-item'><Link to="/program-details/aydll-idl">Paul Revere Program</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="/program-details/aydll-idl">Paul Revere</Link></li>
                     <li><Link to="/leadership">Team</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>

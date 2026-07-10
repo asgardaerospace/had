@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import VideoBackdrop from "../video/VideoBackdrop";
 
 /**
- * Full-bleed cinematic statement band — the second bold moment on the page.
+ * Full-bleed cinematic statement band: the second bold moment on the page.
  * Dawn breaking over the Atlantic (looking east, toward what approaches) under
  * the site's dual-era thesis. The video is lazy + reduced-motion-safe via
  * VideoBackdrop; the parallax wrapper adds depth.
@@ -23,6 +23,8 @@ const StatementBand = () => {
                     poster="/images/had/statement-dawn.jpg"
                     objectPosition="center"
                     className="had-statement-video"
+                    crossfadeLoop
+                    crossfadeDuration={1.2}
                 />
             </motion.div>
             <div className="had-statement-scrim" />
@@ -39,7 +41,7 @@ const StatementBand = () => {
                         The watch has changed. <span>The mission has not.</span>
                     </h2>
                     <p className="had-statement-sub">
-                        Early warning is still a national advantage. The signal came before the fight — it
+                        Early warning is still a national advantage. The signal came before the fight. It
                         still should.
                     </p>
                 </motion.div>

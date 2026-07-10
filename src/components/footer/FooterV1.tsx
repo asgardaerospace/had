@@ -96,7 +96,7 @@ const FooterV1 = () => {
                                                     <i className="fa fa-solid fa-arrow-up-right-from-square ms-2" />
                                                 </a>
                                             ) : (
-                                                <span className="had-placeholder">HAI website — link pending</span>
+                                                <span className="had-placeholder">HAI website (link pending)</span>
                                             )}
                                         </li>
                                         <li>

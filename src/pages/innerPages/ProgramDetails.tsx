@@ -13,6 +13,13 @@ type Program = {
     platform?: string;
 };
 
+/** Flagship (AYDLL) program imagery: full-bleed hero + capability gallery. Boundary-safe. */
+const AYDLL_GALLERY = [
+    { src: "program-network.jpg", cap: "Distributed offshore infrastructure", alt: "A distributed network of AYDLL platform nodes providing persistent coverage across the maritime domain." },
+    { src: "program-air.jpg", cap: "Autonomous systems launch & recovery", alt: "An autonomous tiltrotor aircraft launching from the AYDLL platform flight deck." },
+    { src: "program-launch.jpg", cap: "Multi-domain uncrewed systems", alt: "An autonomous tiltrotor and surface vessel staged on the AYDLL platform for launch and recovery." },
+];
+
 const ProgramDetails = () => {
     const { id } = useParams();
     const program = (ProgramsData as Program[]).find((p) => p.id === id);
@@ -28,7 +35,14 @@ const ProgramDetails = () => {
     return (
         <>
             <HeaderV1 />
-            <BreadCrumb pageTitle={program ? program.name : "Program"} breadcrumb="Program" />
+            <BreadCrumb
+                image={isAydll ? "program-node-hero.jpg" : "program-network.jpg"}
+                objectPosition="center 45%"
+                eyebrow={isAydll ? "Flagship Program" : "Program"}
+                pageTitle={program ? program.name : "Program"}
+                subtitle={isAydll ? SITE.flagship.subtitle : undefined}
+                breadcrumb="Program"
+            />
 
             <section className="had-context-section te-pt-120 te-pb-120">
                 <div className="container">
@@ -43,6 +57,7 @@ const ProgramDetails = () => {
                             </div>
                         </div>
                     ) : (
+                        <>
                         <div className="row gy-5">
                             <div className="col-lg-8">
                                 <span className={`had-program-cat ${pending ? "had-placeholder" : ""}`}>{program.category}</span>
@@ -62,7 +77,7 @@ const ProgramDetails = () => {
                                         </div>
                                         <p className="had-context-lead">
                                             The program exists to reduce the burden of continuous, low-intensity sensing
-                                            and monitoring on high-value crewed assets. It is persistent infrastructure —
+                                            and monitoring on high-value crewed assets. It is persistent infrastructure,
                                             not a ship, a weapons platform, or a replacement for crewed cutters,
                                             destroyers, or aircraft.
                                         </p>
@@ -123,6 +138,20 @@ const ProgramDetails = () => {
                                 </div>
                             </div>
                         </div>
+                        {isAydll && (
+                            <div className="had-program-gallery-wrap">
+                                <span className="had-program-gallery-eyebrow">Platform &amp; Operations</span>
+                                <div className="had-program-gallery">
+                                    {AYDLL_GALLERY.map((g) => (
+                                        <figure className="had-program-gallery-item" key={g.src}>
+                                            <img src={`/images/had/${g.src}`} alt={g.alt} loading="lazy" />
+                                            <figcaption className="had-program-gallery-cap">{g.cap}</figcaption>
+                                        </figure>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                        </>
                     )}
                 </div>
             </section>

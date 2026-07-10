@@ -12,7 +12,7 @@ type Domain = {
 };
 
 /**
- * Domain sectors — Land / Air / Sea. The three environments HAD builds
+ * Domain sectors: Land / Air / Sea. The three environments HAD builds
  * awareness programs across. Cinematic media cards with hover elevation and an
  * amber "signal" accent. Copy follows the approved domain directions; imagery
  * is conceptual (uncrewed sensing infrastructure), never personnel or weapons.
@@ -38,7 +38,7 @@ const DomainSectors = () => {
                                     Awareness across land, air, and sea
                                 </h2>
                                 <p className="had-domains-lead">
-                                    The distributed warning network, modernized — persistent sensing and support
+                                    The distributed warning network, modernized: persistent sensing and support
                                     infrastructure spanning every domain the mission crosses.
                                 </p>
                             </div>

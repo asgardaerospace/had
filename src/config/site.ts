@@ -1,9 +1,9 @@
 /**
- * Hemisphere Defense (HAD) — central site configuration.
+ * Hemisphere Defense (HAD): central site configuration.
  *
  * Single source of truth for brand strings, external links, and contact
  * information. Values wrapped in [BRACKETS] are placeholders awaiting
- * approved content — swap them here and they update everywhere.
+ * approved content; swap them here and they update everywhere.
  *
  * CORPORATE BOUNDARY: HAD and HAI are Hemisphere entities. Do not add any
  * relationship, link, or reference to any non-Hemisphere entity here, and do
@@ -15,10 +15,10 @@ export const SITE = {
   shortName: "HAD",
   // Restrained hero positioning statement (see alternates in project notes).
   positioning: "American vigilance, modernized.",
-  // Primary hero line — the site's operating thesis (Paul Revere metaphor).
+  // Primary hero line: the site's operating thesis (Paul Revere metaphor).
   headline: "The warfighter has changed. The mission remains.",
   description:
-    "Hemisphere Defense builds mission-oriented programs for the next era of American vigilance — persistent awareness, distributed infrastructure, and operational readiness across land, air, and sea.",
+    "Hemisphere Defense builds mission-oriented programs for the next era of American vigilance: persistent awareness, distributed infrastructure, and operational readiness across land, air, and sea.",
 
   parent: {
     name: "Hemisphere Aerospace Investments",
@@ -49,7 +49,7 @@ export const SITE = {
     hai: "https://hai-aero.com/",
   },
 
-  /** Contact placeholders — replace with approved information before launch. */
+  /** Contact placeholders: replace with approved information before launch. */
   contact: {
     generalEmail: "[GENERAL-INQUIRY-EMAIL]",
     phone: "[PHONE]",

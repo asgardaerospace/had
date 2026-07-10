@@ -15,7 +15,7 @@ interface PhilosophyPrinciplesProps {
 }
 
 /**
- * Operating Philosophy — the five principles that govern how HAD develops and
+ * Operating Philosophy: the five principles that govern how HAD develops and
  * runs programs (See First · Signal Fast · Sustain the Watch · Preserve
  * Authority · Scale Through Evidence). Reused on the home page (with header)
  * and the Approach page (header suppressed).

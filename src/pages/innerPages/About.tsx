@@ -9,7 +9,14 @@ const About = () => {
     return (
         <>
             <HeaderV1 />
-            <BreadCrumb pageTitle="About Hemisphere Defense" breadcrumb="About" />
+            <BreadCrumb
+                image="about-revere.jpg"
+                objectPosition="center 35%"
+                eyebrow="Who We Are"
+                pageTitle="About Hemisphere Defense"
+                subtitle="Advancing persistent awareness and distributed capability for the modern watch."
+                breadcrumb="About"
+            />
             <AboutV1 full style="background-gray-700 te-pt-120 te-pb-120" />
             <section className="had-context-section te-pt-120 te-pb-60">
                 <div className="container">
@@ -24,7 +31,7 @@ const About = () => {
                             <p className="had-context-lead">
                                 Government missions increasingly depend on awareness that is maintained continuously,
                                 infrastructure that is distributed rather than concentrated, and autonomous systems that
-                                extend reach — all delivered at a lower manpower burden and sustained over a program's
+                                extend reach, all delivered at a lower manpower burden and sustained over a program's
                                 life. Hemisphere Defense is built to identify these operational gaps and develop
                                 structured defense programs around them.
                             </p>

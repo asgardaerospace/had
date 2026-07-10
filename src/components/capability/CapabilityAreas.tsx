@@ -14,7 +14,7 @@ interface CapabilityAreasProps {
 }
 
 /**
- * Capability Areas — the categories of national-security problem HAD builds
+ * Capability Areas: the categories of national-security problem HAD builds
  * programs around. Static informational cards (no outbound links); the
  * program portfolio is reached from the nav and the featured-program band.
  */

@@ -2,11 +2,11 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 /**
- * Mission statement band — the site's thesis, stated over the Old North Church
+ * Mission statement band: the site's thesis, stated over the Old North Church
  * signal lanterns ("one if by land, two if by sea"). Parallaxed image + navy
  * scrim; copy reveals as it enters view.
  *
- * Historical framing only — the metaphor, not a claim. Anchors the hero scroll
+ * Historical framing only: the metaphor, not a claim. Anchors the hero scroll
  * cue (id="mission").
  */
 const MissionBand = () => {
@@ -35,7 +35,7 @@ const MissionBand = () => {
                     </h2>
                     <p className="had-mission-band-lead">
                         America has always depended on those who see first. On an April night in 1775, the
-                        country's defense began with a signal — lanterns raised in a church tower and riders
+                        country's defense began with a signal: lanterns raised in a church tower and riders
                         carrying word ahead of the column. Hemisphere Defense is built on the same idea:
                         detect early, signal clearly, and sustain the watch so decision-makers can act before
                         arrival.

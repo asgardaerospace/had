@@ -11,15 +11,16 @@
         "featured": true,
         "hasDedicatedSite": true,
         "externalKey": "aydllIdl",
-        "thumb": "program-aydll-idl.jpg"
+        "thumb": "program-observing.jpg",
+        "imageAlt": "The AYDLL platform on station at sunset, supporting autonomous surface vessels and government maritime assets."
     },
     {
         "id": "program-placeholder-2",
-        "name": "[ADDITIONAL PROGRAM — NAME PENDING]",
+        "name": "[ADDITIONAL PROGRAM: NAME PENDING]",
         "category": "[CAPABILITY AREA]",
         "mission": "[Short mission statement to be provided once this program is approved for public presentation.]",
         "problem": "[Operational problem the program is built to address.]",
-        "approach": "[Program approach — to be provided.]",
+        "approach": "[Program approach: to be provided.]",
         "stage": "[STAGE]",
         "featured": false,
         "hasDedicatedSite": false,
@@ -28,11 +29,11 @@
     },
     {
         "id": "program-placeholder-3",
-        "name": "[ADDITIONAL PROGRAM — NAME PENDING]",
+        "name": "[ADDITIONAL PROGRAM: NAME PENDING]",
         "category": "[CAPABILITY AREA]",
         "mission": "[Short mission statement to be provided once this program is approved for public presentation.]",
         "problem": "[Operational problem the program is built to address.]",
-        "approach": "[Program approach — to be provided.]",
+        "approach": "[Program approach: to be provided.]",
         "stage": "[STAGE]",
         "featured": false,
         "hasDedicatedSite": false,

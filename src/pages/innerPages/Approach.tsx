@@ -8,7 +8,13 @@ const Approach = () => {
     return (
         <>
             <HeaderV1 />
-            <BreadCrumb pageTitle="Approach" breadcrumb="Approach" />
+            <BreadCrumb
+                image="statement-dawn.jpg"
+                eyebrow="How We Work"
+                pageTitle="Approach"
+                subtitle="The principles that govern how we scope, develop, and sustain programs."
+                breadcrumb="Approach"
+            />
             <section className="had-context-section te-pt-120 te-pb-60">
                 <div className="container">
                     <div className="row">

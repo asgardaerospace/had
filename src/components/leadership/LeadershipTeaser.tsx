@@ -7,7 +7,7 @@ type Group = { group: string; members: unknown[] };
 /**
  * Team preview for the home page. Shows the organizing structure of the team
  * over a mission-operations image and routes to the full Team page. Names and
- * bios remain placeholders on the Team page — none are invented here.
+ * bios remain placeholders on the Team page. None are invented here.
  */
 const LeadershipTeaser = () => {
     const groups = LeadershipData as Group[];
@@ -62,7 +62,7 @@ const LeadershipTeaser = () => {
                                     <div className="had-team-chip">
                                         <h3 className="had-team-chip-title">{g.group}</h3>
                                         <p className="had-team-chip-note">
-                                            {g.members.length} {g.members.length === 1 ? "role" : "roles"} — profiles pending
+                                            {g.members.length} {g.members.length === 1 ? "role" : "roles"} (profiles pending)
                                         </p>
                                     </div>
                                 </div>

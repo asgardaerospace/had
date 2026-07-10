@@ -14,6 +14,7 @@ type Program = {
     hasDedicatedSite: boolean;
     externalKey: string | null;
     thumb: string;
+    imageAlt?: string;
     platform?: string;
 };
 
@@ -37,7 +38,13 @@ const ProgramPortfolio = () => {
                     const externalUrl = externalUrlFor(p.externalKey);
                     const isPending = isPlaceholder(p.name);
                     return (
-                        <div className="had-program-row" key={p.id}>
+                        <div className={`had-program-row${p.featured ? " had-program-row-featured" : ""}`} key={p.id}>
+                            {!isPending && p.thumb && (
+                                <Link to={`/program-details/${p.id}`} className="had-program-banner" aria-label={`View ${p.name}`}>
+                                    <img src={`/images/had/${p.thumb}`} alt={p.imageAlt || p.name} loading="lazy" />
+                                    {p.platform && <span className="had-program-banner-tag">{p.platform} Platform</span>}
+                                </Link>
+                            )}
                             <div className="row gy-3 align-items-start">
                                 <div className="col-lg-8">
                                     <span className={`had-program-cat ${isPending ? "had-placeholder" : ""}`}>

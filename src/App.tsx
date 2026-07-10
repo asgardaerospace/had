@@ -38,7 +38,7 @@ function App() {
       {isLoading ? <PreLoader /> :
           <div>
             <Helmet>
-              <title>{`${SITE.name} — ${SITE.positioning}`}</title>
+              <title>{`${SITE.name} | ${SITE.positioning}`}</title>
               <meta name="description" content={SITE.description} />
               <link rel="shortcut icon" href="/images/logo/favicon.png"></link>
             </Helmet>

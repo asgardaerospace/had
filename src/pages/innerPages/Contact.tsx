@@ -7,7 +7,14 @@ const Contact = () => {
     return (
         <>
             <HeaderV1 />
-            <BreadCrumb pageTitle="Contact" breadcrumb="Contact" />
+            <BreadCrumb
+                image="lantern-network.jpg"
+                objectPosition="center 40%"
+                eyebrow="Get in Touch"
+                pageTitle="Contact"
+                subtitle="Program, partnership, and general inquiries."
+                breadcrumb="Contact"
+            />
             <ContactContent />
             <FooterV1 />
         </>

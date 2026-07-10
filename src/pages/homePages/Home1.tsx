@@ -12,7 +12,7 @@ import ContactCta from '../../components/cta/ContactCta';
 import FooterV1 from '../../components/footer/FooterV1';
 
 /**
- * Hemisphere Defense — corporate home.
+ * Hemisphere Defense: corporate home.
  *
  * Scroll sequence follows the Paul Revere narrative: cinematic hero →
  * mission thesis → who we are → Land/Air/Sea domains → flagship Paul Revere

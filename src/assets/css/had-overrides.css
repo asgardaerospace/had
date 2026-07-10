@@ -1,5 +1,5 @@
 /* =====================================================================
-   Hemisphere Defense (HAD) — structural + tone overrides.
+   Hemisphere Defense (HAD): structural + tone overrides.
    Loaded AFTER style.css so these rules win. Keep this file focused on
    HAD-specific adjustments; the base design system stays in style.css.
    ===================================================================== */
@@ -486,11 +486,11 @@ body {
 .preeloader, .preloader { background-color: var(--had-navy) !important; }
 
 /* =====================================================================
-   Depth pass — sensing motif, world-map layers, technical detailing.
+   Depth pass: sensing motif, world-map layers, technical detailing.
    On-theme (sensing / awareness / maritime). No personnel or weapons.
    ===================================================================== */
 
-/* Sensing motif base — color + fade set here; placement by parent. */
+/* Sensing motif base: color + fade set here; placement by parent. */
 .had-motif { color: var(--had-accent); display: block; }
 .had-motif-ring {
   transform-origin: 300px 300px;
@@ -568,7 +568,7 @@ body {
 .had-mission-visual .had-mission-visual-line,
 .had-mission-visual .had-mission-visual-note { z-index: 2; }
 
-/* Corner ticks — small technical framing on key panels. */
+/* Corner ticks: small technical framing on key panels. */
 .had-mission-visual {
   box-shadow:
     inset 2px 2px 0 -1px rgba(90,151,206,0.5),
@@ -596,7 +596,7 @@ body {
 }
 
 /* =====================================================================
-   Generated imagery pass (nano-banana) — cinematic autonomous-defense
+   Generated imagery pass (nano-banana): cinematic autonomous-defense
    photography, brand-tinted navy + steel-azure. No personnel or weapons.
    Appended last so these win over earlier equal-specificity base rules.
    ===================================================================== */
@@ -701,7 +701,7 @@ body {
 }
 
 /* =====================================================================
-   Depth & motion pass — elevation, contrast, and one cinematic statement
+   Depth & motion pass: elevation, contrast, and one cinematic statement
    moment. Removes the "flat / subdued" read while keeping the institutional
    restraint. All motion respects prefers-reduced-motion (opt-out at end).
    ===================================================================== */
@@ -763,7 +763,7 @@ body {
   from { transform: scale(1.05); }
   to   { transform: scale(1.14) translate3d(-1.5%, -1%, 0); }
 }
-/* Orchestrated hero entrance — content rises in on load. */
+/* Orchestrated hero entrance: content rises in on load. */
 .had-hero-content > * { animation: hadRise 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 .had-hero-content > *:nth-child(1) { animation-delay: 0.10s; }
 .had-hero-content > *:nth-child(2) { animation-delay: 0.20s; }
@@ -829,7 +829,7 @@ body {
   margin: 0;
   font-weight: 700;
 }
-.had-statement-title span { color: var(--had-accent-strong); }
+.had-statement-title span { display: block; color: var(--had-accent-strong); }
 
 /* --- Button depth. --- */
 .te-theme-btn { box-shadow: 0 10px 24px -10px rgba(62, 124, 177, 0.65); }
@@ -876,7 +876,7 @@ body {
   --had-amber-glow: rgba(233, 162, 59, 0.38);
 }
 
-/* Restrained red/white/blue tick — the only overt patriotic mark, kept tiny. */
+/* Restrained red/white/blue tick: the only overt patriotic mark, kept tiny. */
 .had-tricolor {
   display: inline-block;
   width: 22px;
@@ -899,7 +899,7 @@ body {
 .had-video-el { z-index: 1; }
 
 /* =====================================================================
-   Cinematic hero (.had-hero-cinematic) — replaces the slider hero.
+   Cinematic hero (.had-hero-cinematic): replaces the slider hero.
    ===================================================================== */
 .had-hero-cinematic { min-height: min(100vh, 920px); display: flex; align-items: center; }
 /* framer-motion drives the line-by-line reveal; kill the old CSS rise. */
@@ -908,7 +908,7 @@ body {
 .had-hero-media { position: absolute; inset: -120px 0; z-index: 1; pointer-events: none; will-change: transform; }
 .had-hero-video .had-video-el,
 .had-hero-video .had-video-poster { filter: contrast(1.06) saturate(1.12) brightness(1.02); }
-/* Very slow, subtle scale drift for depth — complements the 0.5x playback so
+/* Very slow, subtle scale drift for depth: complements the 0.5x playback so
    the overall hero motion stays calm and cinematic. */
 .had-hero-video .had-video-el { animation: hadHeroDrift 72s ease-in-out infinite alternate; }
 @keyframes hadHeroDrift {
@@ -956,7 +956,7 @@ body {
 @media (max-width: 991px) { .had-hero-scrollcue { display: none; } }
 
 /* =====================================================================
-   Mission band — "The warning came before the fight." (Old North lanterns)
+   Mission band: "The warning came before the fight." (Old North lanterns)
    ===================================================================== */
 .had-mission-band {
   position: relative; overflow: hidden; min-height: 640px;
@@ -998,7 +998,7 @@ body {
 }
 
 /* =====================================================================
-   Domains — Land / Air / Sea
+   Domains: Land / Air / Sea
    ===================================================================== */
 .had-domains {
   position: relative;
@@ -1050,7 +1050,7 @@ body {
 .had-domain-text { color: rgba(255, 255, 255, 0.72); line-height: 1.6; margin: 0; }
 
 /* =====================================================================
-   Flagship — Paul Revere Program (.had-prp)
+   Flagship: Paul Revere Program (.had-prp)
    ===================================================================== */
 .had-prp {
   position: relative; padding-top: 120px;
@@ -1095,7 +1095,7 @@ body {
 
 /* Lantern → network tagline band */
 .had-prp-tagline {
-  position: relative; overflow: hidden; margin-top: 120px; min-height: 440px;
+  position: relative; overflow: hidden; margin-top: 120px; min-height: 640px;
   display: flex; align-items: center;
   border-top: 1px solid var(--had-line); border-bottom: 1px solid var(--had-line);
   background: var(--had-black);
@@ -1111,11 +1111,11 @@ body {
 .had-prp-tagline .container { position: relative; z-index: 2; }
 .had-prp-tagline-inner { max-width: 780px; padding: 74px 0; }
 .had-prp-tagline-title { color: #fff; font-weight: 700; margin: 0; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.16; }
-.had-prp-tagline-title span { color: var(--had-amber-strong); }
+.had-prp-tagline-title span { display: block; color: var(--had-amber-strong); }
 .had-prp-tagline-sub { margin: 16px 0 0; color: rgba(255, 255, 255, 0.78); font-size: clamp(15px, 1.4vw, 18px); }
 
 /* =====================================================================
-   Statement band — now video-backed (dawn Atlantic). Reuses existing
+   Statement band: now video-backed (dawn Atlantic). Reuses existing
    .had-statement / -scrim / -inner / -eyebrow / -title; add media + sub.
    ===================================================================== */
 .had-statement-media { position: absolute; inset: -8% 0; z-index: 0; will-change: transform; }
@@ -1143,7 +1143,7 @@ body {
 .had-team-chip-note { color: rgba(255, 255, 255, 0.6); font-size: 14px; margin: 0; }
 
 /* =====================================================================
-   Operating philosophy — icon row + centered 5-card grid
+   Operating philosophy: icon row + centered 5-card grid
    ===================================================================== */
 .had-principle-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
 .had-principle-icon {
@@ -1173,7 +1173,7 @@ body {
   .had-prp { padding-top: 90px; }
   .had-prp-media { margin-bottom: 34px; }
   .had-prp-media-inset { position: static; width: 100%; right: auto; bottom: auto; margin-top: 14px; }
-  .had-prp-tagline { margin-top: 80px; min-height: 360px; }
+  .had-prp-tagline { margin-top: 80px; min-height: 480px; }
 }
 @media (max-width: 575px) {
   .had-hero-actions .te-theme-btn { width: 100%; justify-content: center; }
@@ -1182,7 +1182,7 @@ body {
 }
 
 /* =====================================================================
-   Motion opt-out (narrative pass) — kill parallax/Ken-Burns for
+   Motion opt-out (narrative pass): kill parallax/Ken-Burns for
    reduced-motion. CSS !important beats framer-motion's inline transform.
    ===================================================================== */
 @media (prefers-reduced-motion: reduce) {
@@ -1191,4 +1191,158 @@ body {
   .had-mission-band-photo,
   .had-statement-media { transform: none !important; }
   .had-hero-scrollcue-dot { animation: none; }
+}
+
+/* =====================================================================
+   Programs pages: featured listing banner + detail hero + gallery
+   ===================================================================== */
+
+/* --- Listing: cinematic banner on the featured program card. --- */
+.had-program-row-featured { overflow: hidden; padding-top: 0; }
+.had-program-banner {
+  display: block; position: relative; overflow: hidden;
+  margin: 0 -34px 30px; aspect-ratio: 21 / 9;
+  border-bottom: 1px solid var(--had-line);
+}
+.had-program-banner img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block;
+  filter: contrast(1.08) saturate(1.14);
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.had-program-row-featured:hover .had-program-banner img { transform: scale(1.045); }
+.had-program-banner::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(0deg, rgba(11, 21, 34, 0.8) 0%, rgba(11, 21, 34, 0) 50%);
+}
+.had-program-banner-tag {
+  position: absolute; left: 18px; bottom: 16px; z-index: 2;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #fff;
+  background: rgba(10, 16, 26, 0.62); backdrop-filter: blur(4px);
+  border: 1px solid rgba(233, 162, 59, 0.45); padding: 7px 13px;
+}
+
+/* --- Detail: full-bleed program hero. --- */
+.had-program-hero {
+  position: relative; width: 100%; overflow: hidden;
+  height: clamp(320px, 42vw, 560px);
+  border-bottom: 1px solid var(--had-line); background: var(--had-black);
+}
+.had-program-hero > img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 42%;
+  filter: contrast(1.06) saturate(1.12);
+  animation: hadProgHeroDrift 30s ease-in-out infinite alternate;
+}
+.had-program-hero::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(0deg, rgba(11, 21, 34, 0.92) 0%, rgba(11, 21, 34, 0.12) 46%, rgba(11, 21, 34, 0.3) 100%),
+    linear-gradient(90deg, rgba(11, 21, 34, 0.68) 0%, rgba(11, 21, 34, 0) 56%);
+}
+.had-program-hero .container {
+  position: relative; z-index: 2; height: 100%;
+  display: flex; align-items: flex-end; padding-bottom: 34px;
+}
+.had-program-hero-cap { max-width: 640px; }
+.had-program-hero-eyebrow {
+  display: inline-block; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--had-amber-strong); margin-bottom: 10px;
+}
+.had-program-hero-line {
+  color: #fff; font-weight: 600; font-size: clamp(20px, 2.4vw, 30px);
+  line-height: 1.2; margin: 0; text-shadow: 0 2px 26px rgba(0, 0, 0, 0.45);
+}
+@keyframes hadProgHeroDrift { from { transform: scale(1.02); } to { transform: scale(1.08); } }
+
+/* --- Detail: capability gallery. --- */
+.had-program-gallery-wrap { margin-top: 64px; }
+.had-program-gallery-eyebrow {
+  display: block; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--had-accent-strong); margin-bottom: 18px;
+}
+.had-program-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.had-program-gallery-item {
+  position: relative; overflow: hidden; margin: 0; aspect-ratio: 4 / 3;
+  border: 1px solid var(--had-line); box-shadow: var(--had-elev), var(--had-rim);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+}
+.had-program-gallery-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: contrast(1.08) saturate(1.14);
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.had-program-gallery-item:hover {
+  transform: translateY(-5px); border-color: rgba(90, 151, 206, 0.6);
+  box-shadow: var(--had-elev), 0 0 42px -10px var(--had-glow), 0 0 0 1px rgba(90, 151, 206, 0.22), var(--had-rim);
+}
+.had-program-gallery-item:hover img { transform: scale(1.06); }
+.had-program-gallery-cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; margin: 0; padding: 32px 16px 14px;
+  color: #fff; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500;
+  background: linear-gradient(0deg, rgba(9, 15, 24, 0.92) 0%, rgba(9, 15, 24, 0) 100%);
+}
+
+@media (max-width: 767px) {
+  .had-program-gallery { grid-template-columns: 1fr; }
+  .had-program-banner { aspect-ratio: 16 / 9; margin: 0 -34px 24px; }
+  .had-program-hero .container { padding-bottom: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .had-program-hero > img { animation: none; }
+}
+
+/* =====================================================================
+   Inner-page hero (.had-page-hero): modern cinematic header for every
+   non-home page. Replaces the old flat breadcrumb strip.
+   ===================================================================== */
+.had-page-hero {
+  position: relative; overflow: hidden;
+  min-height: clamp(340px, 44vw, 560px);
+  display: flex; align-items: flex-end;
+  border-bottom: 1px solid var(--had-line);
+  background: var(--had-black);
+}
+.had-page-hero-media { position: absolute; inset: 0; z-index: 0; }
+.had-page-hero-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: contrast(1.06) saturate(1.12);
+  animation: hadPageHeroDrift 34s ease-in-out infinite alternate;
+}
+.had-page-hero-scrim {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(0deg, rgba(11, 21, 34, 0.95) 0%, rgba(11, 21, 34, 0.5) 44%, rgba(11, 21, 34, 0.32) 100%),
+    linear-gradient(90deg, rgba(11, 21, 34, 0.82) 0%, rgba(11, 21, 34, 0.14) 56%, rgba(11, 21, 34, 0) 100%);
+}
+.had-page-hero .container { position: relative; z-index: 2; padding-top: 64px; padding-bottom: 46px; }
+.had-page-hero-inner { max-width: 760px; }
+.had-page-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--had-amber-strong); margin-bottom: 16px;
+}
+.had-page-hero-title {
+  color: #fff; font-weight: 700; margin: 0;
+  font-size: clamp(34px, 5vw, 58px); line-height: 1.05;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.42);
+}
+.had-page-hero-sub {
+  color: rgba(255, 255, 255, 0.82); margin: 16px 0 0; max-width: 600px;
+  font-size: clamp(15px, 1.5vw, 18px); line-height: 1.6;
+}
+.had-page-hero-crumbs {
+  display: flex; align-items: center; gap: 10px; margin-top: 24px;
+  font-size: 13px; letter-spacing: 0.05em;
+}
+.had-page-hero-crumbs a { color: rgba(255, 255, 255, 0.62); transition: color 0.2s ease; }
+.had-page-hero-crumbs a:hover { color: var(--had-accent-strong); }
+.had-page-hero-crumbs .sep { color: rgba(255, 255, 255, 0.3); }
+.had-page-hero-crumbs .current { color: var(--had-accent-strong); }
+@keyframes hadPageHeroDrift { from { transform: scale(1.03); } to { transform: scale(1.09); } }
+@media (max-width: 767px) {
+  .had-page-hero { min-height: 300px; }
+  .had-page-hero .container { padding-top: 40px; padding-bottom: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .had-page-hero-media img { animation: none; }
 }

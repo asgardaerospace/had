@@ -64,7 +64,7 @@ const HeaderV1 = () => {
 
             {/* Header Start !*/}
             <header className="header-area style-3">
-                {/* Header Top Start — HAI corporate linkage, kept visually secondary */}
+                {/* Header Top Start: HAI corporate linkage, kept visually secondary */}
                 <div className="header-top had-header-top">
                     <div className="container">
                         <div className="row ">

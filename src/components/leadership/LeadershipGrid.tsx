@@ -15,7 +15,7 @@ type Group = {
 
 /**
  * Leadership & Team grid, organized by group. All member content is a
- * clearly-marked placeholder — no invented names, titles, biographies,
+ * clearly-marked placeholder: no invented names, titles, biographies,
  * prior service, clearances, awards, or affiliations.
  */
 const LeadershipGrid = () => {

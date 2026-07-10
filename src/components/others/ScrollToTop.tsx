@@ -25,7 +25,7 @@ const ScrollToTop = () => {
           el.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
           return;
         }
-        // Section not mounted yet (e.g. preloader still showing) — retry.
+        // Section not mounted yet (e.g. preloader still showing); retry.
         if (tries++ < 25) timer = window.setTimeout(tryScroll, 120);
       };
       timer = window.setTimeout(tryScroll, 60);

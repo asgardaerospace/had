@@ -1,9 +1,9 @@
 /**
- * SensingMotif — a lightweight, on-theme graphic (concentric sensing/awareness
+ * SensingMotif: a lightweight, on-theme graphic (concentric sensing/awareness
  * rings, range ticks, and contact nodes) rendered as inline SVG. Used to add
  * depth to the hero and to stand in for approved program imagery.
  *
- * On-brief: evokes sensing / persistent awareness / maritime domain — no
+ * On-brief: evokes sensing / persistent awareness / maritime domain; no
  * personnel, weapons, flags, or camouflage. Color comes from `currentColor`
  * (set via CSS); opacity and placement are controlled by the parent class.
  */

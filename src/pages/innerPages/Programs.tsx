@@ -8,7 +8,13 @@ const Programs = () => {
     return (
         <>
             <HeaderV1 />
-            <BreadCrumb pageTitle="Programs" breadcrumb="Programs" />
+            <BreadCrumb
+                image="program-network.jpg"
+                eyebrow="What We Build"
+                pageTitle="Programs"
+                subtitle="Mission-oriented programs, each scoped to a specific operational problem."
+                breadcrumb="Programs"
+            />
             <section className="had-context-section te-pt-120 te-pb-60">
                 <div className="container">
                     <div className="row">

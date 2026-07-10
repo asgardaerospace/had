@@ -6,12 +6,12 @@ import VideoBackdrop from "../video/VideoBackdrop";
  * Hemisphere Defense cinematic hero.
  *
  * The operating metaphor made literal: a colonial rider and a modern operator
- * face each other across a single amber lantern — "The warfighter has changed.
+ * face each other across a single amber lantern: "The warfighter has changed.
  * The mission remains." A muted, looped video plays behind a left-weighted
  * navy scrim that keeps the copy legible; a poster still paints first and is
  * the sole visual for reduced-motion / reduced-data users.
  *
- * No weapons emphasis, no flag-waving — the two watchmen and the signal light
+ * No weapons emphasis, no flag-waving. The two watchmen and the signal light
  * carry the meaning.
  */
 const HeroV1 = () => {
@@ -47,6 +47,8 @@ const HeroV1 = () => {
                     objectPosition="center"
                     className="had-hero-video"
                     playbackRate={0.5}
+                    crossfadeLoop
+                    crossfadeDuration={1}
                 />
             </motion.div>
             {/* Left-weighted scrim + bottom vignette keep the headline legible. */}
@@ -75,7 +77,7 @@ const HeroV1 = () => {
 
                     <motion.p className="had-hero-desc" variants={line}>
                         Hemisphere Defense builds mission-oriented programs for the next era of American
-                        vigilance — persistent awareness, distributed infrastructure, and operational
+                        vigilance: persistent awareness, distributed infrastructure, and operational
                         readiness across land, air, and sea.
                     </motion.p>
 

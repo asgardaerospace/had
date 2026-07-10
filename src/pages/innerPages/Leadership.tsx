@@ -8,7 +8,14 @@ const Leadership = () => {
     return (
         <>
             <HeaderV1 />
-            <BreadCrumb pageTitle="Leadership & Team" breadcrumb="Leadership" />
+            <BreadCrumb
+                image="team-ops.jpg"
+                objectPosition="center 40%"
+                eyebrow="Our People"
+                pageTitle="Leadership & Team"
+                subtitle="Executive, program, and technical leadership, supported by strategic advisors."
+                breadcrumb="Leadership"
+            />
             <section className="had-context-section te-pt-120 te-pb-60">
                 <div className="container">
                     <div className="row">

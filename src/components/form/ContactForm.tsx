@@ -4,7 +4,7 @@ type Pathway = { id: number; title: string };
 
 /**
  * General inquiry form. Routing is by inquiry type; no sales/quote framing.
- * This is a front-end placeholder — wire to an approved endpoint before launch.
+ * This is a front-end placeholder. Wire to an approved endpoint before launch.
  */
 const ContactForm = () => {
     return (

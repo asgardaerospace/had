@@ -4,7 +4,7 @@ import { SITE, EXTERNAL_LINK_PROPS, isPlaceholder } from "../../config/site";
 import VideoBackdrop from "../video/VideoBackdrop";
 
 /**
- * Flagship section — the Paul Revere Program.
+ * Flagship section: the Paul Revere Program.
  *
  * "Paul Revere Program" is the public-facing program name; it is built around
  * the AYDLL platform. This band presents the canonical description and canon-
@@ -12,7 +12,7 @@ import VideoBackdrop from "../video/VideoBackdrop";
  * technical detail is intentionally NOT reproduced on the HAD corporate site.
  *
  * BOUNDARY GUARDRAILS (do not remove): the platform is persistent maritime
- * awareness infrastructure — never a ship, drone mothership, weapons platform,
+ * awareness infrastructure, never a ship, drone mothership, weapons platform,
  * combat ship, autonomous warship, or a replacement for crewed assets. It is
  * not a deployed or endorsed government program. Government personnel retain
  * all command, mission, intelligence, response, engagement, and weapons-release
@@ -48,13 +48,13 @@ const FeaturedProgram = () => {
                             <img
                                 className="had-prp-media-main"
                                 src="/images/had/program-node.jpg"
-                                alt="Overhead view of a modular offshore sensing node holding position on open water."
+                                alt="The AYDLL maritime awareness infrastructure platform on station at sea at dusk, with autonomous systems arrayed on its deck."
                                 loading="lazy"
                             />
                             <img
                                 className="had-prp-media-inset"
                                 src="/images/had/program-mast-fog.jpg"
-                                alt="A maritime sensing mast lit amber in coastal fog at night."
+                                alt="A network view of the AYDLL platform linking distributed sensors and autonomous systems across air, surface, and subsurface domains."
                                 loading="lazy"
                             />
                             <span className="had-prp-platform-badge">
@@ -93,7 +93,7 @@ const FeaturedProgram = () => {
                         <div className="had-authority-note">
                             Government mission owners retain command, mission, intelligence, response, and
                             engagement authority. Hemisphere Defense operates, maintains, hosts, and sustains the
-                            infrastructure — it is not a ship, a weapons platform, or a replacement for crewed
+                            infrastructure. It is not a ship, a weapons platform, or a replacement for crewed
                             assets.
                         </div>
 
@@ -127,7 +127,7 @@ const FeaturedProgram = () => {
                 <VideoBackdrop
                     src="/video/lantern-network.mp4"
                     poster="/images/had/lantern-network.jpg"
-                    objectPosition="center"
+                    objectPosition="center 35%"
                     className="had-prp-tagline-media"
                 />
                 <div className="had-prp-tagline-scrim" />
