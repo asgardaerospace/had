@@ -16,15 +16,8 @@
     {
         "group": "Technical Leadership",
         "members": [
-            { "id": "tech-1", "name": "Chip Fichtner", "title": "Head of Engineering", "bio": "Chip serves as Head of Engineering for Hemisphere Defense programs. He leads system and platform engineering, technical design, engineering standards, and technical execution across program development efforts, working with leadership to move concepts from design toward execution.", "photo": "/images/had/chip-fichtner.jpg" },
+            { "id": "tech-1", "name": "Chip Fichtner", "title": "Head of Engineering", "bio": "Chip Fichtner serves as Head of Engineering for Hemisphere Defense, leading system and platform engineering, technical design, engineering standards, and program execution across development efforts. He brings more than 40 years as an engineering and operations executive, including service as an Executive Director at RTX, where he led large engineering, manufacturing, quality, and program-management organizations. His career spans P&L responsibility from $5 million to $900 million and teams of more than 500 across domestic and international operations, with expertise in advanced manufacturing, Lean operations, and complex systems integration. He is recognized for recovering underperforming programs and building disciplined organizations that deliver complex work reliably, experience he now applies to Hemisphere Defense's engineering and program development.", "photo": "/images/had/chip-fichtner.jpg" },
             { "id": "tech-2", "name": "Dalton Sawyer", "title": "Technical Direction", "bio": "Dalton supports technical direction across HAI and Hemisphere Defense programs, helping align engineering interfaces, technical standards, and program requirements. His role focuses on ensuring technical work remains coordinated with program objectives and leadership priorities.", "photo": null }
-        ]
-    },
-    {
-        "group": "Strategic & Corporate Leadership",
-        "members": [
-            { "id": "strat-1", "name": "Thomas Leath", "title": "Partner & Chief Business Development Officer", "bio": "Thomas Leath serves as Partner and Chief Business Development Officer of Hemisphere Aerospace Investments. He leads business development, investor relationships, strategic partnerships, and growth initiatives, bringing a broad cross-industry network to support the company's long-term expansion and capitalization.", "photo": null },
-            { "id": "strat-2", "name": "Cody Blossman", "title": "Chief Operating Officer & Chief of Staff", "bio": "Cody serves as Chief Operating Officer and Chief of Staff, overseeing day-to-day operations and internal coordination across the organization. His role focuses on aligning teams, processes, staffing, and execution with leadership priorities across HAI and affiliated defense initiatives.", "photo": null }
         ]
     }
 ]
