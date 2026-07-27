@@ -7,7 +7,7 @@ type Status = 'idle' | 'submitting' | 'success' | 'error' | 'unconfigured';
 
 /**
  * General inquiry form. Submissions POST to Web3Forms, which forwards them to
- * the inbox tied to the access key in site config (info@hai-aero.com). Until a
+ * the inbox tied to the access key in site config (info@haiaero.com). Until a
  * real key is set, the form stays inert and points visitors to email directly
  * rather than failing silently.
  */

@@ -6,7 +6,7 @@ const ContactContent = () => {
     const { generalEmail, phone, phoneDisplay, address } = SITE.contact;
 
     // Inquiry channel grid is turned off for now: every inquiry goes to the general
-    // inbox (info@hai-aero.com). The InquiryPathwaysGrid layout and its data
+    // inbox (info@haiaero.com). The InquiryPathwaysGrid layout and its data
     // (jsonData/contact/InquiryPathways.json) stay intact so this can be switched back
     // on once dedicated per-channel emails exist. To restore, flip this to true.
     const SHOW_INQUIRY_CHANNELS: boolean = false;

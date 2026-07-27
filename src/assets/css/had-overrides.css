@@ -258,6 +258,9 @@
 .had-leader-name { color: #fff; font-size: 22px; margin: 0 0 4px; }
 .had-leader-title { color: var(--had-accent-strong); font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 12px; }
 .had-leader-bio { color: rgba(255, 255, 255, 0.6); margin: 0; line-height: 1.6; font-size: 15px; }
+/* Multi-paragraph bios: the base rule zeroes margins, so space consecutive paragraphs. */
+.had-leader-bio + .had-leader-bio { margin-top: 12px; }
+.had-context-lead + .had-context-lead { margin-top: 16px; }
 .had-leader-group-title {
   color: #fff;
   font-size: 26px;

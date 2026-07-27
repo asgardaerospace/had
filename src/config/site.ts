@@ -51,7 +51,7 @@ export const SITE = {
 
   /** Contact information. */
   contact: {
-    generalEmail: "info@hai-aero.com",
+    generalEmail: "info@haiaero.com",
     // phone is raw E.164 for the tel: click-to-call href; phoneDisplay is the readable label shown to visitors.
     phone: "+12544772281",
     phoneDisplay: "+1 (254) 477-2281",
@@ -60,7 +60,7 @@ export const SITE = {
 
   /**
    * Contact form delivery via Web3Forms (https://web3forms.com). Create a free
-   * access key for the inbox that should receive submissions (info@hai-aero.com)
+   * access key for the inbox that should receive submissions (info@haiaero.com)
    * and paste it below. While this stays a [PLACEHOLDER], the form stays inert
    * and asks visitors to email that inbox directly instead of failing silently.
    */

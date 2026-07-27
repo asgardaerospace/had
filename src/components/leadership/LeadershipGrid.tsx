@@ -39,7 +39,9 @@ const LeadershipGrid = () => {
                                         <div className="had-leader-body">
                                             <h3 className={`had-leader-name ${isPlaceholder(m.name) ? "had-placeholder" : ""}`}>{m.name}</h3>
                                             <p className="had-leader-title">{m.title}</p>
-                                            <p className={`had-leader-bio ${isPlaceholder(m.bio) ? "had-placeholder" : ""}`}>{m.bio}</p>
+                                            {m.bio.split("\n\n").map((para, i) => (
+                                                <p key={i} className={`had-leader-bio ${isPlaceholder(m.bio) ? "had-placeholder" : ""}`}>{para}</p>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>

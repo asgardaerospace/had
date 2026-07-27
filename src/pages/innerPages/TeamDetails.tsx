@@ -44,9 +44,11 @@ const LeadershipDetails = () => {
                                 {member ? member.name : "[NAME]"}
                             </h2>
                             <p className="had-leader-title">{member ? member.title : "[TITLE]"}</p>
-                            <p className={`had-context-lead ${member ? "" : "had-placeholder"}`}>
-                                {member ? member.bio : "[SHORT BIO: to be provided]"}
-                            </p>
+                            {(member ? member.bio.split("\n\n") : ["[SHORT BIO: to be provided]"]).map((para, i) => (
+                                <p key={i} className={`had-context-lead ${member ? "" : "had-placeholder"}`}>
+                                    {para}
+                                </p>
+                            ))}
                             <div className="btn-wrapper mt-4">
                                 <Link to="/leadership" className="te-theme-btn te-theme-btn-outline">
                                     All Leadership
