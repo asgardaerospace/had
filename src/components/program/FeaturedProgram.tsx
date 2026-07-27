@@ -48,7 +48,7 @@ const FeaturedProgram = () => {
                             <img
                                 className="had-prp-media-main"
                                 src="/images/had/program-node.jpg"
-                                alt="The AYDLL maritime awareness infrastructure platform on station at sea at dusk, with autonomous systems arrayed on its deck."
+                                alt="The AYDLL maritime awareness infrastructure platform on station at sea under breaking weather, with an uncrewed surface vessel and an aerial system operating alongside it."
                                 loading="lazy"
                             />
                             <img
