@@ -47,6 +47,17 @@ export const SITE = {
     aydllIdl: "https://aydll.com",
     // Hemisphere Aerospace Investments (HAI) corporate website.
     hai: "https://hai-aero.com/",
+    // USFCR verified vendor profile for Hemisphere Defense.
+    usfcrProfile: "https://hemispheredefensegov.com/",
+    // SAM.gov entity page for HEMISPHERE AEROSPACE DEFENSE, LLC.
+    samEntity: "https://sam.gov/entity/JC89VWA2MA45",
+  },
+
+  /** Federal registration identifiers (SAM.gov, active). */
+  registration: {
+    legalName: "HEMISPHERE AEROSPACE DEFENSE, LLC",
+    uei: "JC89VWA2MA45",
+    cage: "22TR6",
   },
 
   /** Contact information. */

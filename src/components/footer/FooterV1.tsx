@@ -30,6 +30,35 @@ const FooterV1 = () => {
                                     <div className="te-social-profile">
                                         <SocialShare />
                                     </div>
+                                    <div className="had-registrations">
+                                        <a
+                                            href={SITE.external.usfcrProfile}
+                                            {...EXTERNAL_LINK_PROPS}
+                                            className="had-registration-badge"
+                                            aria-label="USFCR Verified Vendor profile for Hemisphere Defense"
+                                        >
+                                            <img
+                                                src="/images/had/usfcr-verified-vendor-2026.png"
+                                                alt="USFCR Verified Vendor 2026 seal"
+                                                loading="lazy"
+                                            />
+                                        </a>
+                                        <a
+                                            href={SITE.external.samEntity}
+                                            {...EXTERNAL_LINK_PROPS}
+                                            className="had-registration-badge"
+                                            aria-label="SAM.gov entity registration for Hemisphere Aerospace Defense, LLC"
+                                        >
+                                            <img
+                                                src="/images/had/sam-gov.webp"
+                                                alt="SAM.gov active registration"
+                                                loading="lazy"
+                                            />
+                                        </a>
+                                    </div>
+                                    <p className="had-registration-ids">
+                                        UEI: {SITE.registration.uei} &middot; CAGE: {SITE.registration.cage}
+                                    </p>
                                 </div>
                             </div>
 

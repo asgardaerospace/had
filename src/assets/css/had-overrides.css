@@ -1606,3 +1606,40 @@ body {
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.5);
 }
+
+/* --- Footer registration badges (USFCR verified vendor, SAM.gov). Light chips so the marks stay legible on the dark footer. --- */
+.had-registrations {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.had-registration-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f6f8;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  padding: 8px 12px;
+  height: 72px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.had-registration-badge img {
+  max-height: 100%;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  display: block;
+}
+a.had-registration-badge:hover {
+  box-shadow: 0 0 0 2px var(--had-accent-strong);
+  transform: translateY(-2px);
+}
+.had-registration-ids {
+  margin: 12px 0 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.5);
+}
