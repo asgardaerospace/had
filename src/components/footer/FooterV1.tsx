@@ -43,18 +43,16 @@ const FooterV1 = () => {
                                                 loading="lazy"
                                             />
                                         </a>
-                                        <a
-                                            href={SITE.external.samEntity}
-                                            {...EXTERNAL_LINK_PROPS}
+                                        <span
                                             className="had-registration-badge"
-                                            aria-label="SAM.gov entity registration for Hemisphere Aerospace Defense, LLC"
+                                            aria-label="SAM.gov active registration for Hemisphere Aerospace Defense, LLC"
                                         >
                                             <img
                                                 src="/images/had/sam-gov.webp"
                                                 alt="SAM.gov active registration"
                                                 loading="lazy"
                                             />
-                                        </a>
+                                        </span>
                                     </div>
                                     <p className="had-registration-ids">
                                         UEI: {SITE.registration.uei} &middot; CAGE: {SITE.registration.cage}

@@ -49,7 +49,10 @@ export const SITE = {
     hai: "https://hai-aero.com/",
     // USFCR verified vendor profile for Hemisphere Defense.
     usfcrProfile: "https://hemispheredefensegov.com/",
-    // SAM.gov entity page for HEMISPHERE AEROSPACE DEFENSE, LLC.
+    // SAM.gov entity page for HEMISPHERE AEROSPACE DEFENSE, LLC. Currently
+    // unused: the registration is not visible in SAM.gov public search, so the
+    // footer badge stays unlinked. Re-link once public display is enabled and
+    // this URL resolves for signed-out visitors.
     samEntity: "https://sam.gov/entity/JC89VWA2MA45",
   },
 
