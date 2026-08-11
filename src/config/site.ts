@@ -68,7 +68,7 @@ export const SITE = {
     samStatus: "Active Registration",
     naics: "[NAICS CODES PENDING]",
     psc: "[PSC CODES PENDING]",
-    capabilityStatement: "[CAPABILITY STATEMENT PENDING]",
+    capabilityStatement: "/documents/HAD-AYDLL-Capability-Statement.pdf",
   },
 
   /** Contact information. */

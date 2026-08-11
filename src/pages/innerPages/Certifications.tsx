@@ -152,7 +152,12 @@ const Certifications = () => {
                                     <span className="had-contact-list-label">Capability Statement</span>
                                     {isPlaceholder(capabilityStatement)
                                         ? <span className="had-placeholder">{capabilityStatement}</span>
-                                        : <a href={capabilityStatement} {...EXTERNAL_LINK_PROPS}>Download (PDF)</a>}
+                                        : (
+                                            <a href={capabilityStatement} {...EXTERNAL_LINK_PROPS}>
+                                                AYDLL Capability Statement (PDF)
+                                                <i className="fa fa-solid fa-arrow-up-right-from-square ms-2" />
+                                            </a>
+                                        )}
                                 </li>
                             </ul>
                         </div>
