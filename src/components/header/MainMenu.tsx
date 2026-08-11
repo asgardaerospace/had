@@ -25,6 +25,7 @@ const MainMenu = ({ toggleSubMenu }: MainMenuProps) => {
                         </ul>
                     </li>
                     <li><Link to="/leadership">Team</Link></li>
+                    <li><Link to="/certifications">Certifications</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>

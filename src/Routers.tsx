@@ -6,6 +6,7 @@ import ProgramDetails from './pages/innerPages/ProgramDetails';
 import Approach from './pages/innerPages/Approach';
 import Leadership from './pages/innerPages/Leadership';
 import LeadershipDetails from './pages/innerPages/TeamDetails';
+import Certifications from './pages/innerPages/Certifications';
 import Contact from './pages/innerPages/Contact';
 import Privacy from './pages/innerPages/Privacy';
 import Terms from './pages/innerPages/Terms';
@@ -27,6 +28,7 @@ const Routers = () => {
                 <Route path='/approach' element={<Approach />}></Route>
                 <Route path='/leadership' element={<Leadership />}></Route>
                 <Route path='/leadership/:id' element={<LeadershipDetails />}></Route>
+                <Route path='/certifications' element={<Certifications />}></Route>
                 <Route path='/contact' element={<Contact />}></Route>
                 <Route path='/privacy' element={<Privacy />}></Route>
                 <Route path='/terms' element={<Terms />}></Route>

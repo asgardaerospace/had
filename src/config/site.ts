@@ -56,11 +56,19 @@ export const SITE = {
     samEntity: "https://sam.gov/entity/JC89VWA2MA45",
   },
 
-  /** Federal registration identifiers (SAM.gov, active). */
+  /**
+   * Federal registration identifiers (SAM.gov, active). Shown on the
+   * Certifications page and in the footer. Placeholder values render dim
+   * until the approved codes/documents are supplied.
+   */
   registration: {
     legalName: "HEMISPHERE AEROSPACE DEFENSE, LLC",
     uei: "JC89VWA2MA45",
     cage: "22TR6",
+    samStatus: "Active Registration",
+    naics: "[NAICS CODES PENDING]",
+    psc: "[PSC CODES PENDING]",
+    capabilityStatement: "[CAPABILITY STATEMENT PENDING]",
   },
 
   /** Contact information. */

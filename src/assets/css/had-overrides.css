@@ -1643,3 +1643,18 @@ a.had-registration-badge:hover {
   letter-spacing: 0.08em;
   color: rgba(255, 255, 255, 0.5);
 }
+
+/* Certifications page: verification badges sized up from the footer chips. */
+.had-cert-badges {
+  margin: 0 0 28px;
+}
+.had-cert-badges .had-registration-badge {
+  height: 96px;
+  padding: 12px 18px;
+}
+.had-cert-badges .had-registration-badge img {
+  max-width: 210px;
+}
+.had-cert-row-gap {
+  padding-top: 56px;
+}

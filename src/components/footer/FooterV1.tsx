@@ -113,6 +113,7 @@ const FooterV1 = () => {
                                         <li><Link to="/program-details/aydll-idl">Paul Revere Program</Link></li>
                                         <li><Link to="/approach">Approach</Link></li>
                                         <li><Link to="/leadership">Team</Link></li>
+                                        <li><Link to="/certifications">Certifications</Link></li>
                                         <li><Link to="/contact">Contact</Link></li>
                                     </ul>
                                 </div>
