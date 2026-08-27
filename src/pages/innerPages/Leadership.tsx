@@ -13,7 +13,7 @@ const Leadership = () => {
                 objectPosition="center 40%"
                 eyebrow="Our People"
                 pageTitle="Leadership & Team"
-                subtitle="Executive, program, and technical leadership."
+                subtitle="Executive and technical leadership."
                 breadcrumb="Leadership"
             />
             <section className="had-context-section te-pt-120 te-pb-60">
@@ -27,8 +27,8 @@ const Leadership = () => {
                                 The people responsible for Hemisphere Defense
                             </h2>
                             <p className="had-context-lead">
-                                Hemisphere Defense is led across three areas: executive, program, and
-                                technical leadership.
+                                Hemisphere Defense is led across two areas: executive and technical
+                                leadership.
                             </p>
                         </div>
                     </div>

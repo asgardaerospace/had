@@ -5,7 +5,7 @@ import LeadershipData from '../../jsonData/leadership/LeadershipData.json';
 type Group = { group: string; members: { name: string }[] };
 
 /**
- * Team preview for the home page. Shows the four leadership categories and their
+ * Team preview for the home page. Shows the leadership categories and their
  * members over a mission-operations image and routes to the full Team page. No
  * content is invented here.
  */
@@ -50,8 +50,7 @@ const LeadershipTeaser = () => {
                                 <h2 className="title">The people who keep the watch</h2>
                                 <div className="te-section-desc">
                                     <p>
-                                        HAD is led across executive, program, technical, and strategic &amp; corporate
-                                        leadership.
+                                        HAD is led across executive and technical leadership.
                                     </p>
                                 </div>
                             </div>
