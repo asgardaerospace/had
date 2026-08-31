@@ -1,0 +1,51 @@
+{
+  "description": "Machine-readable privacy inventory for the Hemisphere Defense website. This file must describe reality: update it, the Privacy Policy (src/pages/innerPages/Privacy.tsx), and the point-of-collection notice whenever a data flow is added or removed. scripts/privacy-check.mjs enforces parts of it at build time.",
+  "lastReviewed": "2026-08-25",
+  "cookies": [],
+  "browserStorage": [],
+  "analytics": [],
+  "advertising": [],
+  "consentBanner": {
+    "present": false,
+    "reason": "No cookies and no non-essential tracking exist, so there is nothing to consent to. If any entry is ever added to cookies/analytics/advertising, a consent layer must be implemented BEFORE that technology ships, not after."
+  },
+  "dataCollection": [
+    {
+      "mechanism": "Contact form",
+      "source": "src/components/form/ContactForm.tsx",
+      "data": ["name", "email", "organization (optional)", "inquiry type", "message"],
+      "purpose": "Respond to and route visitor inquiries",
+      "trigger": "Only on explicit user submit",
+      "storage": "Delivered to the info@haiaero.com inbox; not stored by the website",
+      "retention": "Business correspondence retention (business decision, see PRIVACY-NOTES.md)",
+      "recipients": ["Web3Forms (processor, delivery only)", "Hemisphere Defense / HAI inbox"],
+      "legalBasisNote": "Data is necessary to fulfill the visitor's own request; no marketing use"
+    },
+    {
+      "mechanism": "Hosting server logs",
+      "source": "Hosting infrastructure (outside this repository)",
+      "data": ["IP address", "request time", "requested URL", "user agent", "referrer"],
+      "purpose": "Serve and secure the site",
+      "trigger": "Every request",
+      "storage": "Hosting provider",
+      "retention": "Unknown from this repository; confirm with the hosting provider (see PRIVACY-NOTES.md)",
+      "recipients": ["Hosting provider"],
+      "legalBasisNote": "Standard operation of the requested service"
+    }
+  ],
+  "thirdParties": [
+    {
+      "name": "Web3Forms",
+      "host": "api.web3forms.com",
+      "role": "Contact form delivery (processor)",
+      "dataReceived": "Contact form field contents, on submit only",
+      "loadsOnPageView": false,
+      "disclosedInPolicy": true
+    }
+  ],
+  "allowedExternalRequestHosts": ["api.web3forms.com"],
+  "allowedOutboundLinkHosts": ["aydll.com", "hai-aero.com", "hemispheredefensegov.com", "sam.gov", "web3forms.com", "fontawesome.com", "www.w3.org"],
+  "forbiddenWithoutConsentReview": [
+    "googletagmanager.com", "google-analytics.com", "analytics.google.com", "doubleclick.net", "connect.facebook.net", "facebook.com/tr", "snap.licdn.com", "px.ads.linkedin.com", "hotjar.com", "clarity.ms", "sentry.io", "segment.com", "mixpanel.com", "posthog.com", "hubspot.com", "hs-scripts.com", "intercom.io", "fullstory.com", "mouseflow.com", "crazyegg.com", "youtube.com/embed", "youtube-nocookie.com", "player.vimeo.com", "google.com/maps/embed", "google.com/recaptcha", "gstatic.com/recaptcha", "fonts.gstatic.com", "cdn.jsdelivr.net", "cdnjs.cloudflare.com", "unpkg.com"
+  ]
+}

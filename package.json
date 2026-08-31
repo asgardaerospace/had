@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "node scripts/privacy-check.mjs && tsc -b && vite build",
+    "privacy-check": "node scripts/privacy-check.mjs",
     "type-check": "tsc --noEmit",
     "lint": "eslint .",
     "preview": "vite preview"

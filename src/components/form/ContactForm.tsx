@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { Link } from 'react-router-dom';
 import InquiryPathways from '../../jsonData/contact/InquiryPathways.json';
 import { SITE, isPlaceholder } from "../../config/site";
 
@@ -115,7 +116,9 @@ const ContactForm = () => {
                                 )}
                                 {(status === 'idle' || submitting) && (
                                     <p className="had-external-note" style={{ display: "block", marginTop: 14 }}>
-                                        Submissions are sent to the Hemisphere Defense team.
+                                        Submissions are delivered to the Hemisphere Defense team by Web3Forms,
+                                        our form delivery provider, and are used only to respond to your
+                                        inquiry. See our <Link to="/privacy">Privacy Policy</Link>.
                                     </p>
                                 )}
                             </div>

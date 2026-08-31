@@ -81,10 +81,13 @@ export const SITE = {
   },
 
   /**
-   * Contact form delivery via Web3Forms (https://web3forms.com). Create a free
-   * access key for the inbox that should receive submissions (info@haiaero.com)
-   * and paste it below. While this stays a [PLACEHOLDER], the form stays inert
-   * and asks visitors to email that inbox directly instead of failing silently.
+   * Contact form delivery via Web3Forms (https://web3forms.com), which
+   * forwards submissions to info@haiaero.com. The access key is a public
+   * inbox-routing identifier by design (it grants no account access), so it
+   * is safe to ship client-side; the form's honeypot field filters bot spam.
+   * Web3Forms is the only third party that receives form data; it is named
+   * in the Privacy Policy and in the notice under the form. If this provider
+   * ever changes, update both of those disclosures and privacy/inventory.json.
    */
   contactForm: {
     web3formsAccessKey: "c6dff364-33a3-45e9-8c42-4de36b3b25a8",
