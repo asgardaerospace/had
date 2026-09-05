@@ -27,9 +27,14 @@ import LeadershipData from './jsonData/leadership/LeadershipData.json';
  *
  * The old template-generated paths still resolve, but redirect to the
  * canonical slug so no existing link, bookmark, or capability-statement
- * reference breaks. Redirects are client-side here; once the production domain
- * is attached, mirror them as 301s at the edge (see vercel.json) so search
- * engines see a real permanent redirect rather than a JS hop.
+ * reference breaks. These client-side redirects are the fallback; the
+ * authoritative ones are permanent redirects at the edge, in vercel.json, so
+ * search engines see a real permanent redirect rather than a JS hop.
+ *
+ * vercel.json cannot carry comments (its schema rejects unknown properties),
+ * so the policy is documented here instead. Those eight rules are generated
+ * from the id and slug fields in src/jsonData; regenerate them if either
+ * changes, and keep every redirect destination a real prerendered route.
  *
  * Anything unmatched renders a real 404 page carrying meta robots noindex,
  * instead of the previous behaviour where an unknown URL returned HTTP 200
