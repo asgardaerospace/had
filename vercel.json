@@ -1,7 +1,48 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/program-details/aydll-idl",
+      "destination": "/programs/paul-revere-program",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/exec-1",
+      "destination": "/leadership/john-b-sawyer",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/exec-2",
+      "destination": "/leadership/craig-mcpike",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/exec-3",
+      "destination": "/leadership/alex-hart",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/prog-2",
+      "destination": "/leadership/robert-riedell",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/tech-1",
+      "destination": "/leadership/chip-fichtner",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/tech-2",
+      "destination": "/leadership/dalton-sawyer",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/tech-3",
+      "destination": "/leadership/austin-fichtner",
+      "permanent": true
+    }
   ]
 }

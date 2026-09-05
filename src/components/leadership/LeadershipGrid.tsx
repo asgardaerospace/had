@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import LeadershipData from '../../jsonData/leadership/LeadershipData.json';
 import { isPlaceholder } from '../../config/site';
 
 type Member = {
     id: string;
+    slug: string;
     name: string;
     title: string;
     bio: string;
@@ -18,6 +20,11 @@ type Group = {
  * Leadership & Team grid, organized by category. Names, titles, and bios are
  * approved content; a headshot is shown when one is provided, otherwise a
  * neutral placeholder icon. No content is invented here.
+ *
+ * The grid shows each leader's opening paragraph and links to their profile
+ * page for the rest. Previously it printed every biography in full and linked
+ * to nothing, which left all seven /leadership/<name> pages orphaned and made
+ * them duplicates of this page. One canonical home per person, reachable.
  */
 const LeadershipGrid = () => {
     return (
@@ -39,9 +46,13 @@ const LeadershipGrid = () => {
                                         <div className="had-leader-body">
                                             <h3 className={`had-leader-name ${isPlaceholder(m.name) ? "had-placeholder" : ""}`}>{m.name}</h3>
                                             <p className="had-leader-title">{m.title}</p>
-                                            {m.bio.split("\n\n").map((para, i) => (
-                                                <p key={i} className={`had-leader-bio ${isPlaceholder(m.bio) ? "had-placeholder" : ""}`}>{para}</p>
-                                            ))}
+                                            <p className={`had-leader-bio ${isPlaceholder(m.bio) ? "had-placeholder" : ""}`}>
+                                                {m.bio.split("\n\n")[0]}
+                                            </p>
+                                            <Link to={`/leadership/${m.slug}`} className="had-inline-link had-leader-more">
+                                                Full profile: {m.name}
+                                                <i className="fa fa-solid fa-arrow-right ms-2" aria-hidden="true" />
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

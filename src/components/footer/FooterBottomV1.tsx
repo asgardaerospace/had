@@ -10,7 +10,7 @@ const FooterBottomV1 = () => {
                         &copy; {new Date().getFullYear()} {SITE.name} ({SITE.shortName}). All rights reserved.
                     </p>
                     <p className="had-copyright-hai">
-                        A {SITE.parent.name} ({SITE.parent.shortName}) company.
+                        {SITE.parent.relationshipShort}.
                     </p>
                 </div>
                 <div className="te-footer-bottom-menu">

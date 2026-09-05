@@ -2,10 +2,13 @@ import HeaderV1 from "../../components/header/HeaderV1";
 import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 import LegalDoc, { type LegalSection } from "../../components/legal/LegalDoc";
 import FooterV1 from "../../components/footer/FooterV1";
+import Seo from "../../components/seo/Seo";
+import { breadcrumbSchema, webPageSchema } from "../../components/seo/schema";
+import { metaForPath } from "../../config/seo";
 import { SITE } from "../../config/site";
 
 const intro = [
-    "These Terms of Use govern your access to and use of this website operated by Hemisphere Defense (HAD), which operates within the Hemisphere Aerospace Investments (HAI) structure. Please read them carefully.",
+    "These Terms of Use govern your access to and use of this website, operated by Hemisphere Defense (HAD). Please read them carefully.",
     "By accessing or using this website, you agree to be bound by these Terms of Use. If you do not agree, do not use the site.",
 ];
 
@@ -86,8 +89,16 @@ const sections: LegalSection[] = [
 ];
 
 const Terms = () => {
+    const meta = metaForPath("/terms");
     return (
         <>
+            <Seo
+                path="/terms"
+                schema={[
+                    webPageSchema({ path: "/terms", name: meta.title, description: meta.description }),
+                    breadcrumbSchema([{ name: "Terms of Use", path: "/terms" }]),
+                ]}
+            />
             <HeaderV1 />
             <BreadCrumb
                 image="breadcrumb-bg.jpg"

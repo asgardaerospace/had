@@ -3,10 +3,21 @@ import BreadCrumb from '../../components/breadcrumb/BreadCrumb';
 import ProgramPortfolio from "../../components/program/ProgramPortfolio";
 import HaiBand from "../../components/hai/HaiBand";
 import FooterV1 from "../../components/footer/FooterV1";
+import Seo from "../../components/seo/Seo";
+import { breadcrumbSchema, webPageSchema } from "../../components/seo/schema";
+import { metaForPath } from "../../config/seo";
 
 const Programs = () => {
+    const meta = metaForPath("/programs");
     return (
         <>
+            <Seo
+                path="/programs"
+                schema={[
+                    webPageSchema({ path: "/programs", name: meta.title, description: meta.description }),
+                    breadcrumbSchema([{ name: "Programs", path: "/programs" }]),
+                ]}
+            />
             <HeaderV1 />
             <BreadCrumb
                 image="colonial-boston.jpg"

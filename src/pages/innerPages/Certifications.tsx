@@ -3,6 +3,11 @@ import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 import HaiBand from "../../components/hai/HaiBand";
 import FooterV1 from "../../components/footer/FooterV1";
 import { SITE, EXTERNAL_LINK_PROPS, isPlaceholder } from "../../config/site";
+import Seo from "../../components/seo/Seo";
+import EntityAnswers from "../../components/seo/EntityAnswers";
+import { breadcrumbSchema, faqSchema, webPageSchema } from "../../components/seo/schema";
+import { metaForPath } from "../../config/seo";
+import { PROCUREMENT_FAQ } from "../../config/entityAnswers";
 
 /**
  * Certifications & Registrations: the reference page for contracting officers,
@@ -13,9 +18,18 @@ import { SITE, EXTERNAL_LINK_PROPS, isPlaceholder } from "../../config/site";
 const Certifications = () => {
     const { legalName, uei, cage, samStatus, naics, psc, capabilityStatement } = SITE.registration;
     const { generalEmail, phone, phoneDisplay, address } = SITE.contact;
+    const meta = metaForPath("/certifications");
 
     return (
         <>
+            <Seo
+                path="/certifications"
+                schema={[
+                    webPageSchema({ path: "/certifications", name: meta.title, description: meta.description }),
+                    breadcrumbSchema([{ name: "Certifications", path: "/certifications" }]),
+                    faqSchema(PROCUREMENT_FAQ),
+                ]}
+            />
             <HeaderV1 />
             <BreadCrumb
                 eyebrow="Working With Us"
@@ -85,6 +99,8 @@ const Certifications = () => {
                                     <img
                                         src="/images/had/usfcr-verified-vendor-2026.png"
                                         alt="USFCR Verified Vendor 2026 seal"
+                                        width={349}
+                                        height={269}
                                         loading="lazy"
                                     />
                                 </a>
@@ -164,6 +180,14 @@ const Certifications = () => {
                     </div>
                 </div>
             </div>
+
+            <EntityAnswers
+                className="te-pt-120 te-pb-120"
+                eyebrow="Vendor Vetting"
+                heading="Entity questions, answered directly"
+                intro="The facts most often needed for market research, vendor vetting, and award actions."
+                items={PROCUREMENT_FAQ}
+            />
 
             <HaiBand />
             <FooterV1 />

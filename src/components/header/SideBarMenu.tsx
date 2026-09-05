@@ -37,7 +37,7 @@ const SideBarMenu = ({ isMenuActive, closeMenu, toggleSubMenu }: SideBarMenuProp
                                         <i className="fa-solid fa-envelope"></i>{SITE.contact.generalEmail}
                                     </span>
                                     <span className={isPlaceholder(SITE.contact.phone) ? "had-placeholder" : ""}>
-                                        <i className="fa-solid fa-phone"></i>{SITE.contact.phone}
+                                        <i className="fa-solid fa-phone"></i>{SITE.contact.phoneDisplay}
                                     </span>
                                 </div>
                                 <Link to="/contact" className="te-theme-btn mt-3">Contact HAD</Link>

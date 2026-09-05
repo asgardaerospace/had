@@ -48,13 +48,13 @@ const FeaturedProgram = () => {
                             <img
                                 className="had-prp-media-main"
                                 src="/images/had/program-node.jpg"
-                                alt="The AYDLL maritime awareness infrastructure platform on station at sea under breaking weather, with an uncrewed surface vessel and an aerial system operating alongside it."
+                                alt="Concept rendering: the AYDLL maritime awareness infrastructure platform on station at sea under breaking weather, with an uncrewed surface vessel and an aerial system operating alongside it."
                                 loading="lazy"
                             />
                             <img
                                 className="had-prp-media-inset"
                                 src="/images/had/program-mast-fog.jpg"
-                                alt="A network view of the AYDLL platform linking distributed sensors and autonomous systems across air, surface, and subsurface domains."
+                                alt="Concept rendering: a network view of the AYDLL platform linking distributed sensors and autonomous systems across air, surface, and subsurface domains."
                                 loading="lazy"
                             />
                             <span className="had-prp-platform-badge">
@@ -98,7 +98,7 @@ const FeaturedProgram = () => {
                         </div>
 
                         <div className="btn-wrapper d-flex flex-wrap align-items-center gap-3 mt-4">
-                            <Link to="/program-details/aydll-idl" className="te-theme-btn">
+                            <Link to="/programs/paul-revere-program" className="te-theme-btn">
                                 Program Overview
                                 <i className="fa fa-solid fa-arrow-right" />
                             </Link>
@@ -108,7 +108,7 @@ const FeaturedProgram = () => {
                                     {...EXTERNAL_LINK_PROPS}
                                     className="te-theme-btn te-theme-btn-outline"
                                 >
-                                    Visit the Paul Revere Program Site
+                                    Visit the AYDLL Platform Site
                                     <i className="fa fa-solid fa-arrow-up-right-from-square ms-2" />
                                 </a>
                             ) : (

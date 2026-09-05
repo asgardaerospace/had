@@ -23,8 +23,9 @@ const FooterV1 = () => {
                                             <HeaderLogo />
                                         </div>
                                         <p className="mt-3">
-                                            Hemisphere Defense (HAD) develops and advances defense-oriented programs
-                                            within the Hemisphere Aerospace Investments structure.
+                                            Hemisphere Defense (HAD) develops and advances defense-oriented
+                                            programs. HAD and Hemisphere Aerospace Investments (HAI) share
+                                            executive leadership.
                                         </p>
                                     </div>
                                     <div className="te-social-profile">
@@ -108,9 +109,11 @@ const FooterV1 = () => {
                                 <div className="te-footer-widget te_widget_nav_menu">
                                     <h3 className="te-footer-widget-title">Explore</h3>
                                     <ul className="no-icon">
-                                        <li><Link to="/#domains">Domains</Link></li>
+                                        <li><Link to="/about">About</Link></li>
+                                        <li><Link to="/capabilities">Capability Areas</Link></li>
+                                        <li><Link to="/domains">Land, Air &amp; Sea Domains</Link></li>
                                         <li><Link to="/programs">Programs</Link></li>
-                                        <li><Link to="/program-details/aydll-idl">Paul Revere Program</Link></li>
+                                        <li><Link to="/programs/paul-revere-program">Paul Revere Program</Link></li>
                                         <li><Link to="/approach">Approach</Link></li>
                                         <li><Link to="/leadership">Team</Link></li>
                                         <li><Link to="/certifications">Certifications</Link></li>
@@ -137,11 +140,11 @@ const FooterV1 = () => {
                                         <li>
                                             {aydllReady ? (
                                                 <a href={SITE.external.aydllIdl} {...EXTERNAL_LINK_PROPS}>
-                                                    Paul Revere Program Site
+                                                    AYDLL Platform Site
                                                     <i className="fa fa-solid fa-arrow-up-right-from-square ms-2" />
                                                 </a>
                                             ) : (
-                                                <Link to="/program-details/aydll-idl">Paul Revere Program</Link>
+                                                <Link to="/programs/paul-revere-program">Paul Revere Program</Link>
                                             )}
                                         </li>
                                     </ul>

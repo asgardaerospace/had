@@ -4,10 +4,24 @@ import AboutV1 from "../../components/about/AboutV1";
 import CapabilityAreas from "../../components/capability/CapabilityAreas";
 import HaiBand from "../../components/hai/HaiBand";
 import FooterV1 from "../../components/footer/FooterV1";
+import Seo from "../../components/seo/Seo";
+import { breadcrumbSchema, faqSchema, webPageSchema } from "../../components/seo/schema";
+import { metaForPath } from "../../config/seo";
+import EntityAnswers from "../../components/seo/EntityAnswers";
+import { ABOUT_FAQ } from "../../config/entityAnswers";
 
 const About = () => {
+    const meta = metaForPath("/about");
     return (
         <>
+            <Seo
+                path="/about"
+                schema={[
+                    webPageSchema({ path: "/about", name: meta.title, description: meta.description }),
+                    breadcrumbSchema([{ name: "About", path: "/about" }]),
+                    faqSchema(ABOUT_FAQ),
+                ]}
+            />
             <HeaderV1 />
             <BreadCrumb
                 image="about-revere.jpg"
@@ -29,6 +43,12 @@ const About = () => {
                                 A defense environment that increasingly requires persistent, distributed capability
                             </h2>
                             <p className="had-context-lead">
+                                Hemisphere Defense is the operating name of HEMISPHERE AEROSPACE DEFENSE, LLC,
+                                a defense-programs company based in Waco, Texas. The two names refer to the
+                                same registered entity. Hemisphere Defense shares executive leadership with
+                                Hemisphere Aerospace Investments (HAI).
+                            </p>
+                            <p className="had-context-lead">
                                 Government missions increasingly depend on awareness that is maintained continuously,
                                 infrastructure that is distributed rather than concentrated, and autonomous systems that
                                 extend reach, all delivered at a lower manpower burden and sustained over a program's
@@ -44,7 +64,14 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <CapabilityAreas style="te-pt-60 te-pb-120" />
+            <CapabilityAreas style="te-pt-60 te-pb-60" />
+            <EntityAnswers
+                className="background-gray-700 te-pt-120 te-pb-120"
+                eyebrow="In Brief"
+                heading="Hemisphere Aerospace Defense, answered directly"
+                intro="Short factual answers to the questions government mission owners, industry partners, and procurement teams ask first."
+                items={ABOUT_FAQ}
+            />
             <HaiBand />
             <FooterV1 />
         </>

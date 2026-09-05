@@ -87,7 +87,7 @@ const HeroV1 = () => {
                             <i className="fa fa-solid fa-arrow-right" />
                         </Link>
                         <Link
-                            to="/program-details/aydll-idl"
+                            to="/programs/paul-revere-program"
                             className="te-theme-btn te-theme-btn-outline"
                         >
                             View Paul Revere Program

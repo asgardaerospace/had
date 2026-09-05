@@ -3,10 +3,21 @@ import BreadCrumb from '../../components/breadcrumb/BreadCrumb';
 import ApproachWalkthrough from "../../components/philosophy/ApproachWalkthrough";
 import HaiBand from "../../components/hai/HaiBand";
 import FooterV1 from "../../components/footer/FooterV1";
+import Seo from "../../components/seo/Seo";
+import { breadcrumbSchema, webPageSchema } from "../../components/seo/schema";
+import { metaForPath } from "../../config/seo";
 
 const Approach = () => {
+    const meta = metaForPath("/approach");
     return (
         <>
+            <Seo
+                path="/approach"
+                schema={[
+                    webPageSchema({ path: "/approach", name: meta.title, description: meta.description }),
+                    breadcrumbSchema([{ name: "Approach", path: "/approach" }]),
+                ]}
+            />
             <HeaderV1 />
             <BreadCrumb
                 image="statement-dawn.jpg"
