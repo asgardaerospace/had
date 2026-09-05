@@ -28,7 +28,7 @@ export const SITE = {
    * Populate this ONE field and every one of those is generated automatically.
    * Nothing else in the codebase hard-codes the production origin.
    */
-  productionDomain: "",
+  productionDomain: "https://had.hai-aero.com",
 
   name: "Hemisphere Defense",
   /** Registered entity name. The canonical, unambiguous string for search. */

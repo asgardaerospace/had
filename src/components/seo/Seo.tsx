@@ -29,7 +29,15 @@ const Seo = ({ path, meta, schema = [] }: SeoProps) => {
   const base = metaForPath(path);
   const m: RouteMeta = { ...base, ...meta, path };
 
-  const canonical = absoluteUrl(m.path);
+  // A noindex page gets no canonical and no og:url.
+  //
+  // Two reasons. Combining noindex with a self-canonical is contradictory
+  // signalling: the canonical says "index this content here", the robots tag
+  // says "do not index". More importantly, the host serves the 404 document at
+  // arbitrary unknown URLs, so a canonical of /404 would tell search engines
+  // that every mistyped URL canonicalises to /404, which is exactly how a 404
+  // page ends up indexed.
+  const canonical = m.noindex ? undefined : absoluteUrl(m.path);
   const ogImage = m.image ? absoluteUrl(m.image) : undefined;
   const graph = buildGraph([organizationSchema(), webSiteSchema(), ...schema]);
 
