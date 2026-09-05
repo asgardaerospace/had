@@ -10,6 +10,10 @@ import LeadershipTeaser from '../../components/leadership/LeadershipTeaser';
 import HaiBand from '../../components/hai/HaiBand';
 import ContactCta from '../../components/cta/ContactCta';
 import FooterV1 from '../../components/footer/FooterV1';
+import Seo from '../../components/seo/Seo';
+import { programSchema, webPageSchema } from '../../components/seo/schema';
+import { metaForPath } from '../../config/seo';
+import { SITE } from '../../config/site';
 
 /**
  * Hemisphere Defense: corporate home.
@@ -23,8 +27,24 @@ import FooterV1 from '../../components/footer/FooterV1';
  * generic capability grid now lives on the About page.
  */
 const Home = () => {
+    const meta = metaForPath('/');
     return (
         <>
+            <Seo
+                path="/"
+                schema={[
+                    webPageSchema({ path: '/', name: meta.title, description: meta.description }),
+                    // The home page names the flagship program, so it carries the
+                    // provider relationship too. This is the shortest path for a
+                    // retrieval system to answer "who develops the Paul Revere Program?".
+                    programSchema({
+                        name: SITE.flagship.program,
+                        slug: 'paul-revere-program',
+                        serviceType: 'Persistent maritime awareness infrastructure',
+                        description: SITE.flagship.canonical,
+                    }),
+                ]}
+            />
             <HeaderV1 />
             <HeroV1 />
             <MissionBand />

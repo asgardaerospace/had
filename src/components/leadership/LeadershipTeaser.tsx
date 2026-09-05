@@ -26,7 +26,7 @@ const LeadershipTeaser = () => {
                         <div className="had-team-media">
                             <img
                                 src="/images/had/team-ops.jpg"
-                                alt="A small mission-operations team at consoles before a wall display tracking the maritime approaches."
+                                alt="Illustrative image: a small mission-operations team at consoles before a wall display tracking the maritime approaches."
                                 loading="lazy"
                             />
                             <span className="had-team-media-caption">

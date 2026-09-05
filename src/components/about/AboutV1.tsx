@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type AboutV1Props = {
     style?: string;
     full?: boolean;
@@ -39,8 +41,9 @@ const AboutV1 = ({ style = "", full = false }: AboutV1Props) => {
                                             </h2>
                                             <div className="te-section-desc">
                                                 <p>
-                                                    Hemisphere Defense (HAD) is the defense-programs company within
-                                                    Hemisphere Aerospace Investments. Government missions increasingly
+                                                    Hemisphere Defense (HAD) is a defense-programs company that shares
+                                                    executive leadership with Hemisphere Aerospace Investments (HAI).
+                                                    Government missions increasingly
                                                     require persistent awareness, distributed infrastructure, and
                                                     autonomous-systems support delivered at a lower manpower burden and
                                                     sustained over time. HAD is built to identify those operational gaps
@@ -52,6 +55,19 @@ const AboutV1 = ({ style = "", full = false }: AboutV1Props) => {
                                                         the mission. We approach each program with measurable criteria and
                                                         decision gates, so capability advances on evidence rather than
                                                         demonstration.
+                                                    </p>
+                                                )}
+                                                {!full && (
+                                                    <p>
+                                                        More on{" "}
+                                                        <Link to="/about" className="had-inline-link">
+                                                            what Hemisphere Aerospace Defense does
+                                                        </Link>{" "}
+                                                        and the{" "}
+                                                        <Link to="/capabilities" className="had-inline-link">
+                                                            capability areas
+                                                        </Link>{" "}
+                                                        our programs are built around.
                                                     </p>
                                                 )}
                                             </div>

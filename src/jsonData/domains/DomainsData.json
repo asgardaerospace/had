@@ -6,7 +6,7 @@
         "theme": "Distributed sensing · forward infrastructure · austere operations",
         "text": "Persistent ground-based awareness and support infrastructure for contested, remote, and mission-critical environments.",
         "image": "domain-land.jpg",
-        "alt": "A ridgeline sensing and support installation overlooking the coastal approaches at first light."
+        "alt": "Illustrative image: a ridgeline sensing and support installation overlooking coastal approaches at first light."
     },
     {
         "id": "air",
@@ -15,7 +15,7 @@
         "theme": "Reach · ISR · communications relay · persistent observation",
         "text": "Air-domain programs focused on reach, sensing, communications, and autonomous systems support.",
         "image": "domain-air.jpg",
-        "alt": "A long-endurance uncrewed aircraft holding station above the cloud deck at dusk."
+        "alt": "Illustrative image: a long-endurance uncrewed aircraft holding station above the cloud deck at dusk."
     },
     {
         "id": "sea",
@@ -24,6 +24,6 @@
         "theme": "Maritime awareness · offshore infrastructure · sensor fusion",
         "text": "Maritime programs built for persistent awareness, distributed sensing, and lower-burden operational coverage.",
         "image": "domain-sea.jpg",
-        "alt": "An offshore sensing mast standing watch over dark open water at night, distant contacts on the horizon."
+        "alt": "Illustrative image: an offshore sensing mast over dark open water at night, distant contacts on the horizon."
     }
 ]

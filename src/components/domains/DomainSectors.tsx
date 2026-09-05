@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import DomainsData from "../../jsonData/domains/DomainsData.json";
 
@@ -39,7 +40,11 @@ const DomainSectors = () => {
                                 </h2>
                                 <p className="had-domains-lead">
                                     The distributed warning network, modernized: persistent sensing and support
-                                    infrastructure spanning every domain the mission crosses.
+                                    infrastructure spanning every domain the mission crosses.{" "}
+                                    <Link to="/domains" className="had-inline-link">
+                                        How we work across land, air, and sea
+                                    </Link>
+                                    .
                                 </p>
                             </div>
                         </motion.div>

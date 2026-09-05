@@ -3,10 +3,21 @@ import BreadCrumb from '../../components/breadcrumb/BreadCrumb';
 import LeadershipGrid from "../../components/leadership/LeadershipGrid";
 import HaiBand from "../../components/hai/HaiBand";
 import FooterV1 from "../../components/footer/FooterV1";
+import Seo from "../../components/seo/Seo";
+import { breadcrumbSchema, webPageSchema } from "../../components/seo/schema";
+import { metaForPath } from "../../config/seo";
 
 const Leadership = () => {
+    const meta = metaForPath("/leadership");
     return (
         <>
+            <Seo
+                path="/leadership"
+                schema={[
+                    webPageSchema({ path: "/leadership", name: meta.title, description: meta.description }),
+                    breadcrumbSchema([{ name: "Leadership", path: "/leadership" }]),
+                ]}
+            />
             <HeaderV1 />
             <BreadCrumb
                 image="team-ops.jpg"

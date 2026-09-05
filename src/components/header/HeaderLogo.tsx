@@ -11,7 +11,7 @@ const HeaderLogo = () => {
             <Link to="/" className="had-wordmark" aria-label="Hemisphere Defense home">
                 <img
                     src="/images/logo/had-emblem.png"
-                    alt=""
+                    alt="Hemisphere Aerospace Defense"
                     className="had-wordmark-emblem"
                     width={52}
                     height={49}

@@ -1,6 +1,6 @@
 {
   "description": "Machine-readable privacy inventory for the Hemisphere Defense website. This file must describe reality: update it, the Privacy Policy (src/pages/innerPages/Privacy.tsx), and the point-of-collection notice whenever a data flow is added or removed. scripts/privacy-check.mjs enforces parts of it at build time.",
-  "lastReviewed": "2026-08-25",
+  "lastReviewed": "2026-09-05",
   "cookies": [],
   "browserStorage": [],
   "analytics": [],
@@ -13,23 +13,40 @@
     {
       "mechanism": "Contact form",
       "source": "src/components/form/ContactForm.tsx",
-      "data": ["name", "email", "organization (optional)", "inquiry type", "message"],
+      "data": [
+        "name",
+        "email",
+        "organization (optional)",
+        "inquiry type",
+        "message"
+      ],
       "purpose": "Respond to and route visitor inquiries",
       "trigger": "Only on explicit user submit",
       "storage": "Delivered to the info@haiaero.com inbox; not stored by the website",
       "retention": "Business correspondence retention (business decision, see PRIVACY-NOTES.md)",
-      "recipients": ["Web3Forms (processor, delivery only)", "Hemisphere Defense / HAI inbox"],
+      "recipients": [
+        "Web3Forms (processor, delivery only)",
+        "Hemisphere Defense / HAI inbox"
+      ],
       "legalBasisNote": "Data is necessary to fulfill the visitor's own request; no marketing use"
     },
     {
       "mechanism": "Hosting server logs",
       "source": "Hosting infrastructure (outside this repository)",
-      "data": ["IP address", "request time", "requested URL", "user agent", "referrer"],
+      "data": [
+        "IP address",
+        "request time",
+        "requested URL",
+        "user agent",
+        "referrer"
+      ],
       "purpose": "Serve and secure the site",
       "trigger": "Every request",
       "storage": "Hosting provider",
       "retention": "Unknown from this repository; confirm with the hosting provider (see PRIVACY-NOTES.md)",
-      "recipients": ["Hosting provider"],
+      "recipients": [
+        "Hosting provider"
+      ],
       "legalBasisNote": "Standard operation of the requested service"
     }
   ],
@@ -43,9 +60,62 @@
       "disclosedInPolicy": true
     }
   ],
-  "allowedExternalRequestHosts": ["api.web3forms.com"],
-  "allowedOutboundLinkHosts": ["aydll.com", "hai-aero.com", "hemispheredefensegov.com", "sam.gov", "web3forms.com", "fontawesome.com", "www.w3.org"],
+  "allowedExternalRequestHosts": [
+    "api.web3forms.com"
+  ],
+  "allowedOutboundLinkHosts": [
+    "aydll.com",
+    "fontawesome.com",
+    "hai-aero.com",
+    "hemispheredefensegov.com",
+    "sam.gov",
+    "schema.org",
+    "web3forms.com",
+    "www.sitemaps.org",
+    "www.w3.org"
+  ],
   "forbiddenWithoutConsentReview": [
-    "googletagmanager.com", "google-analytics.com", "analytics.google.com", "doubleclick.net", "connect.facebook.net", "facebook.com/tr", "snap.licdn.com", "px.ads.linkedin.com", "hotjar.com", "clarity.ms", "sentry.io", "segment.com", "mixpanel.com", "posthog.com", "hubspot.com", "hs-scripts.com", "intercom.io", "fullstory.com", "mouseflow.com", "crazyegg.com", "youtube.com/embed", "youtube-nocookie.com", "player.vimeo.com", "google.com/maps/embed", "google.com/recaptcha", "gstatic.com/recaptcha", "fonts.gstatic.com", "cdn.jsdelivr.net", "cdnjs.cloudflare.com", "unpkg.com"
-  ]
+    "googletagmanager.com",
+    "google-analytics.com",
+    "analytics.google.com",
+    "doubleclick.net",
+    "connect.facebook.net",
+    "facebook.com/tr",
+    "snap.licdn.com",
+    "px.ads.linkedin.com",
+    "hotjar.com",
+    "clarity.ms",
+    "sentry.io",
+    "segment.com",
+    "mixpanel.com",
+    "posthog.com",
+    "hubspot.com",
+    "hs-scripts.com",
+    "intercom.io",
+    "fullstory.com",
+    "mouseflow.com",
+    "crazyegg.com",
+    "youtube.com/embed",
+    "youtube-nocookie.com",
+    "player.vimeo.com",
+    "google.com/maps/embed",
+    "google.com/recaptcha",
+    "gstatic.com/recaptcha",
+    "fonts.gstatic.com",
+    "cdn.jsdelivr.net",
+    "cdnjs.cloudflare.com",
+    "unpkg.com"
+  ],
+  "vocabularyIdentifiers": {
+    "note": "Namespace URIs that appear in source as identifiers only. They are never fetched at runtime, set no cookies, and send no data. Listed here so scripts/privacy-check.mjs can distinguish them from real external requests.",
+    "hosts": {
+      "schema.org": "JSON-LD @context vocabulary for structured data (src/components/seo/schema.ts).",
+      "www.sitemaps.org": "XML namespace for the generated sitemap (scripts/generate-seo-files.mjs)."
+    }
+  },
+  "searchMeasurement": {
+    "note": "Search performance is measured through Google Search Console and Bing Webmaster Tools only. Both are verified by DNS TXT record, which adds no script, no cookie, no browser storage, and no third-party request to any page. No analytics, tag manager, or advertising pixel is present, and none may be added without updating this file, the Privacy Policy, and the point-of-collection notice, and implementing consent first.",
+    "verificationMethod": "DNS TXT (preferred). An HTML verification file is the fallback; it is a static file and also adds no script.",
+    "clientSideAnalytics": false
+  }
 }

@@ -72,7 +72,7 @@ const HeaderV1 = () => {
                                 <div className="te-header-top-wrapper">
                                     <div className="header-top-info">
                                         <span className="had-header-top-note">
-                                            A Hemisphere Aerospace Investments (HAI) company
+                                            {SITE.parent.relationshipShort}
                                         </span>
                                     </div>
                                     <div className="header-top-info">
@@ -95,8 +95,11 @@ const HeaderV1 = () => {
                 {/* Header Top End */}
                 {/* Header Nav Menu Start */}
                 <div className={`te-header-menu-area te-sticky-header ${isSticky ? "te-sticky_menu" : ""}`}>
+                    {/* The template nested two Bootstrap containers here, which
+                      * applied the gutter padding twice and squeezed the nav into
+                      * roughly 24px less width than it should have. One container. */}
                     <div className="container">
-                        <div className="container">
+                        <div>
                             <div className="row menu-wrapper">
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-6 d-flex align-items-center">
                                     <HeaderLogo />

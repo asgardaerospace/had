@@ -1,7 +1,49 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "_comment": "Every route is prerendered to its own static HTML file, so the previous catch-all rewrite to /index.html is gone: it would have served the homepage, with a 200, for every unknown URL. Vercel now serves the prerendered file for known paths and dist/404.html with a real 404 status for everything else. The redirects below mirror the client-side ones in src/Routers.tsx as 301s so search engines see a permanent redirect rather than a JavaScript hop. They are generated from the id and slug fields in src/jsonData; regenerate if those change.",
+  "redirects": [
+    {
+      "source": "/program-details/aydll-idl",
+      "destination": "/programs/paul-revere-program",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/exec-1",
+      "destination": "/leadership/john-b-sawyer",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/exec-2",
+      "destination": "/leadership/craig-mcpike",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/exec-3",
+      "destination": "/leadership/alex-hart",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/prog-2",
+      "destination": "/leadership/robert-riedell",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/tech-1",
+      "destination": "/leadership/chip-fichtner",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/tech-2",
+      "destination": "/leadership/dalton-sawyer",
+      "permanent": true
+    },
+    {
+      "source": "/leadership/tech-3",
+      "destination": "/leadership/austin-fichtner",
+      "permanent": true
+    }
   ]
 }

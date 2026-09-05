@@ -4,6 +4,7 @@ import { SITE, EXTERNAL_LINK_PROPS, isPlaceholder } from "../../config/site";
 
 type Program = {
     id: string;
+    slug: string;
     name: string;
     category: string;
     mission: string;
@@ -40,7 +41,7 @@ const ProgramPortfolio = () => {
                     return (
                         <div className={`had-program-row${p.featured ? " had-program-row-featured" : ""}`} key={p.id}>
                             {!isPending && p.thumb && (
-                                <Link to={`/program-details/${p.id}`} className="had-program-banner" aria-label={`View ${p.name}`}>
+                                <Link to={`/programs/${p.slug}`} className="had-program-banner" aria-label={`View ${p.name}`}>
                                     <img src={`/images/had/${p.thumb}`} alt={p.imageAlt || p.name} loading="lazy" />
                                     {p.platform && <span className="had-program-banner-tag">{p.platform} Platform</span>}
                                 </Link>
@@ -79,7 +80,7 @@ const ProgramPortfolio = () => {
 
                             {!isPending && (
                                 <div className="btn-wrapper mt-4 d-flex flex-wrap align-items-center gap-3">
-                                    <Link to={`/program-details/${p.id}`} className="te-theme-btn">
+                                    <Link to={`/programs/${p.slug}`} className="te-theme-btn">
                                         Program Overview
                                         <i className="fa fa-solid fa-arrow-right" />
                                     </Link>

@@ -5,7 +5,20 @@
     <link rel="icon" type="image/png" href="/images/logo/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0E1C33" />
-    <title>Hemisphere Defense | American vigilance, modernized</title>
+    <title>Hemisphere Aerospace Defense</title>
+    <!--
+      Scroll and load reveals are driven by Framer Motion, which serializes its
+      starting state (opacity:0) into the prerendered HTML. Crawlers that read
+      raw HTML still get the text, and crawlers that execute JavaScript see the
+      animation run. This rule covers the remaining case, a visitor with
+      JavaScript disabled, who would otherwise see an empty page. It applies
+      only inside <noscript>, so it can never affect the animated experience.
+    -->
+    <noscript>
+      <style>
+        [style*="opacity:0"] { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
   </head>
   <body>
     <div id="root"></div>

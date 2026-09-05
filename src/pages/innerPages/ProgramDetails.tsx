@@ -5,9 +5,12 @@ import HaiBand from "../../components/hai/HaiBand";
 import FooterV1 from "../../components/footer/FooterV1";
 import ProgramsData from '../../jsonData/programs/ProgramsData.json';
 import { SITE, EXTERNAL_LINK_PROPS, isPlaceholder } from "../../config/site";
+import Seo from "../../components/seo/Seo";
+import { breadcrumbSchema, programSchema, webPageSchema } from "../../components/seo/schema";
+import { metaForPath } from "../../config/seo";
 
 type Program = {
-    id: string; name: string; category: string; mission: string;
+    id: string; slug: string; name: string; category: string; mission: string;
     problem: string; approach: string; stage: string; featured: boolean;
     hasDedicatedSite: boolean; externalKey: string | null; thumb: string;
     platform?: string;
@@ -15,25 +18,47 @@ type Program = {
 
 /** Flagship (AYDLL) program imagery: full-bleed hero + capability gallery. Boundary-safe. */
 const AYDLL_GALLERY = [
-    { src: "program-network.jpg", cap: "Distributed offshore infrastructure", alt: "A distributed network of AYDLL platform nodes providing persistent coverage across the maritime domain." },
-    { src: "program-air.jpg", cap: "Autonomous systems launch & recovery", alt: "An autonomous tiltrotor aircraft launching from the AYDLL platform flight deck." },
-    { src: "program-launch.jpg", cap: "Multi-domain uncrewed systems", alt: "An autonomous tiltrotor and surface vessel staged on the AYDLL platform for launch and recovery." },
+    { src: "program-network.jpg", cap: "Distributed offshore infrastructure", alt: "Concept rendering: a distributed network of AYDLL platform nodes providing persistent coverage across the maritime domain." },
+    { src: "program-air.jpg", cap: "Autonomous systems launch & recovery", alt: "Concept rendering: an autonomous tiltrotor aircraft launching from the AYDLL platform flight deck." },
+    { src: "program-launch.jpg", cap: "Multi-domain uncrewed systems", alt: "Concept rendering: an autonomous tiltrotor and surface vessel staged on the AYDLL platform for launch and recovery." },
 ];
 
 const ProgramDetails = () => {
-    const { id } = useParams();
-    const program = (ProgramsData as Program[]).find((p) => p.id === id);
+    const { slug } = useParams();
+    const program = (ProgramsData as Program[]).find((p) => p.slug === slug);
 
     const externalUrl =
         program?.externalKey
             ? (SITE.external as Record<string, string>)[program.externalKey]
             : undefined;
     const externalReady = !!externalUrl && !isPlaceholder(externalUrl);
-    const isAydll = program?.id === "aydll-idl";
+    const isAydll = program?.slug === "paul-revere-program";
     const pending = program ? isPlaceholder(program.name) : false;
+
+    const path = program ? `/programs/${program.slug}` : "/404";
+    const meta = metaForPath(path);
 
     return (
         <>
+            <Seo
+                path={path}
+                schema={program ? [
+                    webPageSchema({ path, name: meta.title, description: meta.description }),
+                    breadcrumbSchema([
+                        { name: "Programs", path: "/programs" },
+                        { name: program.name, path },
+                    ]),
+                    // Names Hemisphere Aerospace Defense as the provider, so the
+                    // program and the company resolve as one connected entity pair
+                    // rather than two unrelated names.
+                    programSchema({
+                        name: program.name,
+                        slug: program.slug,
+                        serviceType: program.category,
+                        description: program.mission,
+                    }),
+                ] : []}
+            />
             <HeaderV1 />
             <BreadCrumb
                 image={isAydll ? "program-node-hero.jpg" : "program-network.jpg"}
@@ -65,8 +90,16 @@ const ProgramDetails = () => {
 
                                 {isAydll ? (
                                     <>
+                                        {/*
+                                          * Explicit entity relationship. Stated in plain language rather
+                                          * than left for a crawler to infer, so that search and AI systems
+                                          * can answer "who develops the Paul Revere Program?" from this
+                                          * page alone. Mirrored in Service schema (provider) and in
+                                          * config/entityAnswers.ts.
+                                          */}
                                         <p className="had-context-lead" style={{ marginBottom: 16 }}>
-                                            The public-facing <strong>Paul Revere Program</strong> is built around the{" "}
+                                            The <strong>Paul Revere Program</strong> is developed by{" "}
+                                            <strong>Hemisphere Aerospace Defense</strong> and is built around the{" "}
                                             <strong>AYDLL</strong> platform. It carries forward a simple American idea:
                                             warning before arrival.
                                         </p>
@@ -88,9 +121,18 @@ const ProgramDetails = () => {
                                             launches, recovers, hosts, operates, maintains, and sustains the
                                             infrastructure.
                                         </div>
+                                        {/*
+                                          * Previously this said full program detail was maintained on a
+                                          * dedicated Paul Revere Program website. As of this build the
+                                          * linked AYDLL site describes the platform and does not carry
+                                          * program-named detail, so the claim was inaccurate. Corrected to
+                                          * describe what each property actually covers. Flagged for
+                                          * management: see the cross-property consistency matrix.
+                                          */}
                                         <p className="had-context-lead" style={{ marginTop: 24 }}>
-                                            This is a concise corporate-level introduction. Full program detail is
-                                            maintained on the dedicated Paul Revere Program website.
+                                            This page is the authoritative corporate description of the program.
+                                            The AYDLL platform site covers the platform the program is built
+                                            around.
                                         </p>
                                     </>
                                 ) : (
@@ -112,7 +154,7 @@ const ProgramDetails = () => {
                                 <div className="btn-wrapper mt-4 d-flex flex-wrap align-items-center gap-3">
                                     {program.hasDedicatedSite && externalReady && (
                                         <a href={externalUrl} {...EXTERNAL_LINK_PROPS} className="te-theme-btn">
-                                            Visit the {program.name} Site
+                                            Visit the AYDLL Platform Site
                                             <i className="fa fa-solid fa-arrow-up-right-from-square ms-2" />
                                         </a>
                                     )}

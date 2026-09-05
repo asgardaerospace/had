@@ -1,6 +1,7 @@
 [
     {
         "id": "aydll-idl",
+        "slug": "paul-revere-program",
         "name": "Paul Revere Program",
         "platform": "AYDLL",
         "category": "Persistent Maritime Awareness Infrastructure",
@@ -12,6 +13,6 @@
         "hasDedicatedSite": true,
         "externalKey": "aydllIdl",
         "thumb": "program-observing.jpg",
-        "imageAlt": "The AYDLL platform on station at sunset, linked with government maritime assets, autonomous surface vessels, and aircraft across the surrounding area."
+        "imageAlt": "Concept rendering: the AYDLL platform on station at sunset, linked with maritime assets, autonomous surface vessels, and aircraft across the surrounding area."
     }
 ]

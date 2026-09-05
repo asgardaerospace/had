@@ -11,7 +11,28 @@
  */
 
 export const SITE = {
+  /**
+   * PRODUCTION_DOMAIN_REQUIRED
+   *
+   * The single authoritative origin for this site. Management must supply it.
+   * Format: scheme plus host, no trailing slash and no path.
+   * Shape: "https:" + "//" + the live hostname.
+   *
+   * While this is empty the site still builds and prerenders correctly, but it
+   * deliberately omits every absolute URL rather than guessing one:
+   *   - no <link rel="canonical">
+   *   - no og:url / og:image / twitter:image
+   *   - no "url" / "@id" / "logo" fields in JSON-LD
+   *   - no sitemap.xml, and a conservative robots.txt
+   *
+   * Populate this ONE field and every one of those is generated automatically.
+   * Nothing else in the codebase hard-codes the production origin.
+   */
+  productionDomain: "",
+
   name: "Hemisphere Defense",
+  /** Registered entity name. The canonical, unambiguous string for search. */
+  legalNameShort: "Hemisphere Aerospace Defense",
   shortName: "HAD",
   // Restrained hero positioning statement (see alternates in project notes).
   positioning: "American vigilance, modernized.",
@@ -20,11 +41,38 @@ export const SITE = {
   description:
     "Hemisphere Defense builds mission-oriented programs for the next era of American vigilance: persistent awareness, distributed infrastructure, and operational readiness across land, air, and sea.",
 
+  /**
+   * Hemisphere Aerospace Investments (HAI).
+   *
+   * RELATIONSHIP LANGUAGE IS DELIBERATELY CONSERVATIVE.
+   *
+   * What is supported by approved material: three leadership biographies
+   * describe officers serving across both entities (the CEO "providing
+   * executive leadership across HAI and Hemisphere Aerospace Defense", the CFO
+   * and the Technical Director serving both). That establishes shared
+   * executive leadership and affiliation.
+   *
+   * What is NOT established: a parent-subsidiary hierarchy. HAI's own website
+   * describes a commercial aircraft and engine trading business founded in
+   * 2018, with no defense arm, no subsidiary, and no group structure. The
+   * earlier wording ("operates within the HAI structure", "a HAI company")
+   * asserted ownership that is currently claimed in one direction only.
+   *
+   * Structured data asserts no parentOrganization for the same reason; see
+   * components/seo/schema.ts.
+   *
+   * Once management confirms the legal hierarchy, update these two strings and
+   * restore the parentOrganization block. They are the only place the
+   * relationship is worded, so both propagate site-wide.
+   */
   parent: {
     name: "Hemisphere Aerospace Investments",
     shortName: "HAI",
-    // Kept visually secondary to the HAD identity per brand direction.
-    relationship: "Hemisphere Defense operates within the Hemisphere Aerospace Investments (HAI) structure.",
+    /** Full sentence. Used in the HAI band and long-form copy. */
+    relationship:
+      "Hemisphere Defense and Hemisphere Aerospace Investments (HAI) share executive leadership.",
+    /** Short label. Used in the header bar and the footer copyright line. */
+    relationshipShort: "Affiliated with Hemisphere Aerospace Investments (HAI)",
   },
 
   /**
@@ -49,6 +97,11 @@ export const SITE = {
     hai: "https://hai-aero.com/",
     // USFCR verified vendor profile for Hemisphere Defense.
     usfcrProfile: "https://hemispheredefensegov.com/",
+    // HAD LinkedIn company page. Empty until one exists: no page was found for
+    // Hemisphere Aerospace Defense (only Hemisphere Aerospace Investments).
+    // While empty, the footer renders a dim placeholder instead of a dead link,
+    // and the URL is not asserted in Organization sameAs.
+    linkedin: "",
     // SAM.gov entity page for HEMISPHERE AEROSPACE DEFENSE, LLC. Currently
     // unused: the registration is not visible in SAM.gov public search, so the
     // footer badge stays unlinked. Re-link once public display is enabled and
@@ -104,3 +157,21 @@ export const EXTERNAL_LINK_PROPS = {
 /** True when a config value is still an unfilled placeholder. */
 export const isPlaceholder = (value: string): boolean =>
   value.includes("[") && value.includes("]");
+
+/**
+ * True once management has supplied SITE.productionDomain. Every absolute-URL
+ * feature (canonical, og:url, JSON-LD @id, sitemap) is gated on this so the
+ * site never ships a guessed origin.
+ */
+export const hasProductionDomain = (): boolean => SITE.productionDomain.trim().length > 0;
+
+/**
+ * Absolute URL for a site-relative path, or undefined while the production
+ * domain is unset. Callers must omit the field entirely when this returns
+ * undefined rather than substituting a placeholder.
+ */
+export const absoluteUrl = (path: string): string | undefined => {
+  if (!hasProductionDomain()) return undefined;
+  const origin = SITE.productionDomain.replace(/\/+$/, "");
+  return `${origin}${path.startsWith("/") ? path : `/${path}`}`;
+};

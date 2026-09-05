@@ -2,6 +2,9 @@ import HeaderV1 from "../../components/header/HeaderV1";
 import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 import LegalDoc, { type LegalSection } from "../../components/legal/LegalDoc";
 import FooterV1 from "../../components/footer/FooterV1";
+import Seo from "../../components/seo/Seo";
+import { breadcrumbSchema, webPageSchema } from "../../components/seo/schema";
+import { metaForPath } from "../../config/seo";
 import { SITE } from "../../config/site";
 
 /*
@@ -14,7 +17,7 @@ import { SITE } from "../../config/site";
  */
 
 const intro = [
-    "This Privacy Policy explains what information Hemisphere Defense (HAD) collects through this website, how it is used, and the choices available to you. Hemisphere Defense operates within the Hemisphere Aerospace Investments (HAI) structure.",
+    "This Privacy Policy explains what information Hemisphere Defense (HAD) collects through this website, how it is used, and the choices available to you.",
     "This website is a corporate informational site. It does not require an account, it does not set cookies, and it does not use analytics, advertising, or tracking technologies.",
 ];
 
@@ -129,8 +132,16 @@ const sections: LegalSection[] = [
 ];
 
 const Privacy = () => {
+    const meta = metaForPath("/privacy");
     return (
         <>
+            <Seo
+                path="/privacy"
+                schema={[
+                    webPageSchema({ path: "/privacy", name: meta.title, description: meta.description }),
+                    breadcrumbSchema([{ name: "Privacy Policy", path: "/privacy" }]),
+                ]}
+            />
             <HeaderV1 />
             <BreadCrumb
                 image="breadcrumb-bg.jpg"
