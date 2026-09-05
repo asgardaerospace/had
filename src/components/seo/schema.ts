@@ -127,7 +127,40 @@ export const organizationSchema = () =>
         availableLanguage: "en",
       },
     ],
-    sameAs: [SITE.external.usfcrProfile],
+    /*
+     * sameAs is DELIBERATELY EMPTY, pending alignment of the capability
+     * statement property.
+     *
+     * The only candidate was hemispheredefensegov.com. Its identity match is
+     * not in doubt: it carries the legal name HEMISPHERE AEROSPACE DEFENSE,
+     * LLC with UEI JC89VWA2MA45 and CAGE 22TR6, all exactly matching this
+     * entity. It is unambiguously the same organization.
+     *
+     * The problem is what declaring sameAs does. It tells search and AI systems
+     * that the page is an authoritative reference for this entity's identity,
+     * so they may draw the company's description from it. As of this build that
+     * page carries, verbatim:
+     *
+     *   - "AI Supervisory Command and Control"
+     *   - "AI-enabled solutions that enhance operational reach, improve
+     *      situational awareness, and support mission success"
+     *   - primary NAICS 522220, Sales Financing
+     *
+     * The first two are AI capability claims that management has explicitly
+     * withheld from this site and has not defined. Pointing retrieval systems
+     * at that page would reintroduce, through structured data, exactly the
+     * terminology the copy deliberately excludes. The NAICS code is an
+     * unresolved corporate-data question. That is a material entity conflict,
+     * so the assertion is withheld rather than made.
+     *
+     * Restore once the capability statement is aligned to the canonical
+     * description, or once a LinkedIn company page exists:
+     *
+     *   sameAs: [SITE.external.usfcrProfile],
+     *
+     * The page is still linked normally from the footer and the certifications
+     * page. Only the machine-readable identity assertion is withheld.
+     */
   });
 
 /** The site itself. Emitted on every page alongside Organization. */
