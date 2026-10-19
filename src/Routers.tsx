@@ -8,6 +8,8 @@ import ProgramDetails from './pages/innerPages/ProgramDetails';
 import Approach from './pages/innerPages/Approach';
 import Leadership from './pages/innerPages/Leadership';
 import LeadershipDetails from './pages/innerPages/TeamDetails';
+import Insights from './pages/innerPages/Insights';
+import InsightDetails from './pages/innerPages/InsightDetails';
 import Certifications from './pages/innerPages/Certifications';
 import Contact from './pages/innerPages/Contact';
 import Privacy from './pages/innerPages/Privacy';
@@ -86,6 +88,8 @@ const Routers = () => {
             <Route path='/approach' element={<Approach />} />
             <Route path='/leadership' element={<Leadership />} />
             <Route path='/leadership/:slug' element={<LeadershipRoute />} />
+            <Route path='/insights' element={<Insights />} />
+            <Route path='/insights/:slug' element={<InsightDetails />} />
             <Route path='/certifications' element={<Certifications />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/privacy' element={<Privacy />} />

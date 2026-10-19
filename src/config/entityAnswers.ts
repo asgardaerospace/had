@@ -60,7 +60,7 @@ export const ABOUT_FAQ: EntityAnswer[] = [
   },
   {
     q: "Who leads Hemisphere Aerospace Defense?",
-    a: "The company is led by an executive team and a technical leadership team. Executive leadership comprises John B. Sawyer, Founder, Principal and Chief Executive Officer; Craig McPike, Brigadier General USAF Retired, Chair of the Board of Strategy and Oversight; and Alex Hart, Chief Financial Officer. Technical leadership comprises Robert Riedell, Director of Programs; Chip Fichtner, Head of Engineering; Dalton Sawyer, Technical Director; and Austin Fichtner, Technology Strategy and Integration.",
+    a: "The company is led by an executive team and a technical leadership team. Executive leadership comprises John B. Sawyer, Founder, Principal and Chief Executive Officer; Craig McPike, Brigadier General USAF Retired, Chair of the Board of Strategy and Oversight; Brendan McPherson, Board Member and Senior Strategic Advisor; and Alex Hart, Chief Financial Officer. Technical leadership comprises Robert Riedell, Director of Programs; Chip Fichtner, Head of Engineering; Dalton Sawyer, Technical Director; and Austin Fichtner, Technology Strategy and Integration.",
   },
   {
     q: "How can an organization engage Hemisphere Aerospace Defense?",

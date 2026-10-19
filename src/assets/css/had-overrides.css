@@ -1706,3 +1706,71 @@ a.had-registration-badge:hover {
   font-weight: 600;
   letter-spacing: 0.01em;
 }
+
+/* =====================================================================
+   Insights: index cards and article body
+   Long-form technical writing. The measure is held near 70 characters
+   because these run to several screens and are meant to be read, not
+   skimmed. Headings are real h2s so the structure is extractable.
+   ===================================================================== */
+.had-insight-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--had-line);
+  box-shadow: var(--had-elev);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s ease;
+}
+.had-insight-card:hover { transform: translateY(-4px); border-color: rgba(90, 151, 206, 0.55); }
+.had-insight-media { display: block; position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
+.had-insight-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: contrast(1.07) saturate(1.1);
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.had-insight-card:hover .had-insight-media img { transform: scale(1.05); }
+.had-insight-body { padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px; }
+.had-insight-eyebrow {
+  font-size: 12px; letter-spacing: 0.17em; text-transform: uppercase;
+  color: var(--had-accent, #e9a23b); font-weight: 600;
+}
+.had-insight-title { margin: 0; font-size: 22px; line-height: 1.3; }
+.had-insight-title a { color: inherit; text-decoration: none; }
+.had-insight-title a:hover { color: var(--had-accent, #e9a23b); }
+.had-insight-summary { margin: 0; font-size: 16px; line-height: 1.7; opacity: 0.8; }
+
+.had-article-meta {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline;
+  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+  opacity: 0.6; padding-bottom: 20px; margin-bottom: 8px;
+  border-bottom: 1px solid var(--had-line);
+}
+.had-article-meta-sep { opacity: 0.5; }
+.had-article-section { margin-top: 38px; }
+.had-article-section:first-of-type { margin-top: 26px; }
+.had-article-heading {
+  font-size: 25px; line-height: 1.28; margin: 0 0 16px;
+  letter-spacing: -0.01em; text-wrap: balance;
+}
+.had-article-lead { font-size: 20px; line-height: 1.68; margin: 0 0 18px; max-width: 68ch; }
+.had-article-p { font-size: 17px; line-height: 1.78; margin: 0 0 18px; max-width: 70ch; opacity: 0.88; }
+.had-article-list { margin: 0 0 20px; padding-left: 22px; max-width: 70ch; }
+.had-article-list li { font-size: 17px; line-height: 1.72; margin-bottom: 11px; opacity: 0.88; }
+.had-article-cta {
+  margin-top: 46px; padding: 26px 28px;
+  border: 1px solid var(--had-line); background: rgba(255, 255, 255, 0.03);
+}
+.had-article-cta p { margin: 0 0 18px; font-size: 17px; max-width: 62ch; }
+.had-article-related { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--had-line); }
+.had-article-related-title {
+  font-size: 13px; letter-spacing: 0.17em; text-transform: uppercase;
+  opacity: 0.6; margin: 0 0 14px; font-weight: 600;
+}
+.had-article-related ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+@media (max-width: 767px) {
+  .had-article-heading { font-size: 21px; }
+  .had-article-lead { font-size: 18px; }
+  .had-article-p, .had-article-list li { font-size: 16px; }
+  .had-insight-body { padding: 20px 22px 24px; }
+}

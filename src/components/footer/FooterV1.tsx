@@ -115,6 +115,7 @@ const FooterV1 = () => {
                                         <li><Link to="/programs">Programs</Link></li>
                                         <li><Link to="/programs/paul-revere-program">Paul Revere Program</Link></li>
                                         <li><Link to="/approach">Approach</Link></li>
+                                        <li><Link to="/insights">Insights</Link></li>
                                         <li><Link to="/leadership">Team</Link></li>
                                         <li><Link to="/certifications">Certifications</Link></li>
                                         <li><Link to="/contact">Contact</Link></li>

@@ -234,6 +234,37 @@ export const programSchema = (p: {
     description: p.description,
   });
 
+/**
+ * An insights article.
+ *
+ * author and publisher are the Organization, not a Person. The pieces are
+ * written in the company's voice and no individual byline has been approved;
+ * attributing one would invent a fact. Swap author to a Person reference once
+ * a named byline is agreed, which would also strengthen the connection between
+ * the leadership pages and the technical content.
+ */
+export const articleSchema = (a: {
+  headline: string;
+  description: string;
+  path: string;
+  image: string;
+  published: string;
+  updated: string;
+}) =>
+  prune({
+    "@type": "Article",
+    headline: a.headline,
+    description: a.description,
+    url: absoluteUrl(a.path),
+    image: absoluteUrl(a.image),
+    datePublished: a.published,
+    dateModified: a.updated,
+    author: orgRef(),
+    publisher: orgRef(),
+    mainEntityOfPage: absoluteUrl(a.path),
+    isAccessibleForFree: true,
+  });
+
 /** A page-level node binding the page to the entity it is about. */
 export const webPageSchema = (p: {
   path: string;

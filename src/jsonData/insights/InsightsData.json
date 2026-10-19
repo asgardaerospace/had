@@ -1,0 +1,172 @@
+[
+  {
+    "slug": "authority-boundaries",
+    "title": "Who retains authority when a contractor operates the sensor",
+    "seoTitle": "Who Retains Authority When a Contractor Operates the Sensor",
+    "description": "Contractor-owned, contractor-operated sensing raises a question government mission owners ask early: who holds command, mission, intelligence, response, and engagement authority. The distinction between operating infrastructure and holding authority, and how to design it in.",
+    "eyebrow": "Program Structure",
+    "summary": "Operating the infrastructure and holding the authority are different things. Programs that do not separate them deliberately tend to blur them by accident.",
+    "published": "2026-10-19",
+    "updated": "2026-10-19",
+    "image": "principle-authority.jpg",
+    "imageAlt": "Illustrative image: mission operators directing a shared awareness picture from a command center",
+    "readMinutes": 7,
+    "sections": [
+      {
+        "blocks": [
+          { "type": "lead", "text": "When a government organization considers persistent sensing infrastructure that a contractor owns, operates, and sustains, one question tends to arrive before any technical question: if the company is running the sensor, who is actually in charge of what it sees?" },
+          { "type": "p", "text": "It is a fair question and it deserves a precise answer rather than a reassuring one. The answer is that operating infrastructure and holding authority are two different things, and a well-structured program keeps them visibly apart. Where programs get into trouble is not usually that someone intended to transfer authority. It is that nobody wrote down where the line was, so the line moved." }
+        ]
+      },
+      {
+        "heading": "Why the question is being asked more often",
+        "blocks": [
+          { "type": "p", "text": "Three things have converged. Sensing has moved from something you bring to a location toward something that stays there. Autonomous and uncrewed systems have made continuous coverage affordable in places where keeping a crew would not be. And the commercial sector has become a realistic supplier of the infrastructure that hosts both." },
+          { "type": "p", "text": "Each of those is individually familiar. Together they produce an arrangement that is less familiar: a commercial entity maintaining a continuous presence, hosting government-relevant sensing, in an environment where decisions may need to be made quickly. The authority question is the natural response to that arrangement, and it should be." }
+        ]
+      },
+      {
+        "heading": "Operating is not deciding",
+        "blocks": [
+          { "type": "p", "text": "The useful distinction is between the physical and logistical work of keeping a capability available, and the decisions made using what that capability produces." },
+          { "type": "p", "text": "An infrastructure operator launches, recovers, hosts, powers, maintains, repairs, and sustains. The operator keeps the platform on station, keeps the payloads working, keeps the links up, and keeps the whole arrangement available over a program's life. That is a demanding set of responsibilities and it is entirely about availability." },
+          { "type": "p", "text": "None of it is a decision about what the mission is, what a contact means, whether to respond, or what response is authorized. Those are different questions, they are answered by different people, and they sit with the government." }
+        ]
+      },
+      {
+        "heading": "The authorities that do not move",
+        "blocks": [
+          { "type": "p", "text": "It helps to enumerate these rather than gesture at them, because the enumeration is what makes the boundary auditable:" },
+          {
+            "type": "ul",
+            "items": [
+              "Command authority. Who directs the mission and to whom the mission answers.",
+              "Mission authority. What the mission is, what it prioritizes, and when it changes.",
+              "Intelligence authority. How collected information is assessed, classified, and used.",
+              "Response authorization. Whether action is taken on what has been observed.",
+              "Engagement authority. Who may be engaged, under what conditions.",
+              "Weapons-release authority, where weapons are in question at all."
+            ]
+          },
+          { "type": "p", "text": "Hemisphere Aerospace Defense structures programs so that every one of these stays with government personnel. The company does not replace military services, government mission owners, or prime contractors, and it does not hold government authority." },
+          { "type": "note", "text": "Stating this is easy. The useful question for any vendor is not whether they will say it, but whether the program they are proposing would still be coherent if you held them to it." }
+        ]
+      },
+      {
+        "heading": "Why it has to be designed in, not asserted",
+        "blocks": [
+          { "type": "p", "text": "A boundary that exists only in a statement of work drifts. A boundary that is reflected in how the system is built tends to hold, because crossing it requires someone to actively change something rather than simply keep working." },
+          { "type": "p", "text": "In practice that means the architecture itself should make the distinction legible. Who can task a sensor, and who can only keep it running. Where the awareness picture is assembled, and who sees it. What the operator can observe about the mission as a byproduct of maintaining the equipment, and what they deliberately cannot. How reach-back to government decision-makers is structured so that it is the normal path rather than an exception." },
+          { "type": "p", "text": "These are design decisions with real engineering consequences. They are considerably cheaper to make at the start of a program than to retrofit after an architecture has settled." }
+        ]
+      },
+      {
+        "heading": "Questions worth asking a vendor",
+        "blocks": [
+          { "type": "p", "text": "If you are evaluating contractor-operated persistent sensing, these tend to separate a considered answer from a confident one:" },
+          {
+            "type": "ul",
+            "items": [
+              "Which specific authorities does your model leave with us, named individually rather than described in general terms?",
+              "What can your personnel see about the mission as a consequence of maintaining the infrastructure, and what have you deliberately designed them not to see?",
+              "If we withdrew tasking authority from you entirely, would the program still work as proposed?",
+              "Where does the awareness picture get assembled, and who controls that location?",
+              "What happens, procedurally, when something is detected and no government decision-maker is immediately reachable?",
+              "How does your architecture make the authority boundary observable to us rather than a matter of trust?"
+            ]
+          },
+          { "type": "p", "text": "The last one matters most. A boundary you can verify is a different thing from a boundary you have been promised." }
+        ]
+      },
+      {
+        "heading": "How this shapes our programs",
+        "blocks": [
+          { "type": "p", "text": "Preserving authority is one of the principles Hemisphere Aerospace Defense scopes programs against, alongside starting from the operational problem and advancing on evidence. It is not a compliance posture bolted on at the end. It changes what gets built." },
+          { "type": "p", "text": "In the Paul Revere Program, which is persistent maritime awareness infrastructure built around the AYDLL platform and currently in program development, the infrastructure exists to carry sensing, support autonomous systems operations, host modular mission capability, and connect to government reach-back command. The infrastructure is the product. The decisions remain the government's." },
+          { "type": "p", "text": "That is a narrower claim than the market usually makes. We think it is the one that survives contact with a program office." }
+        ]
+      }
+    ],
+    "cta": {
+      "text": "If you are structuring a program where this boundary matters, we are glad to talk through how we approach it.",
+      "label": "Discuss a program",
+      "to": "/contact"
+    },
+    "related": [
+      { "label": "Our approach to program development", "to": "/approach" },
+      { "label": "Paul Revere Program", "to": "/programs/paul-revere-program" },
+      { "label": "The manning burden of continuous maritime surveillance", "to": "/insights/manning-burden" }
+    ]
+  },
+  {
+    "slug": "manning-burden",
+    "title": "The manning burden of continuous maritime surveillance",
+    "seoTitle": "The Manning Burden of Continuous Maritime Surveillance",
+    "description": "Keeping a capable asset available is not the same as keeping an area covered. Why continuous low-intensity monitoring consumes high-value crewed assets, and what actually reduces the burden.",
+    "eyebrow": "Operational Problem",
+    "summary": "Persistence is a presence problem, not a capability problem. The asset that can see furthest is rarely the one you can afford to leave in place.",
+    "published": "2026-10-19",
+    "updated": "2026-10-19",
+    "image": "domain-sea.jpg",
+    "imageAlt": "Illustrative image: an offshore sensing mast over dark open water at night, distant contacts on the horizon",
+    "readMinutes": 6,
+    "sections": [
+      {
+        "blocks": [
+          { "type": "lead", "text": "A cutter, a destroyer, and a maritime patrol aircraft are all extremely capable sensors. None of them is a persistent one. The difference is the whole problem." },
+          { "type": "p", "text": "Continuous maritime awareness is usually discussed as a sensing question, as though the limitation were detection range or discrimination. More often the limitation is simpler and harder: the asset that can see the area is not in the area most of the time, and putting it there costs something you would rather spend elsewhere." }
+        ]
+      },
+      {
+        "heading": "Capability and presence are different quantities",
+        "blocks": [
+          { "type": "p", "text": "An asset's usefulness for persistent coverage is not what it can detect. It is what fraction of the calendar it spends on station, and what it costs to hold that fraction." },
+          { "type": "p", "text": "That fraction is eroded by things that have nothing to do with sensing. Transit to and from the operating area. Crew rest and watch rotation. Scheduled maintenance and the unscheduled kind. Replenishment of fuel, stores, and consumables. Weather. Port periods. For aircraft, sortie duration and turnaround. For vessels, deployment cycles and the maintenance and training periods that bracket them." },
+          { "type": "p", "text": "None of these are inefficiencies to be optimized away. They are the cost of operating crewed platforms safely, and they are largely irreducible." }
+        ]
+      },
+      {
+        "heading": "The arithmetic of staying on station",
+        "blocks": [
+          { "type": "p", "text": "The consequence is structural. To keep one asset continuously on station, you need materially more than one asset committed to that station. How many depends on the platform, the distance, and the operating tempo, and anyone quoting you a universal ratio is selling something. But the direction is never in doubt: continuous coverage of a single area consumes a multiple of the assets that are visibly there." },
+          { "type": "p", "text": "Multiply that across several areas that all need watching and the demand compounds quickly. Fleets are sized against the full range of missions they are expected to perform, and persistent low-intensity monitoring competes directly with every other one of those missions for the same hulls and airframes." },
+          { "type": "note", "text": "The binding constraint is usually not whether an area can be covered. It is what stops being covered, or stops being trained for, while it is." }
+        ]
+      },
+      {
+        "heading": "The opportunity cost nobody budgets for",
+        "blocks": [
+          { "type": "p", "text": "This is the part that tends to go unpriced. The work in question is frequently low intensity. Watching an approach. Maintaining a track picture. Noticing when a pattern changes. Being present so that absence is not the default condition." },
+          { "type": "p", "text": "That work matters enormously and almost none of it requires the specific capabilities that make a destroyer a destroyer. When a high-value crewed asset performs it, the asset is not being used for what it is uniquely able to do, and the crew is accruing hours and wear against a task that did not need them." },
+          { "type": "p", "text": "The cost shows up later and somewhere else: in maintenance backlogs, in readiness, in a crew that has spent its deployment on a task that could have been covered otherwise, and in the higher-priority tasking that went unaddressed." }
+        ]
+      },
+      {
+        "heading": "What actually reduces the burden",
+        "blocks": [
+          { "type": "p", "text": "Framed as a presence problem rather than a sensing problem, the useful question changes. Not how to see further, but how to be there continuously without committing a crewed asset to being there." },
+          { "type": "p", "text": "That points toward infrastructure that stays in place rather than deploying to a place. Something that does not need to transit, does not need crew rotation, and whose maintenance can be scheduled around rather than removing coverage entirely. Something that can host sensing, and that can also launch, recover, charge, and sustain the autonomous systems that extend reach beyond it, so that those systems are not themselves limited by how far they can get from shore-based support." },
+          { "type": "p", "text": "Hemisphere Aerospace Defense develops programs around that shape of problem. The Paul Revere Program, built around the AYDLL platform, is persistent maritime awareness infrastructure intended to carry continuous sensing, support autonomous systems operations, host modular mission capability, and connect to government reach-back command. It is in program development." }
+        ]
+      },
+      {
+        "heading": "What it does not do",
+        "blocks": [
+          { "type": "p", "text": "Persistent infrastructure is not a substitute for crewed cutters, destroyers, or aircraft, and it is not a ship or a weapons platform. It does not do what those assets do, and the argument for it is not that it replaces them." },
+          { "type": "p", "text": "The argument is narrower. If the continuous, low-intensity portion of the watch can be carried by infrastructure that was designed to stay in place, then crewed assets become available for the tasking that genuinely requires them. The objective is to free capability, not to substitute for it." },
+          { "type": "p", "text": "That arrangement raises its own question, and it is the right one to ask next: if infrastructure a contractor operates is carrying part of the watch, who retains command and response authority over what it sees?" }
+        ]
+      }
+    ],
+    "cta": {
+      "text": "If this describes a coverage problem you are working on, we would be interested in the specifics.",
+      "label": "Discuss a program",
+      "to": "/contact"
+    },
+    "related": [
+      { "label": "Who retains authority when a contractor operates the sensor", "to": "/insights/authority-boundaries" },
+      { "label": "Paul Revere Program", "to": "/programs/paul-revere-program" },
+      { "label": "Capability areas", "to": "/capabilities" }
+    ]
+  }
+]

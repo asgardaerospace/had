@@ -27,6 +27,7 @@
 
 import ProgramsData from "../jsonData/programs/ProgramsData.json";
 import LeadershipData from "../jsonData/leadership/LeadershipData.json";
+import InsightsData from "../jsonData/insights/InsightsData.json";
 
 export type RouteMeta = {
   /** Canonical site-relative path, always leading slash, never trailing. */
@@ -114,6 +115,14 @@ export const STATIC_ROUTES: RouteMeta[] = [
     priority: 0.9,
   },
   {
+    path: "/insights",
+    title: "Insights | Hemisphere Aerospace Defense",
+    description:
+      "Technical and program writing from Hemisphere Aerospace Defense on persistent maritime awareness, autonomous systems support, the manning burden of continuous surveillance, and authority boundaries in contractor-operated programs.",
+    image: "/images/had/statement-dawn.jpg",
+    priority: 0.8,
+  },
+  {
     path: "/contact",
     title: "Contact Hemisphere Aerospace Defense | Program Inquiries",
     description:
@@ -194,11 +203,28 @@ export const LEADERSHIP_ROUTES: RouteMeta[] = (LeadershipData as LeaderGroup[])
     priority: 0.5,
   }));
 
+type InsightRecord = {
+  slug: string;
+  seoTitle: string;
+  description: string;
+  image: string;
+};
+
+export const INSIGHT_ROUTES: RouteMeta[] = (InsightsData as InsightRecord[]).map((a) => ({
+  path: `/insights/${a.slug}`,
+  title: `${a.seoTitle} | Hemisphere Aerospace Defense`,
+  description: a.description,
+  image: `/images/had/${a.image}`,
+  ogType: "article",
+  priority: 0.8,
+}));
+
 /** Every route the prerenderer builds and the sitemap generator considers. */
 export const ALL_ROUTES: RouteMeta[] = [
   ...STATIC_ROUTES,
   ...PROGRAM_ROUTES,
   ...LEADERSHIP_ROUTES,
+  ...INSIGHT_ROUTES,
 ];
 
 /** Routes eligible for indexing and inclusion in sitemap.xml. */

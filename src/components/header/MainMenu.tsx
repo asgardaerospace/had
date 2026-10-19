@@ -41,6 +41,7 @@ const MainMenu = ({ toggleSubMenu }: MainMenuProps) => {
                             <li className='te-list-item'><Link to="/capabilities">Capability Areas</Link></li>
                             <li className='te-list-item'><Link to="/domains">Land, Air &amp; Sea</Link></li>
                             <li className='te-list-item'><Link to="/approach">Our Approach</Link></li>
+                            <li className='te-list-item'><Link to="/insights">Insights</Link></li>
                         </ul>
                     </li>
                     <li className="te-dropdown">
