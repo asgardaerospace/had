@@ -16,6 +16,9 @@ const KNOWN_INSTITUTIONS = [
   "Embry-Riddle Aeronautical University",
   "North Carolina State University",
   "Baylor University",
+  "United States Coast Guard Academy",
+  "University of North Carolina at Chapel Hill",
+  "United States Naval War College",
 ] as const;
 
 /**
