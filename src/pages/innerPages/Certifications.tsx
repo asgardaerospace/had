@@ -17,7 +17,7 @@ import { PROCUREMENT_FAQ } from "../../config/entityAnswers";
  */
 const Certifications = () => {
     const { legalName, uei, cage, samStatus, naics, psc, capabilityStatement } = SITE.registration;
-    const { generalEmail, phone, phoneDisplay, address } = SITE.contact;
+    const { generalEmail, address } = SITE.contact;
     const meta = metaForPath("/certifications");
 
     return (
@@ -157,12 +157,6 @@ const Certifications = () => {
                                     {isPlaceholder(generalEmail)
                                         ? <span className="had-placeholder">{generalEmail}</span>
                                         : <a href={`mailto:${generalEmail}`}>{generalEmail}</a>}
-                                </li>
-                                <li>
-                                    <span className="had-contact-list-label">Phone</span>
-                                    {isPlaceholder(phone)
-                                        ? <span className="had-placeholder">{phone}</span>
-                                        : <a href={`tel:${phone}`}>{phoneDisplay}</a>}
                                 </li>
                                 <li>
                                     <span className="had-contact-list-label">Capability Statement</span>

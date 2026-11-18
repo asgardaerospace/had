@@ -33,7 +33,7 @@ const sections: LegalSection[] = [
                     "Direct contact: if you email or call us using the contact details published on the site, we receive the information you include in that communication.",
                 ],
             },
-            { type: "p", text: "We use this information only to respond to your inquiry and route it to the appropriate team. Providing it is voluntary; if you prefer not to use the form, you can reach us by email or phone." },
+            { type: "p", text: "We use this information only to respond to your inquiry and route it to the appropriate team. Providing it is voluntary; if you prefer not to use the form, you can reach us by email." },
         ],
     },
     {

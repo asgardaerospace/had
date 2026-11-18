@@ -120,9 +120,6 @@ export const organizationSchema = () =>
         "@type": "ContactPoint",
         contactType: "business inquiries",
         email: SITE.contact.generalEmail,
-        // E.164 rather than the display format: this value is read by machines,
-        // and the human-readable form is already on the contact page.
-        telephone: SITE.contact.phone,
         areaServed: "US",
         availableLanguage: "en",
       },

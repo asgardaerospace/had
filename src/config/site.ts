@@ -127,9 +127,6 @@ export const SITE = {
   /** Contact information. */
   contact: {
     generalEmail: "craig@haiaero.com",
-    // phone is raw E.164 for the tel: click-to-call href; phoneDisplay is the readable label shown to visitors.
-    phone: "+12102740352",
-    phoneDisplay: "+1 (210) 274-0352",
     address: "522 Austin Ave, Waco, TX 76701, USA",
   },
 

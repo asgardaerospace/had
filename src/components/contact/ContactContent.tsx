@@ -3,7 +3,7 @@ import InquiryPathwaysGrid from './InquiryPathwaysGrid';
 import { SITE, isPlaceholder } from "../../config/site";
 
 const ContactContent = () => {
-    const { generalEmail, phone, phoneDisplay, address } = SITE.contact;
+    const { generalEmail, address } = SITE.contact;
 
     // Inquiry channel grid is turned off for now: every inquiry goes to the general
     // inbox (craig@haiaero.com). The InquiryPathwaysGrid layout and its data
@@ -46,12 +46,6 @@ const ContactContent = () => {
                                     {isPlaceholder(generalEmail)
                                         ? <span className="had-placeholder">{generalEmail}</span>
                                         : <a href={`mailto:${generalEmail}`}>{generalEmail}</a>}
-                                </li>
-                                <li>
-                                    <span className="had-contact-list-label">Phone</span>
-                                    {isPlaceholder(phone)
-                                        ? <span className="had-placeholder">{phone}</span>
-                                        : <a href={`tel:${phone}`}>{phoneDisplay}</a>}
                                 </li>
                                 <li>
                                     <span className="had-contact-list-label">Address</span>
